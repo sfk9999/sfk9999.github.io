@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Hexo | sun丶的博客</title>
+  <title>git的基本用法 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/Hexo/index.html">
+  <meta name="description" content="git命令基本操作git分为三个区域：工作目录，暂存区，提交区 配置git 配置 1git-config  配置级别 123--local //默认，高优先级：只影响本仓库--global //中优先级: 影响到所有当前用户的git仓库--system //低优先级：影响到全系统的git仓库  初始化仓库 1git-init">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git的基本用法">
+<meta property="og:url" content="http://yoursite.com/2017/11/03/git的基本用法/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="git命令基本操作git分为三个区域：工作目录，暂存区，提交区 配置git 配置 1git-config  配置级别 123--local //默认，高优先级：只影响本仓库--global //中优先级: 影响到所有当前用户的git仓库--system //低优先级：影响到全系统的git仓库  初始化仓库 1git-init">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-03T08:54:34.984Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="git的基本用法">
+<meta name="twitter:description" content="git命令基本操作git分为三个区域：工作目录，暂存区，提交区 配置git 配置 1git-config  配置级别 123--local //默认，高优先级：只影响本仓库--global //中优先级: 影响到所有当前用户的git仓库--system //低优先级：影响到全系统的git仓库  初始化仓库 1git-init">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,106 +127,305 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git的基本用法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/03/hexo配置/" class="archive-article-date">
-  	<time datetime="2017-11-03T08:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/03/hexo配置/">hexo配置</a>
+    <h1 class="article-title" itemprop="name">
+      git的基本用法
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2017/11/03/git的基本用法/" class="archive-article-date">
+  	<time datetime="2017-11-03T07:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-03</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令"><span class="toc-number">1.1.</span> <span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本操作"><span class="toc-number">1.1.1.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#配置git"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">配置git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#状态信息"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">状态信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#添加文件内容到暂存区（同时文件被跟踪）"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">添加文件内容到暂存区（同时文件被跟踪）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#提交（根据暂存区内容提交到提交区）"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">提交（根据暂存区内容提交到提交区）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#工作目录直接提交到提交区"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">工作目录直接提交到提交区</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#显示提交历史信息"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">显示提交历史信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置别名"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">配置别名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#显示不同版本差异"><span class="toc-number">1.1.1.9.</span> <span class="toc-text">显示不同版本差异</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#撤销本地修改"><span class="toc-number">1.1.1.10.</span> <span class="toc-text">撤销本地修改</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#撤销全部改动"><span class="toc-number">1.1.1.11.</span> <span class="toc-text">撤销全部改动</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支操作"><span class="toc-number">1.1.2.</span> <span class="toc-text">分支操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#通过移动HEAD检出版本，可用于分支切换"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">通过移动HEAD检出版本，可用于分支切换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#push–将本地分支的更新，推送到远程主机"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">push–将本地分支的更新，推送到远程主机</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#将当前分支回退到历史某个版本"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">将当前分支回退到历史某个版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#回退"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">回退</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用捷径（代替hash-ID）"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">使用捷径（代替hash ID）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stash"><span class="toc-number">1.1.3.</span> <span class="toc-text">stash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#合并分支"><span class="toc-number">1.1.4.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修剪提交历史基线-变基-–不要再共有分支使用"><span class="toc-number">1.1.5.</span> <span class="toc-text">修剪提交历史基线(变基)–不要再共有分支使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取远程仓库"><span class="toc-number">1.1.6.</span> <span class="toc-text">获取远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#从服务器端获取代码，并同步到当前目录"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">从服务器端获取代码，并同步到当前目录</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#克隆一个远程仓库作为本地仓库"><span class="toc-number">1.1.7.</span> <span class="toc-text">克隆一个远程仓库作为本地仓库</span></a></li></ol></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
           
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><p>git分为三个区域：工作目录，暂存区，提交区</p>
+<h5 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h5><ul>
+<li><p>配置</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git-<span class="built_in">config</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>配置级别</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">-local /<span class="regexp">/默认，高优先级：只影响本仓库</span></span></div><div class="line"><span class="ruby">--global /<span class="regexp">/中优先级: 影响到所有当前用户的git仓库</span></span></div><div class="line"><span class="ruby">--system /<span class="regexp">/低优先级：影响到全系统的git仓库</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>初始化仓库</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git-init</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h5 id="状态信息"><a href="#状态信息" class="headerlink" title="状态信息"></a>状态信息</h5><ul>
+<li><p>查看当前仓库信息</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git status</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>发现以下三项的变化</p>
+<ul>
+<li>未跟踪&lt;-&gt;跟踪</li>
+<li>工作目录&lt;-&gt;暂存区</li>
+<li>暂存区&lt;-&gt;最新提交</li>
+</ul>
+</li>
+</ul>
+<h5 id="添加文件内容到暂存区（同时文件被跟踪）"><a href="#添加文件内容到暂存区（同时文件被跟踪）" class="headerlink" title="添加文件内容到暂存区（同时文件被跟踪）"></a>添加文件内容到暂存区（同时文件被跟踪）</h5><ul>
+<li><p>添加单个文件</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> README.md</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>批量添加</strong></p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> .</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>忽略文件(github有官方仓库)</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.gitignore</span>  <span class="comment">//在添加时忽略匹配的文件</span></div><div class="line"><span class="comment">//仅作用于未追踪的文件</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><ul>
+<li><p>删除（仅从暂存区删除）</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm <span class="params">--cached</span> <span class="string">//</span>仅从暂存区删除</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除（从暂存区与工作目录删除）</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">rm</span> <span class="comment">//从暂存区与工作目录删除</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>删除所有被跟踪</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm <span class="symbol">$</span>(git ls-<span class="keyword">files</span> --deleted) <span class="comment">//删除所有被跟踪，但是在工作目录被删除的文件</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="提交（根据暂存区内容提交到提交区）"><a href="#提交（根据暂存区内容提交到提交区）" class="headerlink" title="提交（根据暂存区内容提交到提交区）"></a><strong>提交</strong>（根据暂存区内容提交到提交区）</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">commit</span>  //所有提交跟着<span class="keyword">HEAD</span>走</div></pre></td></tr></table></figure>
+<ul>
+<li>注释 -m（放在了git log里的提示）<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m 'initial commit'  <span class="comment">//-m命令用来注释</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="工作目录直接提交到提交区"><a href="#工作目录直接提交到提交区" class="headerlink" title="工作目录直接提交到提交区"></a>工作目录直接提交到提交区</h5><ul>
+<li>-a<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -<span class="selector-tag">a</span> -m <span class="string">'full commit'</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="显示提交历史信息"><a href="#显示提交历史信息" class="headerlink" title="显示提交历史信息"></a>显示提交历史信息</h5><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span></div></pre></td></tr></table></figure>
+<h5 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git<span class="built_in"> config </span>alias.shortname &lt;fullcommand&gt;</div></pre></td></tr></table></figure>
+<h5 id="显示不同版本差异"><a href="#显示不同版本差异" class="headerlink" title="显示不同版本差异"></a>显示不同版本差异</h5><ul>
+<li><p>工作目录与暂存区的差异</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">gjit diff</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>暂存区与某次提交差异，默认为HEAD</p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff -cached<span class="meta">[&lt;reference&gt;]</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>工作目录与某次提交的差异</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff&lt;<span class="keyword">reference</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看两次提交的关系</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff ID ID  <span class="comment">//传入两次ID</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="撤销本地修改"><a href="#撤销本地修改" class="headerlink" title="撤销本地修改"></a>撤销本地修改</h5><ul>
+<li><p>将文件内容从暂存区复制到工作目录</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout <span class="comment">-- &lt;file&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>撤销暂存区内容</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">reset</span> <span class="keyword">HEAD</span> &lt;<span class="keyword">file</span>&gt;   //将文件内容从上次提交复制到暂存区</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="撤销全部改动"><a href="#撤销全部改动" class="headerlink" title="撤销全部改动"></a>撤销全部改动</h5><ul>
+<li>将内容从上次提交复制到工作目录（此时工作目录应和暂存区内容一致）<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout HEAD <span class="comment">-- &lt;file&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h4><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git branch</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>创建分支</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>&lt;<span class="keyword">branchName&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>删除分支</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d &lt;<span class="keyword">branchName&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>显示所有分支信息</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-v</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="通过移动HEAD检出版本，可用于分支切换"><a href="#通过移动HEAD检出版本，可用于分支切换" class="headerlink" title="通过移动HEAD检出版本，可用于分支切换"></a>通过移动HEAD检出版本，可用于分支切换</h5><ul>
+<li><p>将指针指向目标分支</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout <span class="tag">&lt;<span class="name">branchName</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>创建分支并切换</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -<span class="selector-tag">b</span> &lt;branchName&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>移动到任何引用对象上</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout &lt;<span class="keyword">reference</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>恢复到上一个分支</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> checkout -</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看分支（列出现在所有分支）</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -v   <span class="comment">//*开头的就是当前所属分支（HEAD所指分支）</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="push–将本地分支的更新，推送到远程主机"><a href="#push–将本地分支的更新，推送到远程主机" class="headerlink" title="push–将本地分支的更新，推送到远程主机"></a>push–将本地分支的更新，推送到远程主机</h5><ul>
+<li><p>将本地的master分支推送到origin主机的master分支。如果master不存在，则会被新建。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> -u <span class="built_in">origin</span> master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="将当前分支回退到历史某个版本"><a href="#将当前分支回退到历史某个版本" class="headerlink" title="将当前分支回退到历史某个版本"></a>将当前分支回退到历史某个版本</h5><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --mixed <span class="params">&lt;commit&gt;</span>  (默认)  <span class="comment">//将内容复制到暂存区</span></div><div class="line">git reset --soft <span class="params">&lt;commit&gt;</span>   <span class="comment">//暂存区和工作目录不改变</span></div><div class="line">git reset --hard <span class="params">&lt;commit&gt;</span>   <span class="comment">//将内容复制到工作目录</span></div></pre></td></tr></table></figure>
+<h5 id="回退"><a href="#回退" class="headerlink" title="回退"></a>回退</h5><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git reflog</span></div></pre></td></tr></table></figure>
+<h5 id="使用捷径（代替hash-ID）"><a href="#使用捷径（代替hash-ID）" class="headerlink" title="使用捷径（代替hash ID）"></a>使用捷径（代替hash ID）</h5><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">A</span>^  //<span class="keyword">A</span>上的父提交</div><div class="line"><span class="keyword">A</span>~n //在<span class="keyword">A</span>之前的第n次提交</div><div class="line"></div><div class="line"><span class="keyword">A</span>^^ //<span class="keyword">A</span>上的父的父提交</div><div class="line"><span class="keyword">A</span>~<span class="number">2</span></div><div class="line"><span class="keyword">A</span>^~<span class="number">1</span></div><div class="line">next~<span class="number">1</span></div></pre></td></tr></table></figure>
+<h4 id="stash"><a href="#stash" class="headerlink" title="stash"></a>stash</h4><ul>
+<li>保存目前的工作目标和暂存区状态，并返回到干净的工作空间<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git stash</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash <span class="keyword">save</span> '<span class="keyword">push</span> to stash area'</div></pre></td></tr></table></figure>
+<ul>
+<li><p>查看stash</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash <span class="built_in">list</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>将保存的信息恢复到工作目录</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash <span class="built_in">apply</span> stash@&#123;<span class="number">0</span>&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除stash记录</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">git</span> <span class="selector-tag">stash</span> <span class="selector-tag">drop</span> <span class="selector-tag">stash</span>@&#123;0&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>pop</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stash <span class="keyword">pop</span> = stash apply +stash <span class="built_in">drop</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4><figure class="highlight cos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">merge</span></div></pre></td></tr></table></figure>
+<ul>
+<li>当前在master分支合并next分支<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">merge</span> <span class="keyword">next</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="修剪提交历史基线-变基-–不要再共有分支使用"><a href="#修剪提交历史基线-变基-–不要再共有分支使用" class="headerlink" title="修剪提交历史基线(变基)–不要再共有分支使用"></a>修剪提交历史基线(变基)–不要再共有分支使用</h4><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git rebase</span></div></pre></td></tr></table></figure>
+<h4 id="获取远程仓库"><a href="#获取远程仓库" class="headerlink" title="获取远程仓库"></a>获取远程仓库</h4><ul>
+<li><p>初始化仓库</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git init</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>配置仓库</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git remote</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="从服务器端获取代码，并同步到当前目录"><a href="#从服务器端获取代码，并同步到当前目录" class="headerlink" title="从服务器端获取代码，并同步到当前目录"></a>从服务器端获取代码，并同步到当前目录</h5><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull    <span class="comment">//pull=fetch+merge</span></div></pre></td></tr></table></figure>
+<h4 id="克隆一个远程仓库作为本地仓库"><a href="#克隆一个远程仓库作为本地仓库" class="headerlink" title="克隆一个远程仓库作为本地仓库"></a>克隆一个远程仓库作为本地仓库</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">地址 文件名   //init</span>+remote+pull</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">配置</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/02/Hexo搭建/" class="archive-article-date">
-  	<time datetime="2017-11-02T13:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/11/03/hexo配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/03/Vue、React和Angular的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue、React和Angular的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/02/Hexo搭建/">Hexo搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令"><span class="toc-number">1.1.</span> <span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本操作"><span class="toc-number">1.1.1.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#配置git"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">配置git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#状态信息"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">状态信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#添加文件内容到暂存区（同时文件被跟踪）"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">添加文件内容到暂存区（同时文件被跟踪）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#提交（根据暂存区内容提交到提交区）"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">提交（根据暂存区内容提交到提交区）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#工作目录直接提交到提交区"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">工作目录直接提交到提交区</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#显示提交历史信息"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">显示提交历史信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置别名"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">配置别名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#显示不同版本差异"><span class="toc-number">1.1.1.9.</span> <span class="toc-text">显示不同版本差异</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#撤销本地修改"><span class="toc-number">1.1.1.10.</span> <span class="toc-text">撤销本地修改</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#撤销全部改动"><span class="toc-number">1.1.1.11.</span> <span class="toc-text">撤销全部改动</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支操作"><span class="toc-number">1.1.2.</span> <span class="toc-text">分支操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#通过移动HEAD检出版本，可用于分支切换"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">通过移动HEAD检出版本，可用于分支切换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#push–将本地分支的更新，推送到远程主机"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">push–将本地分支的更新，推送到远程主机</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#将当前分支回退到历史某个版本"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">将当前分支回退到历史某个版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#回退"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">回退</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用捷径（代替hash-ID）"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">使用捷径（代替hash ID）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stash"><span class="toc-number">1.1.3.</span> <span class="toc-text">stash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#合并分支"><span class="toc-number">1.1.4.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修剪提交历史基线-变基-–不要再共有分支使用"><span class="toc-number">1.1.5.</span> <span class="toc-text">修剪提交历史基线(变基)–不要再共有分支使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取远程仓库"><span class="toc-number">1.1.6.</span> <span class="toc-text">获取远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#从服务器端获取代码，并同步到当前目录"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">从服务器端获取代码，并同步到当前目录</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#克隆一个远程仓库作为本地仓库"><span class="toc-number">1.1.7.</span> <span class="toc-text">克隆一个远程仓库作为本地仓库</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -244,9 +448,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
