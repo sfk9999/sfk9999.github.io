@@ -113,3 +113,33 @@ baidu_tongji: true
 ```
 <%- partial('baidu_tongji') %>
 ```
+#### 创建备份分支
+1. 引入git
+```
+git init
+```
+2. 提交文件
+```
+git commit -m "first commit"
+git remote add origin https://github.com/sfk9999/sfk9999.github.io.git
+git push -u origin master
+```
+3. 创建分支
+```
+在本地新建一个分支： 
+    git branch hexo
+切换到你的新分支: 
+    git checkout hexo
+将新分支发布在github上： 
+    git push origin hexo
+至此分支创建完毕
+```
+4. 在github网站设置hexo为默认分支
+
+#### 后期维护以及博客更新
+在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。
+```
+依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；
+
+然后再执行hexo g -d发布网站到master分支上。
+```
