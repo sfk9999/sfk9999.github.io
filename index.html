@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Kerr的博客</title>
+  <title>sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Kerr的博客">
+<meta property="og:title" content="sun丶的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Kerr的博客">
+<meta property="og:site_name" content="sun丶的博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kerr的博客">
+<meta name="twitter:title" content="sun丶的博客">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -317,6 +317,20 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">#你的百度统计代码,可以从百度统计官网注册获得</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
 <p>最后，编辑文件 hexo/themes/jackman/_partial/footer.ejs,在最后添加一行代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- partial(&apos;baidu_tongji&apos;) %&gt;</div></pre></td></tr></table></figure>
+<h4 id="创建备份分支"><a href="#创建备份分支" class="headerlink" title="创建备份分支"></a>创建备份分支</h4><ol>
+<li><p>引入git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;first commit&quot;</div><div class="line">git remote add origin https://github.com/sfk9999/sfk9999.github.io.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">在本地新建一个分支： </div><div class="line">    git branch hexo</div><div class="line">切换到你的新分支: </div><div class="line">    git checkout hexo</div><div class="line">将新分支发布在github上： </div><div class="line">    git push origin hexo</div><div class="line">至此分支创建完毕</div></pre></td></tr></table></figure>
+</li>
+<li><p>在github网站设置hexo为默认分支</p>
+</li>
+</ol>
+<h4 id="后期维护以及博客更新"><a href="#后期维护以及博客更新" class="headerlink" title="后期维护以及博客更新"></a>后期维护以及博客更新</h4><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">依次执行git add .、git commit -m &quot;...&quot;、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；</div><div class="line"></div><div class="line">然后再执行hexo g -d发布网站到master分支上。</div></pre></td></tr></table></figure></p>
 
       
 
