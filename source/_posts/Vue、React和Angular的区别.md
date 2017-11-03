@@ -1,6 +1,7 @@
 ---
 title: Vue、React和Angular的区别
 date: 2017-11-03 08:50:29
+toc: true
 tags:
 	- 前端框架
 ---
@@ -19,7 +20,7 @@ tags:
     2. 双向数据绑定
     3. 指令
     4. 插件化
-
+<!--more-->
 #### Vue.js与AngularJS的区别
 1. 相同点：
     1. 都支持指令：内置指令和自定义指令。

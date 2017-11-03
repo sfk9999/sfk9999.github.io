@@ -7,9 +7,11 @@
 title: sun丶的博客
 #副标题
 subtitle:
+#副标题
 description:
 author: sun丶
-language:
+language: zh-CN
+#时区
 timezone:
 
 # URL
@@ -30,32 +32,32 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+new_post_name: :title.md # 新文章标题
+default_layout: post  #默认模板(post page photo draft)
+titlecase: false #标题转换成大写
+external_link: true #新标签页里打开连接
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true  #创建md文件时自动创建一个文件夹，用以存放图片
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
+highlight:    #语法高亮
+  enable: true  #博客能否收起
+  line_number: true   #显示行号
+  auto_detect: true #自动检测语言
   tab_replace:
   
-# Home page setting
+# Home page setting 主页设置
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
-  order_by: -date
+  per_page: 5     #每页显示帖,0 =禁用分页
+  order_by: -date  #帖子顺序
   
 # Category & Tag
-default_category: uncategorized
+default_category: uncategorized #默认分类
 category_map:
 tag_map:
 
@@ -66,9 +68,9 @@ tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
-# Pagination
+# Pagination #分页
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 5    #每页文章数, 设置成 0 禁用分页
 pagination_dir: page
 
 # Extensions
