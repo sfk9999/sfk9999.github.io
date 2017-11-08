@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sun丶的博客</title>
+  <title>package.json搭建 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）">
+<meta name="keywords" content="搭建,package,包管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="package.json搭建">
+<meta property="og:url" content="http://yoursite.com/2017/11/08/package-json搭建/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-08T05:42:32.770Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="package.json搭建">
+<meta name="twitter:description" content="每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,22 +127,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Vue、React和Angular的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-package-json搭建" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/03/Vue、React和Angular的区别/">Vue、React和Angular的区别</a>
+    <h1 class="article-title" itemprop="name">
+      package.json搭建
     </h1>
   
 
         
-        <a href="/2017/11/03/Vue、React和Angular的区别/" class="archive-article-date">
-  	<time datetime="2017-11-03T00:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-03</time>
+        <a href="/2017/11/08/package-json搭建/" class="archive-article-date">
+  	<time datetime="2017-11-08T03:03:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
 </a>
         
       </header>
@@ -147,25 +150,123 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="MVX框架模式：MVC-MVP-MVVM"><a href="#MVX框架模式：MVC-MVP-MVVM" class="headerlink" title="MVX框架模式：MVC+MVP+MVVM"></a>MVX框架模式：MVC+MVP+MVVM</h3><ol>
-<li>MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。</li>
-<li>MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。</li>
-<li>MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewModel。Model+View+ViewModel。<ol>
-<li>View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。示。</li>
-<li>这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。</li>
-</ol>
+        <p>每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）</p>
+<a id="more"></a>
+<hr>
+<h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><ol>
+<li><p>创建package.json（在项目文件夹里）</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> init</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装webpack作为依赖包</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装webpack</span></div><div class="line">npm install --<span class="built_in">save</span>-<span class="built_in">dev</span> webpack</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h3><ol>
-<li>是一个构建数据驱动的Web界面的库。Vue.js通过简单的API（应用程序编程接口）提供高效的数据绑定和灵活的组件系统.</li>
-<li>Vue.js的特性如下：<ol>
-<li>轻量级的框架</li>
-<li>双向数据绑定</li>
-<li>指令</li>
-<li>插件化</li></ol></li></ol>
-        
-          <a class="article-more-a" href="/2017/11/03/Vue、React和Angular的区别/#more">more >></a>
-        
+<ul>
+<li>WebPack是一种模块化的解决方案</li>
+<li>Webpack的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件。</li>
+</ul>
+<h4 id="字段解释："><a href="#字段解释：" class="headerlink" title="字段解释："></a>字段解释：</h4><h5 id="Name-包名"><a href="#Name-包名" class="headerlink" title="*Name- 包名"></a>*Name- 包名</h5><ul>
+<li>必须字段。</li>
+<li>小提示：<ul>
+<li>不要在name中包含js, node字样；</li>
+<li>这个名字最终会是URL的一部分，命令行的参数，目录名，所以不能以点号或下划线开头；</li>
+<li>这个名字可能在require()方法中被调用，所以应该尽可能短；</li>
+</ul>
+</li>
+</ul>
+<h5 id="Version-包的版本号"><a href="#Version-包的版本号" class="headerlink" title="*Version-包的版本号"></a>*Version-包的版本号</h5><ul>
+<li>必须字段。</li>
+</ul>
+<h5 id="Description-包的描述"><a href="#Description-包的描述" class="headerlink" title="*Description - 包的描述"></a>*Description - 包的描述</h5><ul>
+<li>可选字段，必须是字符串。npm search的时候会用到。</li>
+</ul>
+<h5 id="Keywords-关键字"><a href="#Keywords-关键字" class="headerlink" title="*Keywords - 关键字"></a>*Keywords - 关键字</h5><ul>
+<li>可选字段，字符串数组。npm search的时候会用到。</li>
+</ul>
+<h5 id="Homepage-包的官网-url"><a href="#Homepage-包的官网-url" class="headerlink" title="Homepage- 包的官网 url"></a>Homepage- 包的官网 url</h5><ul>
+<li>可选字段，没有<a href="http://等带协议前缀的URL。" target="_blank" rel="external">http://等带协议前缀的URL。</a></li>
+</ul>
+<h5 id="Bugs"><a href="#Bugs" class="headerlink" title="Bugs"></a>Bugs</h5><ul>
+<li>可选字段，问题追踪系统的URL或邮箱地址；npm bugs用的上。  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123; </div><div class="line">    <span class="attr">"url"</span> :<span class="string">"http://github.com/owner/project/issues"</span>,</div><div class="line">    <span class="attr">"email"</span> :<span class="string">"project@hostname.com"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="License"><a href="#License" class="headerlink" title="License"></a>License</h5><ul>
+<li>可选字段。</li>
+<li>如果是使用一个普遍的license，比如BSD-3-Clause或MIT，直接使用：  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"license"</span> : <span class="string">"BSD-3-Clause"</span> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Author-contributors"><a href="#Author-contributors" class="headerlink" title="Author, contributors"></a>Author, contributors</h5><ul>
+<li>都是可选字段。</li>
+<li>author是一个人</li>
+<li>contributors是一组人。</li>
+<li><p>Author的格式如下：</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"name"</span> : <span class="string">"Barney Rubble"</span>,</div><div class="line"> <span class="attr">"email"</span> : <span class="string">"b@rubble.com"</span>,</div><div class="line"> <span class="attr">"url"</span> : <span class="string">"http://barnyrubble.tumblr.com/"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>这种格式也可以：</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"<span class="selector-tag">Barney</span> <span class="selector-tag">Rubble</span> &lt;<span class="selector-tag">b</span>@<span class="keyword">rubble</span>.<span class="keyword">com</span>&gt; (http://barnyrubble.tumblr.com/)<span class="string">"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h5><p>可选字段，项目包含的一组文件。如果是文件夹，文件夹下的文件也会被包含。如果需要把某些文件不包含在项目中，添加一个”.npmignore”文件。这个文件和”gitignore”类似。</p>
+<h5 id="Main"><a href="#Main" class="headerlink" title="*Main"></a>*Main</h5><ul>
+<li>main 字段指定了程序的主入口文件，require(‘moduleName’) 就会加载这个文件。这个字段的默认值是模块根目录下面的 index.js。</li>
+<li>可选字段。这个字段的值是你程序主入口模块的ID。如果其他用户需要你的包，当用户调用require()方法时，返回的就是这个模块的导出（exports）。</li>
+</ul>
+<h5 id="Bin"><a href="#Bin" class="headerlink" title="Bin"></a>Bin</h5><ul>
+<li>可选字段。很多的包都会有执行文件需要安装到PATH中去。</li>
+<li>这个字段对应的是一个Map，每个元素对应一个{ 命令名：文件名 }。  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"bin"</span> : &#123; <span class="attr">"npm"</span> : <span class="string">"./cli.js"</span> &#125; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Directories"><a href="#Directories" class="headerlink" title="Directories"></a>Directories</h5><p>用于指示包的目录结构：</p>
+<h5 id="Directories-lib"><a href="#Directories-lib" class="headerlink" title="Directories.lib"></a>Directories.lib</h5><p>指示库文件的位置。</p>
+<h5 id="Directories-bin"><a href="#Directories-bin" class="headerlink" title="Directories.bin"></a>Directories.bin</h5><p>和前面的bin是一样的，但如果前面已经有bin，那么这个就无效。</p>
+<blockquote>
+<p>除了以上两个，还有Directories.doc&amp; Directories.man &amp; Directories.example。</p>
+</blockquote>
+<h5 id="Repository"><a href="#Repository" class="headerlink" title="*Repository"></a>*Repository</h5><ul>
+<li>包代码存放的地方的类型，可以是 git 或 svn，git 可在 Github 上。</li>
+<li><p>可选字段。用于指示代码存放的位置。</p>
+  <figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"repository"</span> :</div><div class="line">  &#123; <span class="string">"type"</span> : <span class="string">"git"</span></div><div class="line">  , <span class="string">"url"</span> : <span class="string">"http://github.com/npm/npm.git"</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"repository"</span> :</div><div class="line">  &#123; <span class="string">"type"</span> : <span class="string">"svn"</span></div><div class="line">  , <span class="string">"url"</span> : <span class="string">"http://v8.googlecode.com/svn/trunk/"</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Scripts"><a href="#Scripts" class="headerlink" title="Scripts"></a>Scripts</h5><p>可选字段，object。Key是生命周期事件名，value是在事件点要跑的命令。参考npm-scripts。</p>
+<h5 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h5><ul>
+<li>可选字段，object。</li>
+<li>Config对象中的值在Scripts的整个周期中皆可用，专门用于给Scripts提供配置参数。</li>
+</ul>
+<h5 id="Dependencies"><a href="#Dependencies" class="headerlink" title="*Dependencies"></a>*Dependencies</h5><ul>
+<li>依赖包列表。如果依赖包没有安装，npm 会自动将依赖包安装在 node_module 目录下</li>
+<li><p>可选字段，指示当前包所依赖的其他包。</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"dependencies"</span> :</div><div class="line">  &#123; <span class="attr">"foo"</span> : <span class="string">"1.0.0 - 2.9999.9999"</span></div><div class="line">  , <span class="attr">"bar"</span> : <span class="string">"&gt;=1.0.2 &lt;2.1.2"</span></div><div class="line">  , <span class="attr">"baz"</span> : <span class="string">"&gt;1.0.2 &lt;=2.3.4"</span></div><div class="line">  , <span class="attr">"boo"</span> : <span class="string">"2.0.1"</span></div><div class="line">  , <span class="attr">"qux"</span> : <span class="string">"&lt;1.0.0 || &gt;=2.3.1 &lt;2.4.5 || &gt;=2.5.2 &lt;3.0.0"</span></div><div class="line">  , <span class="attr">"asd"</span> : <span class="string">"http://asdf.com/asdf.tar.gz"</span></div><div class="line">  , <span class="attr">"til"</span> : <span class="string">"~1.2"</span></div><div class="line">  , <span class="attr">"elf"</span> : <span class="string">"~1.2.3"</span></div><div class="line">  , <span class="attr">"two"</span> : <span class="string">"2.x"</span></div><div class="line">  , <span class="attr">"thr"</span> : <span class="string">"3.3.x"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>版本格式可以是下面任一种：</p>
+  <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">version</span> 完全匹配</div><div class="line">&gt;<span class="keyword">version</span> 大于这个版本</div><div class="line">&gt;=<span class="keyword">version</span>大于或等于这个版本</div><div class="line">&lt;<span class="keyword">version</span></div><div class="line">&lt;=<span class="keyword">version</span></div><div class="line">~<span class="keyword">version</span> 非常接近这个版本</div><div class="line">^<span class="keyword">version</span> 与当前版本兼容</div><div class="line">1.2.x X代表任意数字，因此1.2.1, 1.2.3等都可以</div><div class="line">http:<span class="string">//...</span> Unix系统下使用的tarball的URL。</div><div class="line">* 任何版本都可以</div><div class="line"><span class="string">""</span>任何版本都可以</div><div class="line"><span class="keyword">version</span>1 - <span class="keyword">version</span>2  等价于 &gt;=<span class="keyword">version</span>1 &lt;=<span class="keyword">version</span>2.</div><div class="line">range1 || range2 满足任意一个即可</div><div class="line">git.<span class="string">..</span> Git地址</div><div class="line">user/repo</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="devDependencies"><a href="#devDependencies" class="headerlink" title="devDependencies"></a>devDependencies</h5><p>可选字段。如果只需要下载使用某些模块，而不下载这些模块的测试和文档框架，放在这个下面比较不错。</p>
+<h5 id="peerDependencies"><a href="#peerDependencies" class="headerlink" title="peerDependencies"></a>peerDependencies</h5><p>可选字段。兼容性依赖。如果你的包是插件，适合这种方式。</p>
+<h5 id="bundledDependencies"><a href="#bundledDependencies" class="headerlink" title="bundledDependencies"></a>bundledDependencies</h5><p>可选字段。发布包时同时打包的其他依赖。</p>
+<h5 id="optionalDependencies"><a href="#optionalDependencies" class="headerlink" title="optionalDependencies"></a>optionalDependencies</h5><p>可选字段。如果你想在某些依赖即使没有找到，或则安装失败的情况下，npm都继续执行。那么这些依赖适合放在这里。</p>
+<h5 id="Engines"><a href="#Engines" class="headerlink" title="Engines"></a>Engines</h5><ul>
+<li><p>可选字段。既可以指定node版本：</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"engines"</span> : &#123;<span class="attr">"node"</span> : <span class="string">"&gt;=0.10.3 &lt;0.12"</span> &#125; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>也可以指定npm版本：</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"engines"</span> : &#123;<span class="attr">"npm"</span> : <span class="string">"~1.0.20"</span> &#125; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="engineStrick"><a href="#engineStrick" class="headerlink" title="engineStrick"></a>engineStrick</h5><p>可选字段，布尔值。如果你肯定你的程序只能在制定的engine上运行，设置为true。</p>
+<h5 id="Os"><a href="#Os" class="headerlink" title="Os"></a>Os</h5><p>可选字段。指定模块可以在什么操作系统上运行：<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"os"</span> : [ <span class="string">"darwin"</span>,<span class="string">"Linux"</span> ]</div><div class="line"><span class="string">"os"</span> : [ <span class="string">"!win32"</span> ]</div></pre></td></tr></table></figure></p>
+<h5 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h5><p>可选字段。指定CPU型号。<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"cpu"</span> : [ <span class="string">"x64"</span>,<span class="string">"ia32"</span> ]</div><div class="line"><span class="string">"cpu"</span> : [ <span class="string">"!arm"</span>,<span class="string">"!mips"</span> ]</div></pre></td></tr></table></figure></p>
+<h5 id="preferGlobal"><a href="#preferGlobal" class="headerlink" title="preferGlobal"></a>preferGlobal</h5><p>可选字段，布尔值。如果你的包是个命令行应用程序，需要全局安装，就可以设为true。</p>
+<h5 id="Private"><a href="#Private" class="headerlink" title="Private"></a>Private</h5><p>可选字段，布尔值。如果private为true，npm会拒绝发布。这可以防止私有repositories不小心被发布出去。</p>
+<h5 id="publishConfig"><a href="#publishConfig" class="headerlink" title="publishConfig"></a>publishConfig</h5><p>可选字段。发布时使用的配置值放这。</p>
+<h5 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h5><ul>
+<li><figure class="highlight plain"><figcaption><span>"node server.js"&#125;```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">如果你的包里有server.js文件，npm默认将执行： node server.js.</div><div class="line">- ```&quot;scripts&quot;:&#123;&quot;preinstall&quot;:&quot;node-gyp rebuild&quot;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果包里有binding.gyp，npm默认在preinstall命令时，使用node-gyp做编译。</p>
+
       
 
       
@@ -177,105 +278,17 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/03/Vue、React和Angular的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/02/Hexo搭建/">Hexo搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/02/Hexo搭建/" class="archive-article-date">
-  	<time datetime="2017-11-02T13:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-02</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、搭建"><a href="#一、搭建" class="headerlink" title="一、搭建"></a>一、搭建</h3><ol>
-<li><p>安装hexo（Node和Git都装好后）</p>
- <figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g hexo</div></pre></td></tr></table></figure>
-</li>
-<li><p>初始化<br>创建一个文件夹，在文件夹里执行</p>
- <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">init</span></div><div class="line"><span class="comment">//cd到目标目录</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>生成静态页面</p>
- <figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g  <span class="comment">//==generate</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>启动本地服务</p>
- <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo s   </div><div class="line">hexo d  <span class="string">//</span>生成加部署d==<span class="keyword">deploy</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-        
-          <a class="article-more-a" href="/2017/11/02/Hexo搭建/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搭建</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">package</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">包管理</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -283,16 +296,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/02/Hexo搭建/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/03/npm搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">npm搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -312,12 +333,14 @@
 
 
 
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
+  
+
   
 
 
@@ -340,8 +363,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
