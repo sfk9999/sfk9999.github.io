@@ -1,12 +1,12 @@
 ---
-title: hexo配置
+title: Hexo配置
 date: 2017-11-03 16:03:01
 toc: true
 tags:
     - Hexo
     - 配置
 ---
-hexo中的_config.yml配置文件的简单注释
+Hexo中的_config.yml配置文件的简单注释
 <!--more-->
 
         # Site #站点信息
