@@ -124,19 +124,212 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-IE6常见BUT与相应解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-什么是FOUC-如何避免" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/IE6常见BUT与相应解决办法/">IE6常见BUT与相应解决办法</a>
+      <a class="article-title" href="/2017/11/13/什么是FOUC-如何避免/">什么是FOUC,如何避免</a>
     </h1>
   
 
         
-        <a href="/2017/11/11/IE6常见BUT与相应解决办法/" class="archive-article-date">
+        <a href="/2017/11/13/什么是FOUC-如何避免/" class="archive-article-date">
+  	<time datetime="2017-11-13T01:20:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-什么叫做-FOUC"><a href="#1-什么叫做-FOUC" class="headerlink" title="1. 什么叫做 FOUC"></a>1. 什么叫做 FOUC</h4><ul>
+<li>即浏览器样式闪烁</li>
+<li>如果使用import方法对css进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式短暂失效。</li>
+</ul>
+<h4 id="2-原因："><a href="#2-原因：" class="headerlink" title="2. 原因："></a>2. 原因：</h4><ol>
+<li>使用import方法导入样式表。</li>
+<li>将样式表放在页面底部</li>
+<li>有几个样式表，放在html结构的不同位置。</li>
+</ol>
+<ul>
+<li>当样式表晚于结构性html 加载，当加载到此样式表时，页面将停止之前的渲染。此样式表被下载和解析后，将重新渲染页面，也就出现了短暂的花屏现象。</li>
+</ul>
+<h4 id="3-解决方法："><a href="#3-解决方法：" class="headerlink" title="3. 解决方法："></a>3. 解决方法：</h4><p>使用link标签将样式表放在文档head中</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/13/什么是FOUC-如何避免/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-去除inline-block元素间间距的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/13/去除inline-block元素间间距的方法/">去除inline-block元素间间距的方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/13/去除inline-block元素间间距的方法/" class="archive-article-date">
+  	<time datetime="2017-11-13T01:18:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、现象描述"><a href="#一、现象描述" class="headerlink" title="一、现象描述"></a>一、现象描述</h4><ul>
+<li>真正意义上的inline-block水平呈现的元素间，<strong>换行显示或空格分隔</strong>的情况下会有间距</li>
+<li>我们使用CSS更改非inline-block水平元素为inline-block水平，也会有该问题</li>
+</ul>
+<h4 id="二、解决办法"><a href="#二、解决办法" class="headerlink" title="二、解决办法"></a>二、解决办法</h4><ol>
+<li>移除标签间的空格<ul>
+<li>元素间留白间距出现的原因就是标签段之间的空格</li>
+<li>因此，去掉HTML中的空格，自然间距就没有了</li>
+</ul>
+</li>
+<li>使用margin负值<ul>
+<li>但是不适合大规模使用</li>
+<li>对于12像素大小的上下文，Arial字体的margin负值为-3像素，Tahoma和Verdana就是-4像素，而Geneva为-6像素</li>
+</ul>
+</li>
+<li><p>取消标签闭合（为了兼容IE6/IE7，最后一个标签需要闭合。）</p>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在html5中</span></div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"space"</span>&gt;</div><div class="line">    &lt;<span class="selector-tag">a</span> href=<span class="string">"##"</span>&gt;惆怅</div><div class="line">    &lt;<span class="selector-tag">a</span> href=<span class="string">"##"</span>&gt;淡定</div><div class="line">    &lt;<span class="selector-tag">a</span> href=<span class="string">"##"</span>&gt;热血</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用font-size:0</p>
+ <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在父元素中</span></div><div class="line"><span class="selector-class">.space</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">0</span>;</div><div class="line">    -webkit-text-size-adjust:none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用letter-spacing字符间距(搞定基本上所有浏览器)</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.space</span> &#123;</div><div class="line">    <span class="attribute">letter-spacing</span>: -<span class="number">3px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.space</span> <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">letter-spacing</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用word-spacing单词间距</p>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.space</span> &#123;</div><div class="line">    <span class="attribute">word-spacing</span>: -<span class="number">6px</span>;</div><div class="line">    <span class="attribute">display</span>: inline-table;<span class="comment">//添加inline-table或者table，可以让chrome无间距</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.space</span> <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">word-spacing</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/13/去除inline-block元素间间距的方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-IE6常见BUG与相应解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/11/IE6常见BUG与相应解决办法/">IE6常见BUG与相应解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/11/IE6常见BUG与相应解决办法/" class="archive-article-date">
   	<time datetime="2017-11-11T07:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
 </a>
         
@@ -158,7 +351,7 @@
 <li>解决：需要使布局在同一行的元素都加上float浮动</li>
 </ul>
         
-          <a class="article-more-a" href="/2017/11/11/IE6常见BUT与相应解决办法/#more">more >></a>
+          <a class="article-more-a" href="/2017/11/11/IE6常见BUG与相应解决办法/#more">more >></a>
         
       
 
@@ -186,7 +379,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/IE6常见BUT与相应解决办法/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/11/IE6常见BUG与相应解决办法/">展开全文 >></a>
         </p>
       
 
@@ -413,177 +606,6 @@
 
 
   
-    <article id="post-flex布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/08/flex布局/">flex布局</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/08/flex布局/" class="archive-article-date">
-  	<time datetime="2017-11-08T06:42:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="flex布局（移动端用的更多）"><a href="#flex布局（移动端用的更多）" class="headerlink" title="flex布局（移动端用的更多）"></a>flex布局（移动端用的更多）</h3><h5 id="1-Flex-布局是什么？"><a href="#1-Flex-布局是什么？" class="headerlink" title="1. Flex 布局是什么？"></a>1. Flex 布局是什么？</h5><p>flex意味着：弹性布局<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">display</span>:flex;</div><div class="line">        inline-<span class="attribute">flex</span>;</div></pre></td></tr></table></figure></p>
-<h5 id="2-基本概念"><a href="#2-基本概念" class="headerlink" title="2. 基本概念"></a>2. 基本概念</h5><p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。<br><img src="/2017/11/08/flex布局/01.png" alt="image"></p>
-        
-          <a class="article-more-a" href="/2017/11/08/flex布局/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">css3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/08/flex布局/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-package-json搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/08/package-json搭建/">package.json搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/08/package-json搭建/" class="archive-article-date">
-  	<time datetime="2017-11-08T03:03:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）</p>
-        
-          <a class="article-more-a" href="/2017/11/08/package-json搭建/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">package</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">包管理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/08/package-json搭建/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -673,14 +695,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">IE6</a>
               </li>
              
@@ -694,6 +708,22 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图片</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -713,23 +743,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -738,6 +760,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">包管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
