@@ -1,5 +1,5 @@
 ---
-title: IE6常见BUT与相应解决办法
+title: IE6常见BUG与相应解决办法
 date: 2017-11-11 15:58:57
 tags:
     - IE6
