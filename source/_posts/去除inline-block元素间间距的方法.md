@@ -2,7 +2,7 @@
 title: 去除inline-block元素间间距的方法
 date: 2017-11-13 09:18:35
 tags:
-    - css
+    - CSS
 ---
 
 #### 一、现象描述
