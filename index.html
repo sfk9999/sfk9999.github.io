@@ -124,6 +124,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-bower-json" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/19/bower-json/">bower.json</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/19/bower-json/" class="archive-article-date">
+  	<time datetime="2017-11-19T07:13:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="bower的作用"><a href="#bower的作用" class="headerlink" title="bower的作用"></a>bower的作用</h3><ul>
+<li>它会为你节省寻找客户端的依赖关系的时间</li>
+<li>每次我需要安装jQuery的时候，我都需要去jQuery网站下载包或使用CDN版本。但是有了Bower，你只需要输入一个命令，jquery就会安装在本地计算机上，你不需要去记版本号之类的东西，你也可以通过Bower的info命令去查看任意库的信息。</li>
+<li>可以很容易地展现客户端的依赖关系。你可以创建一个名为bower.json的文件，在这个文件里你可以指定所有客户端的依赖关系，任何时候你需要弄清楚你正在使用哪些库，你可以参考这个文件。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/11/19/bower-json/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">bower</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/19/bower-json/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CSS中的BFC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -156,33 +243,10 @@
 <li>float的值不为none（none为默认值）</li>
 <li>position的值不为static或者relative</li>
 <li>display的值为 table-cell, table-caption, inline-block, flex, 或者 inline-flex中的其中一个</li>
-<li>overflow的值不为visible</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-BFC的规则"><a href="#2-BFC的规则" class="headerlink" title="2. BFC的规则"></a>2. BFC的规则</h4><ul>
-<li>生成BFC元素的子元素会一个接一个的放置。垂直方向上他们的起点是一个包含块的顶部，俩个相邻子元素之间垂直距离取决于元素margin特性。在BFC中相邻的块级元素外边距会折叠。</li>
-<li>生成BFC元素的子元素中，每一个子元素的外边距和包含块的左边界相接触，（对于从右到左的格式化，右外边距和右边界相接触），除非这个子元素也创建了一个新的BFC（如它自身也是一个浮动元素）。</li>
-</ul>
-<h4 id="3-BFC的作用"><a href="#3-BFC的作用" class="headerlink" title="3. BFC的作用"></a>3. BFC的作用</h4><h5 id="3-1-BFC中的盒子对齐"><a href="#3-1-BFC中的盒子对齐" class="headerlink" title="3.1 BFC中的盒子对齐"></a>3.1 BFC中的盒子对齐</h5><ul>
-<li>在BFC中，每个盒子的左外边框紧挨着包含块的左边框（从右到左的格式，则为紧挨右边框）。即使存在浮动也是这样的（尽管一个盒子的边框会由于浮动而收缩），除非这个盒子的内部创建了一个新的BFC浮动，盒子本身将会变得更窄）。</li>
-</ul>
-<h5 id="3-2-BFC导致的外边距折叠"><a href="#3-2-BFC导致的外边距折叠" class="headerlink" title="3.2 BFC导致的外边距折叠"></a>3.2 BFC导致的外边距折叠</h5><h5 id="3-3-使用BFC来防止外边距折叠"><a href="#3-3-使用BFC来防止外边距折叠" class="headerlink" title="3.3 使用BFC来防止外边距折叠"></a>3.3 使用BFC来防止外边距折叠</h5><ul>
-<li>毗邻块盒子的垂直外边距折叠只有他们是在同一BFC时才会发生。如果他们属于不同的BFC，他们之间的外边距将不会折叠。</li>
-</ul>
-<h5 id="3-4-使用BFC来包含浮动"><a href="#3-4-使用BFC来包含浮动" class="headerlink" title="3.4 使用BFC来包含浮动"></a>3.4 使用BFC来包含浮动</h5><ul>
-<li>一个容器里有浮动元素。由于容器元素没有高度，它的浮动孩子将会脱离页面的常规流。我们通常使用清除浮动来解决这个问题，最受欢迎的方法是使用一个clearfix的伪类元素。但我们同样可以通过定义一个BFC来达到这个目的。</li>
-<li>为了解决父元素没有高度的问题，可以添加overflow:hidden，在容器中创建一个新的BFC来解决。</li>
-</ul>
-<h5 id="3-5-使用BFC来防止文字环绕"><a href="#3-5-使用BFC来防止文字环绕" class="headerlink" title="3.5 使用BFC来防止文字环绕"></a>3.5 使用BFC来防止文字环绕</h5><ul>
-<li>有时候一个浮动div周围的文字环绕着它，但是在某些案例中这并不是可取的，我们想要的是外观跟下图中的右图一样的。为了解决这个问题，我们可能使用外边距，但是我们也可以使用一个BFC来解决。</li>
-<li>如果这个p元素创建了一个新的BFC,那么它将不会紧挨着容器块的左边缘。这个可以通过简单的给p元素添加<code>overflow: hidden</code>来实现。这个方法创建了一个新的BFC解决了文字环绕在浮动元素周围的问题。</li>
-</ul>
-<h5 id="3-6多列布局中使用BFC"><a href="#3-6多列布局中使用BFC" class="headerlink" title="3.6多列布局中使用BFC"></a>3.6多列布局中使用BFC</h5><ul>
-<li>如果我们正在创建的一个多列布局占满了整个容器的宽度，在某些浏览器中最后一列有时候将会被挤到下一行。会发生这样可能是因为浏览器舍入（取整）了列的宽度使得总和的宽度超过了容器的宽度。</li>
-<li>然而，如果我们在一个列的布局中建立了一个新的BFC，它将会在前一列填充完之后的后面占据所剩余的空间。</li>
-</ul>
-
+<li>overflow的值不为visible</li></ul></li></ul>
+        
+          <a class="article-more-a" href="/2017/11/16/CSS中的BFC/#more">more >></a>
+        
       
 
       
@@ -355,31 +419,10 @@
 <li>真正意义上的inline-block水平呈现的元素间，<strong>换行显示或空格分隔</strong>的情况下会有间距</li>
 <li>我们使用CSS更改非inline-block水平元素为inline-block水平，也会有该问题</li>
 </ul>
-<h4 id="二、解决办法"><a href="#二、解决办法" class="headerlink" title="二、解决办法"></a>二、解决办法</h4><ol>
-<li>移除标签间的空格<ul>
-<li>元素间留白间距出现的原因就是标签段之间的空格</li>
-<li>因此，去掉HTML中的空格，自然间距就没有了</li>
-</ul>
-</li>
-<li>使用margin负值<ul>
-<li>但是不适合大规模使用</li>
-<li>对于12像素大小的上下文，Arial字体的margin负值为-3像素，Tahoma和Verdana就是-4像素，而Geneva为-6像素</li>
-</ul>
-</li>
-<li><p>取消标签闭合（为了兼容IE6/IE7，最后一个标签需要闭合。）</p>
- <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在html5中</span></div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"space"</span>&gt;</div><div class="line">    &lt;<span class="selector-tag">a</span> href=<span class="string">"##"</span>&gt;惆怅</div><div class="line">    &lt;<span class="selector-tag">a</span> href=<span class="string">"##"</span>&gt;淡定</div><div class="line">    &lt;<span class="selector-tag">a</span> href=<span class="string">"##"</span>&gt;热血</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用font-size:0</p>
- <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在父元素中</span></div><div class="line"><span class="selector-class">.space</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">0</span>;</div><div class="line">    -webkit-text-size-adjust:none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用letter-spacing字符间距(搞定基本上所有浏览器)</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.space</span> &#123;</div><div class="line">    <span class="attribute">letter-spacing</span>: -<span class="number">3px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.space</span> <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">letter-spacing</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用word-spacing单词间距</p>
- <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.space</span> &#123;</div><div class="line">    <span class="attribute">word-spacing</span>: -<span class="number">6px</span>;</div><div class="line">    <span class="attribute">display</span>: inline-table;<span class="comment">//添加inline-table或者table，可以让chrome无间距</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.space</span> <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">word-spacing</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-
+<h4 id="二、解决办法"><a href="#二、解决办法" class="headerlink" title="二、解决办法"></a>二、解决办法</h4>
+        
+          <a class="article-more-a" href="/2017/11/13/去除inline-block元素间间距的方法/#more">more >></a>
+        
       
 
       
@@ -524,116 +567,6 @@
 
 
   
-    <article id="post-css3动画和js动画的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/css3动画和js动画的区别/">css3动画和js动画的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/css3动画和js动画的区别/" class="archive-article-date">
-  	<time datetime="2017-11-11T07:56:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="CSS3动画和js动画的区别"><a href="#CSS3动画和js动画的区别" class="headerlink" title="CSS3动画和js动画的区别"></a>CSS3动画和js动画的区别</h3><h4 id="CSS动画："><a href="#CSS动画：" class="headerlink" title="CSS动画："></a>CSS动画：</h4><ul>
-<li>优点：<ol>
-<li>浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）</li>
-<li>代码相对简单,性能调优方向固定</li>
-<li>对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码</li>
-</ol>
-</li>
-<li>缺点：<ol>
-<li>运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定的时间点，不能在半路反转动画，不能变换时间尺度，不能在特定的位置添加回调函数或是绑定回放事件,无进度报告）</li>
-<li>代码冗长（ rǒng）。想用 CSS 实现稍微复杂一点动画,最后CSS代码都会变得非常笨重</li>
-</ol>
-</li>
-</ul>
-<h4 id="JS动画"><a href="#JS动画" class="headerlink" title="JS动画"></a>JS动画</h4><ul>
-<li>优点：<ol>
-<li>JavaScript动画控制能力很强, 可以在动画播放过程中对动画进行控制：开始、暂停、回放、终止、取消都是可以做到的。</li>
-<li>动画效果比css3动画丰富,有些动画效果，比如曲线运动,冲击闪烁,视差滚动效果，只有JavaScript动画才能完成</li>
-<li>CSS3有兼容性问题，而JS大多时候没有兼容性问题</li>
-</ol>
-</li>
-<li>缺点：<ol>
-<li>JavaScript在浏览器的主线程中运行，而主线程中还有其它需要运行的JavaScript脚本、样式计算、布局、绘制任务等,对其干扰导致线程可能出现阻塞，从而造成丢帧的情况。</li>
-<li>代码的复杂度高于CSS动画</li>
-</ol>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">动画</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对比</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/css3动画和js动画的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -739,7 +672,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">bower</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图片</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -755,30 +708,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">搭建</a>
               </li>
              
@@ -791,11 +720,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
             
             <div class="clearfix"></div>

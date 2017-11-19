@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-08T05:42:32.770Z">
+<meta property="og:updated_time" content="2017-11-16T14:02:43.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="package.json搭建">
 <meta name="twitter:description" content="每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）">
@@ -262,10 +262,13 @@
 <h5 id="Private"><a href="#Private" class="headerlink" title="Private"></a>Private</h5><p>可选字段，布尔值。如果private为true，npm会拒绝发布。这可以防止私有repositories不小心被发布出去。</p>
 <h5 id="publishConfig"><a href="#publishConfig" class="headerlink" title="publishConfig"></a>publishConfig</h5><p>可选字段。发布时使用的配置值放这。</p>
 <h5 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h5><ul>
-<li><figure class="highlight plain"><figcaption><span>"node server.js"&#125;```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">如果你的包里有server.js文件，npm默认将执行： node server.js.</div><div class="line">- ```&quot;scripts&quot;:&#123;&quot;preinstall&quot;:&quot;node-gyp rebuild&quot;&#125;</div></pre></td></tr></table></figure>
+<li><p>如果你的包里有server.js文件，npm默认将执行： node server.js.</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>:&#123;<span class="string">"start"</span>: <span class="string">"node server.js"</span>&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果包里有binding.gyp，npm默认在preinstall命令时，使用node-gyp做编译。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>:&#123;<span class="string">"preinstall"</span>:<span class="string">"node-gyp rebuild"</span>&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>如果包里有binding.gyp，npm默认在preinstall命令时，使用node-gyp做编译。</p>
 
       
 
@@ -451,7 +454,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">bower</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图片</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -467,30 +490,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">搭建</a>
               </li>
              
@@ -503,11 +502,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
             
             <div class="clearfix"></div>

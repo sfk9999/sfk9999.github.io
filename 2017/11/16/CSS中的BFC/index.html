@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流  1.BFC的生成 浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-16T13:56:33.339Z">
+<meta property="og:updated_time" content="2017-11-16T13:59:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的BFC">
 <meta name="twitter:description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流  1.BFC的生成 浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下">
@@ -159,11 +159,10 @@
 <li>float的值不为none（none为默认值）</li>
 <li>position的值不为static或者relative</li>
 <li>display的值为 table-cell, table-caption, inline-block, flex, 或者 inline-flex中的其中一个</li>
-<li>overflow的值不为visible</li>
+<li>overflow的值不为visible<a id="more"></a>
+<h4 id="2-BFC的规则"><a href="#2-BFC的规则" class="headerlink" title="2. BFC的规则"></a>2. BFC的规则</h4></li>
 </ul>
 </li>
-</ul>
-<h4 id="2-BFC的规则"><a href="#2-BFC的规则" class="headerlink" title="2. BFC的规则"></a>2. BFC的规则</h4><ul>
 <li>生成BFC元素的子元素会一个接一个的放置。垂直方向上他们的起点是一个包含块的顶部，俩个相邻子元素之间垂直距离取决于元素margin特性。在BFC中相邻的块级元素外边距会折叠。</li>
 <li>生成BFC元素的子元素中，每一个子元素的外边距和包含块的左边界相接触，（对于从右到左的格式化，右外边距和右边界相接触），除非这个子元素也创建了一个新的BFC（如它自身也是一个浮动元素）。</li>
 </ul>
@@ -220,6 +219,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/11/19/bower-json/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          bower.json
+        
+      </div>
+    </a>
   
   
     <a href="/2017/11/13/什么是FOUC-如何避免/" id="article-nav-older" class="article-nav-link-wrap">
@@ -357,7 +365,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">bower</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图片</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -373,30 +401,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">搭建</a>
               </li>
              
@@ -409,11 +413,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
             
             <div class="clearfix"></div>
