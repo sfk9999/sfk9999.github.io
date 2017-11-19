@@ -192,7 +192,11 @@ npm install --save-dev webpack
 ##### publishConfig
 可选字段。发布时使用的配置值放这。
 ##### 默认值
-- ```"scripts":{"start": "node server.js"}```
-如果你的包里有server.js文件，npm默认将执行： node server.js.
-- ```"scripts":{"preinstall":"node-gyp rebuild"}```
-如果包里有binding.gyp，npm默认在preinstall命令时，使用node-gyp做编译。
+- 如果你的包里有server.js文件，npm默认将执行： node server.js.
+```
+"scripts":{"start": "node server.js"}
+```
+- 如果包里有binding.gyp，npm默认在preinstall命令时，使用node-gyp做编译。
+```
+"scripts":{"preinstall":"node-gyp rebuild"}
+```

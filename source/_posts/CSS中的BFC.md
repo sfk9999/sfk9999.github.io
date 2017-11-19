@@ -15,7 +15,7 @@ tags:
     - position的值不为static或者relative
     - display的值为 table-cell, table-caption, inline-block, flex, 或者 inline-flex中的其中一个
     - overflow的值不为visible
-
+<!--more-->
 #### 2. BFC的规则
 - 生成BFC元素的子元素会一个接一个的放置。垂直方向上他们的起点是一个包含块的顶部，俩个相邻子元素之间垂直距离取决于元素margin特性。在BFC中相邻的块级元素外边距会折叠。
 - 生成BFC元素的子元素中，每一个子元素的外边距和包含块的左边界相接触，（对于从右到左的格式化，右外边距和右边界相接触），除非这个子元素也创建了一个新的BFC（如它自身也是一个浮动元素）。
