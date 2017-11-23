@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: BFC | sun丶的博客</title>
+  <title>AJAX跨域 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/BFC/index.html">
+  <meta name="description" content="1. 同源政策1.1 含义 它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源” 同源指的是三个相同  协议相同 域名相同 端口相同1http://www.example.com/dir/page.html    这个地址  协议是http:// 域名是www.example.com 端口是80（默认端口可以省略）">
+<meta name="keywords" content="AJAX,JavaScript,跨域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX跨域">
+<meta property="og:url" content="http://yoursite.com/2017/11/23/AJAX跨域/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="1. 同源政策1.1 含义 它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源” 同源指的是三个相同  协议相同 域名相同 端口相同1http://www.example.com/dir/page.html    这个地址  协议是http:// 域名是www.example.com 端口是80（默认端口可以省略）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-23T13:10:32.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="AJAX跨域">
+<meta name="twitter:description" content="1. 同源政策1.1 含义 它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源” 同源指的是三个相同  协议相同 域名相同 端口相同1http://www.example.com/dir/page.html    这个地址  协议是http:// 域名是www.example.com 端口是80（默认端口可以省略）">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,64 +127,347 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-AJAX跨域" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/16/CSS中的BFC/" class="archive-article-date">
-  	<time datetime="2017-11-16T13:55:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/CSS中的BFC/">CSS中的BFC</a>
+    <h1 class="article-title" itemprop="name">
+      AJAX跨域
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/23/AJAX跨域/" class="archive-article-date">
+  	<time datetime="2017-11-23T13:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-23</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-同源政策"><a href="#1-同源政策" class="headerlink" title="1. 同源政策"></a>1. 同源政策</h3><h4 id="1-1-含义"><a href="#1-1-含义" class="headerlink" title="1.1 含义"></a>1.1 含义</h4><ul>
+<li>它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源”</li>
+<li><p>同源指的是三个相同</p>
+<ul>
+<li>协议相同</li>
+<li>域名相同</li>
+<li>端口相同<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="regexp">//</span>www.example.com<span class="regexp">/dir/</span>page.html</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>这个地址</p>
+<ul>
+<li>协议是http://</li>
+<li>域名是www.example.com</li>
+<li>端口是80（默认端口可以省略）<a id="more"></a>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-目的和限制范围"><a href="#1-2-目的和限制范围" class="headerlink" title="1.2 目的和限制范围"></a>1.2 目的和限制范围</h4><ul>
+<li>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
+<li>限制：<ul>
+<li>Cookie、LocalStorage 和 IndexDB 无法读取。</li>
+<li>DOM 无法获得。</li>
+<li>AJAX 请求不能发送。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-如何规避、限制"><a href="#2-如何规避、限制" class="headerlink" title="2 如何规避、限制"></a>2 如何规避、限制</h3><h5 id="一级域名和二级域名"><a href="#一级域名和二级域名" class="headerlink" title="一级域名和二级域名"></a>一级域名和二级域名</h5><ul>
+<li>顶级域名就是一级域名，也称裸域名，如example .com</li>
+<li>二级域名就是在顶级（一级）域名前加一级，如sec.example .com</li>
+</ul>
+<h4 id="2-1-Cookie，document-domain"><a href="#2-1-Cookie，document-domain" class="headerlink" title="2.1 Cookie，document.domain"></a>2.1 Cookie，document.domain</h4><p>两个网页一级域名相同，只是二级域名不同，浏览器允许通过设置相同的<figure class="highlight plain"><figcaption><span>Cookie。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">document.domain = &apos;example.com&apos;;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意，这种方法只适用于 Cookie 和 iframe 窗口，LocalStorage 和 IndexDB 无法通过这种方法</p>
+</blockquote>
+<h4 id="2-2-iframe"><a href="#2-2-iframe" class="headerlink" title="2.2 iframe"></a>2.2 iframe</h4><ul>
+<li>如果两个网页不同源，就无法拿到对方的DOM。典型的例子是iframe窗口和window.open方法打开的窗口，它们与父窗口无法通信。</li>
+<li>如果两个窗口一级域名相同，只是二级域名不同，那么设置上一节介绍的document.domain属性，就可以规避同源政策，拿到DOM。</li>
+<li>对于完全不同源的网站，目前有三种方法，可以解决跨域窗口的通信问题。<ul>
+<li>片段识别符（fragment identifier）</li>
+<li>window.name</li>
+<li>跨文档通信API（Cross-document messaging）</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-2-1-片段识别符"><a href="#2-2-1-片段识别符" class="headerlink" title="2.2.1 片段识别符"></a>2.2.1 片段识别符</h5><p>段标识符（fragment identifier）指的是，URL的#号后面的部分，比如<a href="http://example.com/x.html#fragment的#fragment。如果只是改变片段标识符，页面不会重新刷新。" target="_blank" rel="external">http://example.com/x.html#fragment的#fragment。如果只是改变片段标识符，页面不会重新刷新。</a></p>
+<ul>
+<li><p>父窗口可以把信息，写入子窗口的片段标识符</p>
+  <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> src = originURL + <span class="string">"#"</span> +data;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'myIFrame'</span>).src=src;</div></pre></td></tr></table></figure>
+</li>
+<li><p>子窗口通过监听hashchange事件得到通知</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onhashchange=checkMessage;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkMessage</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> message = <span class="built_in">window</span>.location.hash;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>同样的，子窗口也可以改变父窗口的片段标识符</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parent.location.href=<span class="keyword">target</span>+<span class="string">'#'</span>+hash;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2-2-2-window-name"><a href="#2-2-2-window-name" class="headerlink" title="2.2.2 window.name"></a>2.2.2 window.name</h5><p>浏览器的window.name属性，这个属性的最大特点是，无论是否同源，只要在同一个窗口里，前一个网页设置了这个属性，后一个网页可以读取它。</p>
+<ul>
+<li><p>父窗口先打开一个子窗口，载入一个不同源的网页，该网页将信息写入window.name属性</p>
+  <figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.<span class="keyword">name</span>=<span class="keyword">data</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>接着，子窗口跳回一个与主窗口同域的网址</p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span>=<span class="string">'http://parent.url.com/xxx.html'</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后，主窗口就可以读取子窗口的window.name了</p>
+  <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = <span class="built_in">document</span>.getElementById(<span class="string">'myFrame'</span>).contentWindow.name;</div></pre></td></tr></table></figure>
+</li>
+<li><p>优点：window.name容量很大，可以放置非常长的字符串；</p>
+</li>
+<li>缺点：必须监听子窗口window.name属性的变化，影响网页性能。</li>
+</ul>
+<h5 id="2-2-3-window-postMessage-XDM"><a href="#2-2-3-window-postMessage-XDM" class="headerlink" title="2.2.3 window.postMessage(XDM)"></a>2.2.3 window.postMessage(XDM)</h5><ul>
+<li>以上方法都是破解方法</li>
+<li>HTML5为了解决这个问题，引入了一个全新的API：跨文档通信 API（Cross-document messaging）。</li>
+<li>这个API为window对象新增了一个window.postMessage方法，允许跨窗口通信，不论这两个窗口是否同源。</li>
+<li><p>举例: 父窗口<a href="http://aaa.com向子窗口http://bbb.com发消息，调用postMessage方法就可以了。" target="_blank" rel="external">http://aaa.com向子窗口http://bbb.com发消息，调用postMessage方法就可以了。</a></p>
+  <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> popup = <span class="built_in">window</span>.open(<span class="string">'http://bbb.com'</span>,<span class="string">'title'</span>);</div><div class="line">popup.postMessage(<span class="string">'Hello'</span>,<span class="string">'http://bbb.com'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>postMessage(message,targetOrigin):第一个参数类型只能为字符串；第二个参数是接受消息的源(orgin)，即“协议+域名+端口”，也可以设置为*，表示不限制域名，向所有窗口发送。</p>
+</li>
+<li><p>子窗口向父窗口发送消息的写法类似</p>
+  <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.opener.postMessage(<span class="string">'Nice'</span>,<span class="string">'http://aaa.com'</span>);</div><div class="line"><span class="regexp">//</span><span class="built_in">window</span>.opener:创建的窗口可以引用创建它的窗口所定义的属性和函数</div></pre></td></tr></table></figure>
+</li>
+<li><p>父窗口和子窗口都可以通过message事件，监听对方的消息</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'message'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(e.data);</div><div class="line">&#125;,<span class="literal">false</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>message事件的事件对象event，提供以下三个属性</p>
+  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">event<span class="selector-class">.source</span>:发送消息的窗口</div><div class="line">event<span class="selector-class">.origin</span>:消息发向的网址</div><div class="line">event<span class="selector-class">.data</span>:消息内容</div></pre></td></tr></table></figure>
+</li>
+<li><p>下面的例子是，子窗口通过event.source属性引用父窗口，然后发送消息</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'message'</span>, receiveMessage);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">receiveMessage</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">  event.source.postMessage(<span class="string">'Nice to see you!'</span>, <span class="string">'*'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>event.origin属性可以过滤不是发给本窗口的消息</p>
+  <figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">window</span>.addEventListener(<span class="string">'message'</span>, receiveMessage);</div><div class="line">function receiveMessage(<span class="keyword">event</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">event</span>.origin !== <span class="string">'http://aaa.com'</span>) <span class="keyword">return</span>;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">event</span>.data === <span class="string">'Hello World'</span>) &#123;</div><div class="line">      <span class="keyword">event</span>.<span class="keyword">source</span>.postMessage(<span class="string">'Hello'</span>, <span class="keyword">event</span>.origin);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    console.<span class="keyword">log</span>(<span class="keyword">event</span>.data);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2-2-4-LocalStorage"><a href="#2-2-4-LocalStorage" class="headerlink" title="2.2.4 LocalStorage"></a>2.2.4 LocalStorage</h5><p>通过window.postMessage，读写其他窗口的 LocalStorage 也成为了可能。</p>
+<ul>
+<li><p>主窗口写入iframe子窗口的localStorage，子窗口将父窗口发来的信息，写入自己的LocalStorage</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onmessage=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(e.origin!==<span class="string">'http://bbb.com'</span>)&#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> payload = <span class="built_in">JSON</span>.parse(e.data);</div><div class="line">    localStorage.setItem(payload.key, <span class="built_in">JSON</span>.stringify(payload.data));</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>父窗口发送消息的代码如下。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> win = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'iframe'</span>)[<span class="number">0</span>].contentWindow;</div><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">name</span>: <span class="string">'Jack'</span> &#125;;</div><div class="line">win.postMessage(<span class="built_in">JSON</span>.stringify(&#123;<span class="attr">key</span>: <span class="string">'storage'</span>, <span class="attr">data</span>: obj&#125;), <span class="string">'http://bbb.com'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>加强版的子窗口接收消息的代码如下。</p>
+  <figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (e.origin !== <span class="string">'http://bbb.com'</span>) <span class="keyword">return</span>;</div><div class="line">  <span class="keyword">var</span> payload = <span class="built_in">JSON</span>.parse(e.data);</div><div class="line">  <span class="keyword">switch</span> (payload.method) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="string">'set'</span>:</div><div class="line">      localStorage.setItem(payload.key, <span class="built_in">JSON</span>.stringify(payload.data));</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">'get'</span>:</div><div class="line">      <span class="keyword">var</span> <span class="built_in">parent</span> = <span class="built_in">window</span>.parent;</div><div class="line">      <span class="keyword">var</span> data = localStorage.getItem(payload.key);</div><div class="line">      <span class="built_in">parent</span>.postMessage(data, <span class="string">'http://aaa.com'</span>);</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">'remove'</span>:</div><div class="line">      localStorage.removeItem(payload.key);</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>加强版的父窗口发送消息代码如下。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> win = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'iframe'</span>)[<span class="number">0</span>].contentWindow;</div><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">name</span>: <span class="string">'Jack'</span> &#125;;</div><div class="line"><span class="comment">// 存入对象</span></div><div class="line">win.postMessage(<span class="built_in">JSON</span>.stringify(&#123;<span class="attr">key</span>: <span class="string">'storage'</span>, <span class="attr">method</span>: <span class="string">'set'</span>, <span class="attr">data</span>: obj&#125;), <span class="string">'http://bbb.com'</span>);</div><div class="line"><span class="comment">// 读取对象</span></div><div class="line">win.postMessage(<span class="built_in">JSON</span>.stringify(&#123;<span class="attr">key</span>: <span class="string">'storage'</span>, <span class="attr">method</span>: <span class="string">"get"</span>&#125;), <span class="string">"*"</span>);</div><div class="line"><span class="built_in">window</span>.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (e.origin != <span class="string">'http://aaa.com'</span>) <span class="keyword">return</span>;</div><div class="line">  <span class="comment">// "Jack"</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(e.data).name);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-3-AJAX"><a href="#2-3-AJAX" class="headerlink" title="2.3 AJAX"></a>2.3 AJAX</h4><ul>
+<li>同源政策规定，AJAX请求只能发给同源的网址，否则就报错。</li>
+<li>除了架设服务器代理（浏览器请求同源服务器，再由后者请求外部服务），有三种方法规避这个限制。<ul>
+<li>JSONP</li>
+<li>WebSocket</li>
+<li>CORS</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-3-1-JSONP"><a href="#2-3-1-JSONP" class="headerlink" title="2.3.1 JSONP"></a>2.3.1 JSONP</h5><ul>
+<li>JSONP是服务器与客户端跨源通信的常用方法</li>
+<li>特点：简单适用，老式浏览器全部支持，服务器改造非常小。</li>
+<li>原理：在页面上引入不同域上的js脚本是可以的。这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的json数据作为参数传入。</li>
+<li>基本思想: 网页通过添加一个script元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。</li>
+<li>在jQuery中可以用$.getJSON方法</li>
+<li><p>步骤</p>
+<ul>
+<li><p>首先，网页动态插入script元素，由它向跨源网址发出请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addScriptTag</span>(<span class="params">src</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">  script.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);</div><div class="line">  script.src = src;</div><div class="line">  <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  addScriptTag(<span class="string">'http://example.com/ip?callback=foo'</span>);</div><div class="line">  <span class="comment">//该请求的查询字符串有一个callback参数，用来指定回调函数的名字，这对于JSONP是必需的。</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Your public IP address is: '</span> + data.ip);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>服务器收到这个请求以后，会将数据放在回调函数的参数位置返回。</p>
+</li>
+</ul>
+</li>
+<li>由于script元素请求的脚本，直接作为代码运行。这时，只要浏览器定义了foo函数，该函数就会立即调用。作为参数的JSON数据被视为JavaScript对象，而不是字符串，因此避免了使用JSON.parse的步骤。</li>
+</ul>
+<h5 id="2-3-2-WebSocket"><a href="#2-3-2-WebSocket" class="headerlink" title="2.3.2 WebSocket"></a>2.3.2 WebSocket</h5><p>ebSocket是一种通信协议，使用ws://（非加密）和wss://（加密）作为协议前缀。该协议不实行同源政策，只要服务器支持，就可以通过它进行跨源通信。</p>
+<ul>
+<li>有了Origin这个字段，所以WebSocket才没有实行同源政策。</li>
+</ul>
+<h4 id="2-4-CORS"><a href="#2-4-CORS" class="headerlink" title="2.4 CORS"></a>2.4 CORS</h4><h3 id="3-CORS详解"><a href="#3-CORS详解" class="headerlink" title="3 CORS详解"></a>3 CORS详解</h3><h4 id="3-1-简介"><a href="#3-1-简介" class="headerlink" title="3.1 简介"></a>3.1 简介</h4><ul>
+<li>CORS是跨源资源分享（Cross-Origin Resource Sharing）的缩写。它是W3C标准，是跨源AJAX请求的根本解决方法。相比JSONP只能发GET请求，CORS允许任何类型的请求。</li>
+<li>所有浏览器都支持该功能，IE浏览器不能低于IE10。</li>
+<li>CORS的代码与同源的AJAX通信没差别，关键是服务器</li>
+<li>思想：使用自定义的HTTP头部让浏览器与服务器进行沟通。</li>
+</ul>
+<h4 id="3-2-两种请求"><a href="#3-2-两种请求" class="headerlink" title="3.2 两种请求"></a>3.2 两种请求</h4><ul>
+<li>浏览器将CORS请求分为两类：简单请求（simple request）和非简单请求（not-so-simple request）</li>
+<li>简单请求：满足下面两个条件<ul>
+<li>请求方法是以下三种方法之一：<ul>
+<li>HEAD</li>
+<li>GET</li>
+<li>POST</li>
+</ul>
+</li>
+<li>HTTP的头信息不超过以下几种字段<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Last-Event-ID</li>
+<li>Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非简单请求：不满足上面两个条件</li>
+</ul>
+<h4 id="3-3-简单请求"><a href="#3-3-简单请求" class="headerlink" title="3.3 简单请求"></a>3.3 简单请求</h4><h5 id="3-3-1-基本流程"><a href="#3-3-1-基本流程" class="headerlink" title="3.3.1 基本流程"></a>3.3.1 基本流程</h5><ul>
+<li>对于简单请求，浏览器直接发出CORS请求。具体来说，就是在头信息之中，增加一个Origin字段。</li>
+<li>Origin字段用来说明，本次请求来自哪个源（协议 + 域名 + 端口）。服务器根据这个值，决定是否同意这次请求。</li>
+<li>如果Origin指定的域名在许可范围内，服务器返回的响应，会多出几个头信息字段。(都以Access-Control-开头)<ul>
+<li>Access-Control-Allow-Origin<ul>
+<li>该字段是必须的。它的值要么是请求时Origin字段的值，要么是一个*，表示接受任意域名的请求。</li>
+</ul>
+</li>
+<li>Access-Control-Allow-Credentials<ul>
+<li>该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为true，如果服务器不要浏览器发送Cookie，删除该字段即可。</li>
+</ul>
+</li>
+<li>Access-Control-Expose-Headers<ul>
+<li>该字段可选。CORS请求时，XMLHttpRequest对象的getResponseHeader()方法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。上面的例子指定，getResponseHeader(‘FooBar’)可以返回FooBar字段的值。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-3-2-withCredentials属性"><a href="#3-3-2-withCredentials属性" class="headerlink" title="3.3.2 withCredentials属性"></a>3.3.2 withCredentials属性</h5><p>CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服务器，一方面要服务器同意，指定Access-Control-Allow-Credentials字段。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">Access-Control-Allow-Credentials:</span> <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>另一方面，开发者必须在AJAX请求中打开withCredentials属性。(否则，即使服务器同意发送Cookie，浏览器也不会发送。或者，服务器要求设置Cookie，浏览器也不会处理。)<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="type">XMLHttpRequest</span>();</div><div class="line">xhr.withCredentials = <span class="literal">true</span>;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>需要注意的是，如果要发送Cookie，Access-Control-Allow-Origin就不能设为星号，必须指定明确的、与请求网页一致的域名。</li>
+<li>同时，Cookie依然遵循同源政策，只有用服务器域名设置的Cookie才会上传，其他域名的Cookie并不会上传，且（跨源）原网页代码中的document.cookie也无法读取服务器域名下的Cookie。</li>
+</ul>
+<h4 id="3-4-非简单请求"><a href="#3-4-非简单请求" class="headerlink" title="3.4 非简单请求"></a>3.4 非简单请求</h4><h5 id="3-4-1-预检请求"><a href="#3-4-1-预检请求" class="headerlink" title="3.4.1 预检请求"></a>3.4.1 预检请求</h5><ul>
+<li>非简单请求是那种对服务器有特殊要求的请求，比如请求方法是PUT或DELETE，或者Content-Type字段的类型是application/json。</li>
+<li>非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为”预检”请求（preflight）。</li>
+<li>浏览器先询问服务器，当前网页所在的域名是否在服务器的许可名单之中，以及可以使用哪些HTTP动词和头信息字段。只有得到肯定答复，浏览器才会发出正式的XMLHttpRequest请求，否则就报错。</li>
+<li>“预检”请求用的请求方法是OPTIONS，表示这个请求是用来询问的。头信息里面，关键字段是Origin，表示请求来自哪个源。</li>
+<li>除了Origin字段，”预检”请求的头信息包括两个特殊字段。<ul>
+<li>Access-Control-Request-Method<ul>
+<li>该字段是必须的，用来列出浏览器的CORS请求会用到哪些HTTP方法，上例是PUT。</li>
+</ul>
+</li>
+<li>Access-Control-Request-Headers<ul>
+<li>该字段是一个逗号分隔的字符串，指定浏览器CORS请求会额外发送的头信息字段，上例是X-Custom-Header。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-4-2-预检请求的回应"><a href="#3-4-2-预检请求的回应" class="headerlink" title="3.4.2 预检请求的回应"></a>3.4.2 预检请求的回应</h5><ul>
+<li>关键的是Access-Control-Allow-Origin字段，表示<a href="http://api.bob.com可以请求数据。该字段也可以设为星号，表示同意任意跨源请求。" target="_blank" rel="external">http://api.bob.com可以请求数据。该字段也可以设为星号，表示同意任意跨源请求。</a></li>
+<li>如果浏览器否定了”预检”请求，会返回一个正常的HTTP回应，但是没有任何CORS相关的头信息字段.</li>
+<li>服务器回应的其他CORS相关字段如下<ul>
+<li>Access-Control-Allow-Methods<ul>
+<li>该字段必需，它的值是逗号分隔的一个字符串，表明服务器支持的所有跨域请求的方法。注意，返回的是所有支持的方法，而不单是浏览器请求的那个方法。这是为了避免多次”预检”请求。</li>
+</ul>
+</li>
+<li>Access-Control-Allow-Headers<ul>
+<li>如果浏览器请求包括Access-Control-Request-Headers字段，则Access-Control-Allow-Headers字段是必需的。它也是一个逗号分隔的字符串，表明服务器支持的所有头信息字段，不限于浏览器在”预检”中请求的字段。</li>
+</ul>
+</li>
+<li>Access-Control-Allow-Credentials<ul>
+<li>该字段与简单请求时的含义相同。</li>
+</ul>
+</li>
+<li>Access-Control-Max-Age<ul>
+<li>该字段可选，用来指定本次预检请求的有效期，单位为秒。上面结果中，有效期是20天（1728000秒），即允许缓存该条回应1728000秒（即20天），在此期间，不用发出另一条预检请求。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-4-3-浏览器的正常请求和回应"><a href="#3-4-3-浏览器的正常请求和回应" class="headerlink" title="3.4.3 浏览器的正常请求和回应"></a>3.4.3 浏览器的正常请求和回应</h5><p>一旦服务器通过了”预检”请求，以后每次浏览器正常的CORS请求，就都跟简单请求一样，会有一个Origin头信息字段。服务器的回应，也都会有一个Access-Control-Allow-Origin头信息字段。</p>
+<h4 id="3-5-与JSONP的比较"><a href="#3-5-与JSONP的比较" class="headerlink" title="3.5 与JSONP的比较"></a>3.5 与JSONP的比较</h4><ul>
+<li>CORS与JSONP的使用目的相同，但是比JSONP更强大。</li>
+<li>JSONP只支持GET请求，CORS支持所有类型的HTTP请求。</li>
+<li>JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。</li>
+</ul>
+<p><a href="https://www.cnblogs.com/2050/p/3191744.html" target="_blank" rel="external">参考链接：</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">跨域</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/20/数组扁平化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组扁平化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -202,9 +490,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
