@@ -3,10 +3,10 @@ title: CSS中的BFC
 date: 2017-11-16 21:55:45
 tags:
     - CSS
-    - BFC
 ---
 ### CSS中的BFC
 - BFC(Block Formatting Context--块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流
+- 它提供了一个环境, html元素在这个环境中按照一定规则进行布局. 一个环境中的元素不会影响到其他环境中的布局. 决定了元素如何对其内容进行定位, 以及和其他元素的关系和相互作用.
 
 #### 1.BFC的生成
 - 浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下文。
