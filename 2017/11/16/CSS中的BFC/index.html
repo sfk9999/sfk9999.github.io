@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>CSS中的BFC | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流  1.BFC的生成 浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下">
-<meta name="keywords" content="CSS,BFC">
+  <meta name="description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流 它提供了一个环境, html元素在这个环境中按照一定规则进行布局. 一个环境中的元素不会影响到其他环境中的布局. 决定了元素如何对其内容进行定位, 以及和其他元素的关系和相互作用.  1.BFC的生成 浮动，绝对定位元素，inline-b">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS中的BFC">
 <meta property="og:url" content="http://yoursite.com/2017/11/16/CSS中的BFC/index.html">
 <meta property="og:site_name" content="sun丶的博客">
-<meta property="og:description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流  1.BFC的生成 浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下">
+<meta property="og:description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流 它提供了一个环境, html元素在这个环境中按照一定规则进行布局. 一个环境中的元素不会影响到其他环境中的布局. 决定了元素如何对其内容进行定位, 以及和其他元素的关系和相互作用.  1.BFC的生成 浮动，绝对定位元素，inline-b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-16T13:59:53.000Z">
+<meta property="og:updated_time" content="2017-11-26T11:07:20.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的BFC">
-<meta name="twitter:description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流  1.BFC的生成 浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下">
+<meta name="twitter:description" content="CSS中的BFC BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流 它提供了一个环境, html元素在这个环境中按照一定规则进行布局. 一个环境中的元素不会影响到其他环境中的布局. 决定了元素如何对其内容进行定位, 以及和其他元素的关系和相互作用.  1.BFC的生成 浮动，绝对定位元素，inline-b">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -152,6 +152,7 @@
       
         <h3 id="CSS中的BFC"><a href="#CSS中的BFC" class="headerlink" title="CSS中的BFC"></a>CSS中的BFC</h3><ul>
 <li>BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流</li>
+<li>它提供了一个环境, html元素在这个环境中按照一定规则进行布局. 一个环境中的元素不会影响到其他环境中的布局. 决定了元素如何对其内容进行定位, 以及和其他元素的关系和相互作用.</li>
 </ul>
 <h4 id="1-BFC的生成"><a href="#1-BFC的生成" class="headerlink" title="1.BFC的生成"></a>1.BFC的生成</h4><ul>
 <li>浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下文。</li>
@@ -198,10 +199,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFC</a>
         		</li>
       		
 		</ul>
@@ -349,6 +346,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
@@ -361,19 +362,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BFC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图片</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -385,27 +382,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -417,11 +394,39 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -430,18 +435,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">包管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
             
             <div class="clearfix"></div>

@@ -124,6 +124,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CSS中的BFC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/CSS中的BFC/">CSS中的BFC</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/16/CSS中的BFC/" class="archive-article-date">
+  	<time datetime="2017-11-16T13:55:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CSS中的BFC"><a href="#CSS中的BFC" class="headerlink" title="CSS中的BFC"></a>CSS中的BFC</h3><ul>
+<li>BFC(Block Formatting Context–块级格式化范围)是Web页面中盒模型布局的CSS渲染模式。它的定位体系属于常规文档流</li>
+<li>它提供了一个环境, html元素在这个环境中按照一定规则进行布局. 一个环境中的元素不会影响到其他环境中的布局. 决定了元素如何对其内容进行定位, 以及和其他元素的关系和相互作用.</li>
+</ul>
+<h4 id="1-BFC的生成"><a href="#1-BFC的生成" class="headerlink" title="1.BFC的生成"></a>1.BFC的生成</h4><ul>
+<li>浮动，绝对定位元素，inline-blocks, table-cells, table-captions,和overflow的值不为visible的元素，（除了这个值已经被传到了视口的时候）将创建一个新的块级格式化上下文。</li>
+<li>一个BFC是一个HTML盒子并且至少满足下列条件中的任何一个：<ul>
+<li>float的值不为none（none为默认值）</li>
+<li>position的值不为static或者relative</li>
+<li>display的值为 table-cell, table-caption, inline-block, flex, 或者 inline-flex中的其中一个</li>
+<li>overflow的值不为visible</li></ul></li></ul>
+        
+          <a class="article-more-a" href="/2017/11/16/CSS中的BFC/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/16/CSS中的BFC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-什么是FOUC-如何避免" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/13/什么是FOUC-如何避免/">什么是FOUC,如何避免</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/13/什么是FOUC-如何避免/" class="archive-article-date">
+  	<time datetime="2017-11-13T01:20:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-什么叫做-FOUC"><a href="#1-什么叫做-FOUC" class="headerlink" title="1. 什么叫做 FOUC"></a>1. 什么叫做 FOUC</h4><ul>
+<li>即浏览器样式闪烁</li>
+<li>如果使用import方法对css进行导入,会导致某些页面在Windows 下的Internet Explorer出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式短暂失效。</li>
+</ul>
+<h4 id="2-原因："><a href="#2-原因：" class="headerlink" title="2. 原因："></a>2. 原因：</h4><ol>
+<li>使用import方法导入样式表。</li>
+<li>将样式表放在页面底部</li>
+<li>有几个样式表，放在html结构的不同位置。</li>
+</ol>
+<ul>
+<li>当样式表晚于结构性html 加载，当加载到此样式表时，页面将停止之前的渲染。此样式表被下载和解析后，将重新渲染页面，也就出现了短暂的花屏现象。</li>
+</ul>
+<h4 id="3-解决方法："><a href="#3-解决方法：" class="headerlink" title="3. 解决方法："></a>3. 解决方法：</h4><p>使用link标签将样式表放在文档head中</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/13/什么是FOUC-如何避免/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-去除inline-block元素间间距的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -324,14 +502,15 @@
       
         <h3 id="CSS3动画和js动画的区别"><a href="#CSS3动画和js动画的区别" class="headerlink" title="CSS3动画和js动画的区别"></a>CSS3动画和js动画的区别</h3><h4 id="CSS动画："><a href="#CSS动画：" class="headerlink" title="CSS动画："></a>CSS动画：</h4><ul>
 <li>优点：<ol>
-<li>浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）</li>
+<li>浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）。性能上稍微好一点。</li>
 <li>代码相对简单,性能调优方向固定</li>
 <li>对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码</li>
 </ol>
 </li>
 <li>缺点：<ol>
-<li>运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定的时间点，不能在半路反转动画，不能变换时间尺度，不能在特定的位置添加回调函数或是绑定回放事件,无进度报告）</li>
+<li>运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定的时间点，不能在半路反转动画，不能变换时间尺度，不能在特定的位置添加回调函数或是绑定回放事件,无进度报告）–控制上不够灵活</li>
 <li>代码冗长（ rǒng）。想用 CSS 实现稍微复杂一点动画,最后CSS代码都会变得非常笨重</li>
+<li>兼容性不好</li>
 </ol>
 </li>
 </ul>
@@ -343,7 +522,7 @@
 </ol>
 </li>
 <li>缺点：<ol>
-<li>JavaScript在浏览器的主线程中运行，而主线程中还有其它需要运行的JavaScript脚本、样式计算、布局、绘制任务等,对其干扰导致线程可能出现阻塞，从而造成丢帧的情况。</li>
+<li>JavaScript在浏览器的主线程中运行，而主线程中还有其它需要运行的JavaScript脚本、样式计算、布局、绘制任务等,对其干扰导致线程可能出现阻塞，从而造成丢帧的情况。–计算没有css快。</li>
 <li>代码的复杂度高于CSS动画</li>
 </ol>
 </li>
@@ -380,177 +559,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/11/css3动画和js动画的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CSS-Sprites" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/CSS-Sprites/">CSS Sprites</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/CSS-Sprites/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="一、什么是CSS-Sprites"><a href="#一、什么是CSS-Sprites" class="headerlink" title="一、什么是CSS Sprites"></a>一、什么是CSS Sprites</h5><ul>
-<li>css sprites直译过来就是CSS精灵。通常被解释为“CSS图像拼合”或“CSS贴图定位”。</li>
-<li>通过将多个图片融合到一张图里面，然后通过CSS background背景定位技术技巧布局网页背景。</li>
-<li>好处：因为图片多的话，会增加http的请求，无疑促使了网站性能的减低，特别是图片特别多的网站，如果能用css sprites降低图片数量，带来的将是速度的提升</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/11/10/CSS-Sprites/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图片</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/CSS-Sprites/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-flex布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/08/flex布局/">flex布局</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/08/flex布局/" class="archive-article-date">
-  	<time datetime="2017-11-08T06:42:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="flex布局（移动端用的更多）"><a href="#flex布局（移动端用的更多）" class="headerlink" title="flex布局（移动端用的更多）"></a>flex布局（移动端用的更多）</h3><h5 id="1-Flex-布局是什么？"><a href="#1-Flex-布局是什么？" class="headerlink" title="1. Flex 布局是什么？"></a>1. Flex 布局是什么？</h5><p>flex意味着：弹性布局<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">display</span>:flex;</div><div class="line">        inline-<span class="attribute">flex</span>;</div></pre></td></tr></table></figure></p>
-<h5 id="2-基本概念"><a href="#2-基本概念" class="headerlink" title="2. 基本概念"></a>2. 基本概念</h5><p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。<br><img src="/2017/11/08/flex布局/01.png" alt="image"></p>
-        
-          <a class="article-more-a" href="/2017/11/08/flex布局/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/08/flex布局/">展开全文 >></a>
         </p>
       
 
@@ -669,6 +677,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
@@ -681,19 +693,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BFC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图片</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -705,27 +713,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -737,11 +725,39 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -750,18 +766,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">包管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
             
             <div class="clearfix"></div>
