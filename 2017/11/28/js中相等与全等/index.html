@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: BFC | sun丶的博客</title>
+  <title>js中相等与全等 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/BFC/index.html">
+  <meta name="description" content="相等运算符”==”对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中相等与全等">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/js中相等与全等/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="相等运算符”==”对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-28T05:42:23.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="js中相等与全等">
+<meta name="twitter:description" content="相等运算符”==”对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,64 +127,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js中相等与全等" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/16/CSS中的BFC/" class="archive-article-date">
-  	<time datetime="2017-11-16T13:55:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/CSS中的BFC/">CSS中的BFC</a>
+    <h1 class="article-title" itemprop="name">
+      js中相等与全等
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/28/js中相等与全等/" class="archive-article-date">
+  	<time datetime="2017-11-28T05:40:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="相等运算符”-”"><a href="#相等运算符”-”" class="headerlink" title="相等运算符”==”"></a>相等运算符”==”</h4><p>对于x==y比较，Type()为变量的类型。</p>
+<ol>
+<li>若Type(x)与Type(y)相同，则<ol>
+<li>若 Type(x,y) 为 Undefined， 返回 true。</li>
+<li>若 Type(x,y) 为 Null， 返回 true。</li>
+<li>若 Type(x,y) 为 Number， 则<ol>
+<li>若 x 为 NaN， 返回 false。</li>
+<li>若 y 为 NaN， 返回 false。</li>
+<li>若 x 与 y 为相等数值， 返回 true。</li>
+<li>若 x 为 +0 且 y 为 −0， 返回 true。</li>
+<li>若 x 为 −0 且 y 为 +0， 返回 true。</li>
+<li>返回 false。</li>
+</ol>
+</li>
+<li>若 Type(x,y) 为 String, 则当 x 和 y 为完全相同的字符序列（长度相等且相同字符在相同位置）时返回 true。 否则， 返回 false。</li>
+<li>若 Type(x,y) 为 Boolean, 当 x 和 y 为同为 true 或者同为 false 时返回 true。 否则， 返回 false。</li>
+<li>当 x 和 y 为引用同一对象时返回 true。否则，返回 false。</li>
+</ol>
+</li>
+<li>若 x 为 null 且 y 为 undefined， 返回 true。</li>
+<li>若 x 为 undefined 且 y 为 null， 返回 true。</li>
+<li>若 Type(x) 为 Number 且 Type(y) 为 String，返回比较 x == ToNumber(y) 的结果。</li>
+<li>若 Type(x) 为 String 且 Type(y) 为 Number，返回比较 ToNumber(x) == y 的结果。</li>
+<li>若 Type(x) 为 Boolean， 返回比较 ToNumber(x) == y 的结果。</li>
+<li>若 Type(y) 为 Boolean， 返回比较 x == ToNumber(y) 的结果。</li>
+<li>若 Type(x) 为 String 或 Number，且 Type(y) 为 Object，返回比较 x == ToPrimitive(y) 的结果。</li>
+<li>若 Type(x) 为 Object 且 Type(y) 为 String 或 Number， 返回比较 ToPrimitive(x) == y 的结果。</li>
+<li>返回 false。</li>
+</ol>
+<h4 id="全等运算符”-”"><a href="#全等运算符”-”" class="headerlink" title="全等运算符”===”"></a>全等运算符”===”</h4><p>对于x===y比较，Type()为变量的类型</p>
+<ol>
+<li>如果 Type(x) 与 Type(y) 的结果不一致，返回 false，否则</li>
+<li>如果 Type(x,y) 结果为 Undefined，返回 true</li>
+<li>如果 Type(x,y) 结果为 Null，返回 true</li>
+<li>如果 Type(x,y) 结果为 Number，则<ol>
+<li>如果 x 为 NaN，返回 false</li>
+<li>如果 y 为 NaN，返回 false</li>
+<li>如果 x 与 y 为同一个数字，返回 true</li>
+<li>如果 x 为 +0，y 为 -0，返回 true</li>
+<li>如果 x 为 -0，y 为 +0，返回 true</li>
+<li>返回 false</li>
+</ol>
+</li>
+<li>如果 Type(x,y) 结果为 String，如果 x 与 y 为完全相同的字符序列（相同的长度和相同的字符对应相同的位置），返回 true，否则，返回 false</li>
+<li>如果 Type(x,y) 结果为 Boolean，如果 x 与 y 都为 true 或 false，则返回 true，否则，返回 false</li>
+<li>如果 x 和 y 引用到同一个 Object 对象，返回 true，否则，返回 false</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/26/图片替换的方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">图片替换的方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -202,9 +287,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -280,7 +365,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BFC</a>
+                <a href="javascript:void(0)" class="js-tag color3">图片</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -292,6 +385,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
@@ -300,11 +397,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -324,14 +417,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对比</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
@@ -340,23 +425,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">动画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对比</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">package</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">包管理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
             
             <div class="clearfix"></div>
