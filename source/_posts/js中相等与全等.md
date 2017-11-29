@@ -30,6 +30,10 @@ tags:
 9. 若 Type(x) 为 Object 且 Type(y) 为 String 或 Number， 返回比较 ToPrimitive(x) == y 的结果。
 10. 返回 false。
 
+注意：
+1. 要比较相等性之前，不能将null和undefined转换成其他任何值。
+2. NaN不等于NaN
+
 #### 全等运算符"==="
 对于x===y比较，Type()为变量的类型
 1. 如果 Type(x) 与 Type(y) 的结果不一致，返回 false，否则
