@@ -124,6 +124,95 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-项目中git的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/29/项目中git的用法/">项目中git的用法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/29/项目中git的用法/" class="archive-article-date">
+  	<time datetime="2017-11-29T11:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令</p>
+<h3 id="一、基本操作"><a href="#一、基本操作" class="headerlink" title="一、基本操作"></a>一、基本操作</h3><h4 id="1-1-创建版本库"><a href="#1-1-创建版本库" class="headerlink" title="1.1 创建版本库"></a>1.1 创建版本库</h4><p>在空目录里，使用此命令将这个目录变成git可以管理的仓库<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git init</span></div></pre></td></tr></table></figure></p>
+<h4 id="1-2-将文件放到仓库"><a href="#1-2-将文件放到仓库" class="headerlink" title="1.2. 将文件放到仓库"></a>1.2. 将文件放到仓库</h4><p>将文件放到仓库需要两步</p>
+<ol>
+<li><p>将文件添加到仓库</p>
+ <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span> .   <span class="comment">//用.是提交所有文件，可以把.换成单独的文件名</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>把文件提交到仓库</p>
+ <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m<span class="string">"备注内容"</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+        
+          <a class="article-more-a" href="/2017/11/29/项目中git的用法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/29/项目中git的用法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js中相等与全等" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -175,6 +264,11 @@
 <li>若 Type(x) 为 String 或 Number，且 Type(y) 为 Object，返回比较 x == ToPrimitive(y) 的结果。</li>
 <li>若 Type(x) 为 Object 且 Type(y) 为 String 或 Number， 返回比较 ToPrimitive(x) == y 的结果。</li>
 <li>返回 false。</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>要比较相等性之前，不能将null和undefined转换成其他任何值。</li>
+<li>NaN不等于NaN</li>
 </ol>
 <h4 id="全等运算符”-”"><a href="#全等运算符”-”" class="headerlink" title="全等运算符”===”"></a>全等运算符”===”</h4><p>对于x===y比较，Type()为变量的类型</p>
 <ol>
@@ -511,88 +605,9 @@
 
 
   
-    <article id="post-数组扁平化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/20/数组扁平化/">数组扁平化</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/20/数组扁平化/" class="archive-article-date">
-  	<time datetime="2017-11-20T11:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1什么是数组扁平化"><a href="#1什么是数组扁平化" class="headerlink" title="1什么是数组扁平化"></a>1什么是数组扁平化</h4><p>数组的扁平化，就是将一个嵌套多层的数组 array (嵌套可以是任何层数)转换为只有一层的数组<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]]];</div><div class="line"><span class="comment">//扁平化之后：[1,2,3,4];</span></div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/11/20/数组扁平化/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/20/数组扁平化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -719,6 +734,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
@@ -736,14 +759,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">

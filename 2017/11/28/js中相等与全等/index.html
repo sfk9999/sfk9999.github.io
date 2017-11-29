@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="相等运算符”==”对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-28T05:42:23.367Z">
+<meta property="og:updated_time" content="2017-11-28T05:53:04.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中相等与全等">
 <meta name="twitter:description" content="相等运算符”==”对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回">
@@ -179,6 +179,11 @@
 <li>若 Type(x) 为 Object 且 Type(y) 为 String 或 Number， 返回比较 ToPrimitive(x) == y 的结果。</li>
 <li>返回 false。</li>
 </ol>
+<p>注意：</p>
+<ol>
+<li>要比较相等性之前，不能将null和undefined转换成其他任何值。</li>
+<li>NaN不等于NaN</li>
+</ol>
 <h4 id="全等运算符”-”"><a href="#全等运算符”-”" class="headerlink" title="全等运算符”===”"></a>全等运算符”===”</h4><p>对于x===y比较，Type()为变量的类型</p>
 <ol>
 <li>如果 Type(x) 与 Type(y) 的结果不一致，返回 false，否则</li>
@@ -228,6 +233,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/11/29/项目中git的用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          项目中git的用法
+        
+      </div>
+    </a>
   
   
     <a href="/2017/11/26/图片替换的方法/" id="article-nav-older" class="article-nav-link-wrap">
@@ -389,6 +403,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
@@ -406,14 +428,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">

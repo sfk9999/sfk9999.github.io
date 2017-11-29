@@ -124,6 +124,98 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-IE6常见BUG与相应解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/11/IE6常见BUG与相应解决办法/">IE6常见BUG与相应解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/11/IE6常见BUG与相应解决办法/" class="archive-article-date">
+  	<time datetime="2017-11-11T07:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="IE6-BUG"><a href="#IE6-BUG" class="headerlink" title="IE6 BUG"></a>IE6 BUG</h3><p>IE6是兼容BUG最多的浏览器，它不支持PNG alpha通道暂且不论。</p>
+<h4 id="一、IE6双倍边距bug"><a href="#一、IE6双倍边距bug" class="headerlink" title="一、IE6双倍边距bug"></a>一、IE6双倍边距bug</h4><ul>
+<li>当页面上的元素使用float浮动时，不管是向左还是向右浮动；只要该元素带有margin像素都会使该值乘以2，例如“margin-left:10px” 在IE6中，该值就会被解析为20px。</li>
+<li>解决：需要在该元素中加入display:inline 或 display:block 明确其元素类型即可解决双倍边距的BUG</li>
+</ul>
+<h4 id="二、IE6中3像素问题及解决办法"><a href="#二、IE6中3像素问题及解决办法" class="headerlink" title="二、IE6中3像素问题及解决办法"></a>二、IE6中3像素问题及解决办法</h4><ul>
+<li>当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。</li>
+<li>诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。</li>
+<li>解决：需要使布局在同一行的元素都加上float浮动</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/11/11/IE6常见BUG与相应解决办法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IE6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BUG</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/11/IE6常见BUG与相应解决办法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css3动画和js动画的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -493,98 +585,9 @@
 
 
   
-    <article id="post-npm搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/03/npm搭建/">npm搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/03/npm搭建/" class="archive-article-date">
-  	<time datetime="2017-11-03T08:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-03</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="NPM使用介绍"><a href="#NPM使用介绍" class="headerlink" title="NPM使用介绍"></a>NPM使用介绍</h3><p>NPM（Node Package Manager）是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：</p>
-<ul>
-<li>允许用户从NPM服务器下载别人编写的第三方包到本地使用。</li>
-<li>允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。</li>
-<li>允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。</li>
-</ul>
-<p>npm就是node.js的包管理工具<br></p>
-        
-          <a class="article-more-a" href="/2017/11/03/npm搭建/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/03/npm搭建/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -711,6 +714,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
@@ -728,14 +739,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 动画 | sun丶的博客</title>
+  <title>项目中git的用法 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/动画/index.html">
+  <meta name="description" content="之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令 一、基本操作1.1 创建版本库在空目录里，使用此命令将这个目录变成git可以管理的仓库1git init 1.2. 将文件放到仓库将文件放到仓库需要两步  将文件添加到仓库  1git add .   //用.是提交所有文件，可以把.换成单独的文件名  把文件提交到仓库  1git commit -m&quot;备注内容&quot;">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目中git的用法">
+<meta property="og:url" content="http://yoursite.com/2017/11/29/项目中git的用法/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令 一、基本操作1.1 创建版本库在空目录里，使用此命令将这个目录变成git可以管理的仓库1git init 1.2. 将文件放到仓库将文件放到仓库需要两步  将文件添加到仓库  1git add .   //用.是提交所有文件，可以把.换成单独的文件名  把文件提交到仓库  1git commit -m&quot;备注内容&quot;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-29T11:14:31.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="项目中git的用法">
+<meta name="twitter:description" content="之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令 一、基本操作1.1 创建版本库在空目录里，使用此命令将这个目录变成git可以管理的仓库1git init 1.2. 将文件放到仓库将文件放到仓库需要两步  将文件添加到仓库  1git add .   //用.是提交所有文件，可以把.换成单独的文件名  把文件提交到仓库  1git commit -m&quot;备注内容&quot;">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,68 +127,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-项目中git的用法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/11/css3动画和js动画的区别/" class="archive-article-date">
-  	<time datetime="2017-11-11T07:56:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/11/css3动画和js动画的区别/">css3动画和js动画的区别</a>
+    <h1 class="article-title" itemprop="name">
+      项目中git的用法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/29/项目中git的用法/" class="archive-article-date">
+  	<time datetime="2017-11-29T11:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令</p>
+<h3 id="一、基本操作"><a href="#一、基本操作" class="headerlink" title="一、基本操作"></a>一、基本操作</h3><h4 id="1-1-创建版本库"><a href="#1-1-创建版本库" class="headerlink" title="1.1 创建版本库"></a>1.1 创建版本库</h4><p>在空目录里，使用此命令将这个目录变成git可以管理的仓库<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git init</span></div></pre></td></tr></table></figure></p>
+<h4 id="1-2-将文件放到仓库"><a href="#1-2-将文件放到仓库" class="headerlink" title="1.2. 将文件放到仓库"></a>1.2. 将文件放到仓库</h4><p>将文件放到仓库需要两步</p>
+<ol>
+<li><p>将文件添加到仓库</p>
+ <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span> .   <span class="comment">//用.是提交所有文件，可以把.换成单独的文件名</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>把文件提交到仓库</p>
+ <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m<span class="string">"备注内容"</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<h4 id="1-3-查看状态"><a href="#1-3-查看状态" class="headerlink" title="1.3. 查看状态"></a>1.3. 查看状态</h4><ol>
+<li><p>查看仓库信息</p>
+ <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git status</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>查看具体修改了哪些内容</p>
+ <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git diff</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="1-4-查看日志"><a href="#1-4-查看日志" class="headerlink" title="1.4. 查看日志"></a>1.4. 查看日志</h4><p>查看提交日志<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span></div></pre></td></tr></table></figure></p>
+<h4 id="1-5-版本回退"><a href="#1-5-版本回退" class="headerlink" title="1.5. 版本回退"></a>1.5. 版本回退</h4><ul>
+<li>git中，HEAD表示当前版本，上个版本就是HEAD^ ，上上一版本就是HEAD^^，也可以用HEAD~2来表示上上一版本。</li>
+<li><p>回溯版本</p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git reset</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>又后悔了，不想回到这个版本，可以得到commit id来返回 </p>
+</li>
+<li><p>找不到id可以查看我们所有使用过的命令</p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git reflog</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="1-6-删除文件"><a href="#1-6-删除文件" class="headerlink" title="1.6. 删除文件"></a>1.6. 删除文件</h4><ul>
+<li><p>如果本地的文件删除了</p>
+<ul>
+<li><p>要从版本库中删除该文件</p>
+  <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">rm</span>  <span class="comment">//删除</span></div><div class="line">git commit</div></pre></td></tr></table></figure>
+</li>
+<li><p>删错了，要把误删的文件恢复到最新版本</p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git checkout</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-7-从github克隆"><a href="#1-7-从github克隆" class="headerlink" title="1.7. 从github克隆"></a>1.7. 从github克隆</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">...</span></div></pre></td></tr></table></figure>
+<h3 id="二、分支"><a href="#二、分支" class="headerlink" title="二、分支"></a>二、分支</h3><h4 id="2-1-创建分支"><a href="#2-1-创建分支" class="headerlink" title="2.1 创建分支"></a>2.1 创建分支</h4><p>首先要创建分支，并切换到该分支<br><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch <span class="built_in">dev</span> <span class="comment">//创建dev分支</span></div><div class="line">git checkout <span class="built_in">dev</span>    <span class="comment">//切换到dev分支</span></div></pre></td></tr></table></figure></p>
+<p>查看分支状态<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git branch</span></div></pre></td></tr></table></figure></p>
+<h4 id="2-2-合并分支"><a href="#2-2-合并分支" class="headerlink" title="2.2 合并分支"></a>2.2 合并分支</h4><p>要将dev分支中的内容合并到master分支中<br><figure class="highlight cos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">merge</span> dev</div></pre></td></tr></table></figure></p>
+<h4 id="2-3-删除分支"><a href="#2-3-删除分支" class="headerlink" title="2.3 删除分支"></a>2.3 删除分支</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d dev</div></pre></td></tr></table></figure>
+<h4 id="2-4-解决冲突"><a href="#2-4-解决冲突" class="headerlink" title="2.4 解决冲突"></a>2.4 解决冲突</h4><p>git无法自动合并分支时，就必须首先解决冲突，解决冲突后，再提交，合并完成</p>
+<h4 id="2-5-分支挂起"><a href="#2-5-分支挂起" class="headerlink" title="2.5 分支挂起"></a>2.5 分支挂起</h4><p>现实场景中有可能出现以下情况，比如我们正在dev分支中进行项目工作，但是突然出现一个bug工作需要修改，这时会出现一个issue分支来修复它，但是我们的dev分支又没有完成，只能暂时挂起。</p>
+<ul>
+<li><p>将现场工作挂起，等以后恢复现场后再继续工作</p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git stash</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>查看挂起的工作现场</p>
+  <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash <span class="built_in">list</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>恢复</p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git stash applu</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">动画</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对比</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/28/js中相等与全等/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js中相等与全等</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -206,9 +302,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
