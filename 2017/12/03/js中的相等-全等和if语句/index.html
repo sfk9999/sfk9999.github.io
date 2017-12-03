@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: CSS | sun丶的博客</title>
+  <title>js中的相等,全等和if语句 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/CSS/page/2/index.html">
+  <meta name="description" content="比较运算符==对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回 t">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中的相等,全等和if语句">
+<meta property="og:url" content="http://yoursite.com/2017/12/03/js中的相等-全等和if语句/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="比较运算符==对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回 t">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-03T11:16:01.721Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="js中的相等,全等和if语句">
+<meta name="twitter:description" content="比较运算符==对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回 t">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,67 +127,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js中的相等-全等和if语句" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/CSS-Sprites/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/CSS-Sprites/">CSS Sprites</a>
+    <h1 class="article-title" itemprop="name">
+      js中的相等,全等和if语句
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/12/03/js中的相等-全等和if语句/" class="archive-article-date">
+  	<time datetime="2017-12-03T11:15:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符=="></a>比较运算符==</h4><p>对于x==y比较，Type()为变量的类型。</p>
+<ol>
+<li>若Type(x)与Type(y)相同，则<ol>
+<li>若 Type(x,y) 为 Undefined， 返回 true。</li>
+<li>若 Type(x,y) 为 Null， 返回 true。</li>
+<li>若 Type(x,y) 为 Number， 则<ol>
+<li>若 x 为 NaN， 返回 false。</li>
+<li>若 y 为 NaN， 返回 false。</li>
+<li>若 x 与 y 为相等数值， 返回 true。</li>
+<li>若 x 为 +0 且 y 为 −0， 返回 true。</li>
+<li>若 x 为 −0 且 y 为 +0， 返回 true。</li>
+<li>返回 false。</li>
+</ol>
+</li>
+<li>若 Type(x,y) 为 String, 则当 x 和 y 为完全相同的字符序列（长度相等且相同字符在相同位置）时返回 true。 否则， 返回 false。</li>
+<li>若 Type(x,y) 为 Boolean, 当 x 和 y 为同为 true 或者同为 false 时返回 true。 否则， 返回 false。</li>
+<li>当 x 和 y 为引用同一对象时返回 true。否则，返回 false。</li>
+</ol>
+</li>
+<li>若 x 为 null 且 y 为 undefined， 返回 true。</li>
+<li>若 x 为 undefined 且 y 为 null， 返回 true。</li>
+<li>若 Type(x) 为 Number 且 Type(y) 为 String，返回比较 x == ToNumber(y) 的结果。</li>
+<li>若 Type(x) 为 String 且 Type(y) 为 Number，返回比较 ToNumber(x) == y 的结果。</li>
+<li>若 Type(x) 为 Boolean， 返回比较 ToNumber(x) == y 的结果。</li>
+<li>若 Type(y) 为 Boolean， 返回比较 x == ToNumber(y) 的结果。</li>
+<li>若 Type(x) 为 String 或 Number，且 Type(y) 为 Object，返回比较 x == ToPrimitive(y) 的结果。</li>
+<li>若 Type(x) 为 Object 且 Type(y) 为 String 或 Number， 返回比较 ToPrimitive(x) == y 的结果。</li>
+<li>返回 false。</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>要比较相等性之前，不能将null和undefined转换成其他任何值。</li>
+<li>NaN不等于NaN</li>
+</ol>
+<h4 id="全等运算符"><a href="#全等运算符" class="headerlink" title="全等运算符==="></a>全等运算符===</h4><p>对于x===y比较，Type()为变量的类型</p>
+<ol>
+<li>如果 Type(x) 与 Type(y) 的结果不一致，返回 false，否则</li>
+<li>如果 Type(x,y) 结果为 Undefined，返回 true</li>
+<li>如果 Type(x,y) 结果为 Null，返回 true</li>
+<li>如果 Type(x,y) 结果为 Number，则<ol>
+<li>如果 x 为 NaN，返回 false</li>
+<li>如果 y 为 NaN，返回 false</li>
+<li>如果 x 与 y 为同一个数字，返回 true</li>
+<li>如果 x 为 +0，y 为 -0，返回 true</li>
+<li>如果 x 为 -0，y 为 +0，返回 true</li>
+<li>返回 false</li>
+</ol>
+</li>
+<li>如果 Type(x,y) 结果为 String，如果 x 与 y 为完全相同的字符序列（相同的长度和相同的字符对应相同的位置），返回 true，否则，返回 false</li>
+<li>如果 Type(x,y) 结果为 Boolean，如果 x 与 y 都为 true 或 false，则返回 true，否则，返回 false</li>
+<li>如果 x 和 y 引用到同一个 Object 对象，返回 true，否则，返回 false</li>
+</ol>
+<h4 id="if"><a href="#if" class="headerlink" title="if()"></a>if()</h4><ul>
+<li>if()会对条件进行Boolean转换</li>
+<li>对于String类型的值，任何非空字符串返回true，空字符串返回false</li>
+<li>对于Number类型的值，任何非零数字值(包括无穷大)，返回true；0和NaN返回false</li>
+<li>对于Object类型的值，任何对象返回true，null返回false</li>
+<li>对于Undefined类型，返回false(</li>
+<li>对于null类型，返回false</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图片</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/29/项目中git的用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">项目中git的用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/CSS/">&laquo; Prev</a><a class="page-number" href="/tags/CSS/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -206,9 +300,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
