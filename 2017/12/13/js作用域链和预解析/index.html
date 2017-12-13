@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: CSS | sun丶的博客</title>
+  <title>js作用域链和预解析 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/CSS/page/2/index.html">
+  <meta name="description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js作用域链和预解析">
+<meta property="og:url" content="http://yoursite.com/2017/12/13/js作用域链和预解析/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-13T06:47:08.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="js作用域链和预解析">
+<meta name="twitter:description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,67 +127,150 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js作用域链和预解析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/CSS-Sprites/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/CSS-Sprites/">CSS Sprites</a>
+    <h1 class="article-title" itemprop="name">
+      js作用域链和预解析
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/12/13/js作用域链和预解析/" class="archive-article-date">
+  	<time datetime="2017-12-13T06:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的<br><a id="more"></a></p>
+<h4 id="一、作用域"><a href="#一、作用域" class="headerlink" title="一、作用域"></a>一、作用域</h4><ul>
+<li>作用域：<ul>
+<li>就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。</li>
+<li>执行环境（运行期上下文）：每个函数都有自己的执行环境，当执行流进入一个函数的时候，函数的环境会被推入一个函数栈中，而在函数执行完毕后执行环境出栈并被销毁，保存在其中的所有变量和函数定义随之销毁，控制权返回到之前的执行环境中，全局的执行环境在应用程序退出（浏览器关闭）才会被销毁。</li>
+</ul>
+</li>
+<li>作用域链：<ul>
+<li>当代码在一个环境中执行时，会创建变量对象的一个作用域链，保证对执行环境有权访问的变量和函数的有序访问。</li>
+<li>在函数运行过程中标识符的解析是沿着作用域链一级一级搜索的过程，从第一个对象开始，逐级向后回溯，直到找到同名标识符为止，找到后不再继续遍历，找不到就报错。</li>
+</ul>
+</li>
+<li>闭包<ul>
+<li>只要存在调用内部函数的可能，JavaScript就需要保留被引用的函数。而且JavaScript运行时需要跟踪引用这个内部函数的所有变量，直到最后一个变量废弃，JavaScript的垃圾收集器才能释放相应的内存空间。</li>
+<li>消耗内存大</li>
+</ul>
+</li>
+</ul>
+<h4 id="二、预解析"><a href="#二、预解析" class="headerlink" title="二、预解析"></a>二、预解析</h4><h5 id="2-1-什么是js预解析"><a href="#2-1-什么是js预解析" class="headerlink" title="2.1 什么是js预解析"></a>2.1 什么是js预解析</h5><h5 id="2-2-在什么情况下进行预解析"><a href="#2-2-在什么情况下进行预解析" class="headerlink" title="2.2 在什么情况下进行预解析"></a>2.2 在什么情况下进行预解析</h5><ol>
+<li>遇到<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">2. 遇到函数时（因为变量是有作用域的）</div><div class="line"></div><div class="line">##### 2.3 js对什么进行预解析</div><div class="line">1. **var**后面的变量</div><div class="line">2. **函数**</div><div class="line">3. 函数传参的变量</div><div class="line"></div><div class="line">##### 2.4 给这些变量、函数赋予什么初始值</div><div class="line">1. 凡是var 的，都会赋予一个``` undefined``` 作为初始值；</div><div class="line">2. 凡是函数，直接赋予 函数本身 作为初始值；（所以这就是为什么我们可以把 函数调用 放到  函数声明 之前的原因）</div><div class="line"></div><div class="line">##### 2.5 什么情况会改变预解析赋予的初始值</div><div class="line">有赋值功能的符号：=,  +=,  -=,  *=,  /=,  ++,  --等</div><div class="line"></div><div class="line">#### 三、例子</div><div class="line">##### 3.1作用域链例子</div><div class="line">###### 3.1.1.作用域链问题</div></pre></td></tr></table></figure></li>
+</ol>
+<p>var  name = “Aralic”;</p>
+<p>function person () {<br>   console.log(name);<br>   var name = “tom”;<br>　　<br>}</p>
+<p>person();<br>//输出undefined<br>//在函数执行前，会将变量和函数声明提升，因此就变为<br>function person(){<br>    var name;<br>    console.log(name);<br>    name=””<br>}<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### <span class="number">3.1</span><span class="number">.2</span>.作用域链问题(找全局作用域)</div></pre></td></tr></table></figure></p>
+<p>var name = ‘Aralic’;<br>function person() {<br>    alert(name);<br>}</p>
+<p>function test() {<br>   var name = ‘tom’;<br>   person();<br>}</p>
+<p>test();<br>//person和test函数地位相同<br>//所以输出Aralic<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### <span class="number">3.2</span> 预解析例子</div><div class="line">###### <span class="number">3.2</span><span class="number">.1</span></div></pre></td></tr></table></figure></p>
+<p>alert(a);<br>var a = ‘我是变量’;<br>function a(){ alert(‘我是函数’) }<br>alert(a);</p>
+<p>// 输出<br>//function a(){ alert(‘我是函数’) }   (因为undefined代表空，但函数不是空。)<br>//‘我是变量’    (=可以改变初值)<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">alert(a);    </div><div class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span> <span class="params">()</span></span>&#123; <span class="string">'我是函数'</span> &#125;</div><div class="line"><span class="comment">//undefined,可以看出,凡是var,初始值都是undefined</span></div></pre></td></tr></table></figure></p>
+<h6 id="3-2-2"><a href="#3-2-2" class="headerlink" title="3.2.2"></a>3.2.2</h6><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">alert(a);    </div><div class="line">a++;</div><div class="line">alert(a);   </div><div class="line"><span class="keyword">var</span> a = <span class="string">'我是变量'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">()</span></span>&#123; alert(<span class="string">'我是函数'</span>) &#125;</div><div class="line">alert(a); </div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//function a()&#123; alert('我是函数') &#125;</span></div><div class="line"><span class="comment">//NaN   (++可以改变初始值)</span></div><div class="line"><span class="comment">//'我是变量'</span></div></pre></td></tr></table></figure>
+<h6 id="3-2-3-函数"><a href="#3-2-3-函数" class="headerlink" title="3.2.3 函数"></a>3.2.3 函数</h6><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">alert(a);  </div><div class="line"><span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">alert(a);   </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(a);   </span></span></div><div class="line"><span class="function"><span class="comment">    var a = 2;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(a);  </span></span></div><div class="line"><span class="function"><span class="comment">&#125;</span></span></div><div class="line"><span class="function"><span class="title">fn</span><span class="params">()</span></span></div><div class="line"><span class="function"><span class="title">alert</span><span class="params">(a)</span>;</span></div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//undefined </span></div><div class="line"><span class="comment">//0</span></div><div class="line"><span class="comment">//undefined (遇到函数，重新进行预解析)</span></div><div class="line"><span class="comment">//2</span></div><div class="line"><span class="comment">//0 (fn里面的a与全局的a不是同一作用域的)</span></div></pre></td></tr></table></figure>
+<h6 id="3-2-4-函数，函数中无var"><a href="#3-2-4-函数，函数中无var" class="headerlink" title="3.2.4 函数，函数中无var"></a>3.2.4 函数，函数中无var</h6><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">alert(a);   </div><div class="line"><span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">alert(a);    </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(a);   </span></span></div><div class="line"><span class="function"><span class="comment">    a = 2;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(a);    </span></span></div><div class="line"><span class="function"><span class="comment">&#125;</span></span></div><div class="line"><span class="function"><span class="title">fn</span><span class="params">()</span></span></div><div class="line"><span class="function"><span class="title">alert</span><span class="params">(a)</span>;</span> </div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//undefined</span></div><div class="line"><span class="comment">//0</span></div><div class="line"><span class="comment">//0 (因为没var, 所以这里的a会被看作是全局的,往上查找，找到a=0,所以是0，如果全局也没有就会报错)</span></div><div class="line"><span class="comment">//2</span></div><div class="line"><span class="comment">//2 (fn把这全局的a修改了)</span></div></pre></td></tr></table></figure>
+<h6 id="3-2-5-函数参数"><a href="#3-2-5-函数参数" class="headerlink" title="3.2.5 函数参数"></a>3.2.5 函数参数</h6><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">(a)</span><span class="comment">&#123;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(a);    </span></span></div><div class="line"><span class="function"><span class="comment">    a = 2;</span></span></div><div class="line"><span class="function"><span class="comment">    alert(a);    </span></span></div><div class="line"><span class="function"><span class="comment">&#125;</span></span></div><div class="line"><span class="function"><span class="title">fn</span><span class="params">()</span></span></div><div class="line"><span class="function"><span class="title">alert</span><span class="params">(a)</span>;</span>    </div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//undefined (JS会把传参当作var一样对待,相当于在fn内部定义了一个变量--&gt; var a;)</span></div><div class="line"><span class="comment">//2</span></div><div class="line"><span class="comment">//报错</span></div></pre></td></tr></table></figure>
+<h6 id="3-2-6-script标签"><a href="#3-2-6-script标签" class="headerlink" title="3.2.6 script标签"></a>3.2.6 script标签</h6><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    alert(a);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">    <span class="keyword">var</span> a=<span class="number">0</span>;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">//输出：报错</div></pre></td></tr></table></figure>
+<h6 id="3-2-7-script标签"><a href="#3-2-7-script标签" class="headerlink" title="3.2.7 script标签"></a>3.2.7 script标签</h6><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">    <span class="keyword">var</span> a=<span class="number">0</span>;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    alert(a);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">//输出：</div><div class="line">//undefined (虽然这个<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">标签对没有定义a，但会往上查找)</span></div></pre></td></tr></table></figure>
+<h6 id="3-2-8-重复声明"><a href="#3-2-8-重复声明" class="headerlink" title="3.2.8 重复声明"></a>3.2.8 重复声明</h6><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func1 ( <span class="built_in">num</span> ) &#123;</div><div class="line">  console.<span class="built_in">log</span>( <span class="built_in">num</span> );</div><div class="line">  <span class="built_in">var</span> <span class="built_in">num</span> = <span class="number">456</span>;</div><div class="line">  console.<span class="built_in">log</span>( <span class="built_in">num</span> );</div><div class="line">&#125;</div><div class="line"><span class="built_in">var</span> <span class="built_in">num</span> = <span class="number">123</span>;</div><div class="line">func1( <span class="built_in">num</span> );</div></pre></td></tr></table></figure>
+<ol>
+<li>进行预解析,观察声明有两个,一个函数声明func1,一个是变量声明``var num```<ul>
+<li>func1被预解析记录,并与函数体相连</li>
+<li><code>var num</code> 被记录</li>
+</ul>
+</li>
+<li>预解析结束,开始执行代码<ul>
+<li>执行第一句话为:<code>`num = 123</code>,对num进行赋值</li>
+<li>调用func1( num );</li>
+<li>在进入函数体前,开辟函数内存需要的内存空间,将函数的参数var num = 123进行声明</li>
+<li>进入函数体,开始执行预解析,观察到有个<code>var num</code>,重复声明,忽略</li>
+<li>执行函数体,第一个console.log( num ) =&gt; 123</li>
+<li>num = 456,对num进行赋值</li>
+<li>第二个console.log( num ) =&gt; 456</li>
+<li>函数执行结束,回到外层</li>
+</ul>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图片</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/12/06/Web安全/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Web安全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/CSS/">&laquo; Prev</a><a class="page-number" href="/tags/CSS/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -206,9 +294,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

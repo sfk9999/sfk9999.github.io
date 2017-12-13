@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: CSS | sun丶的博客</title>
+  <title>Web安全 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/CSS/page/2/index.html">
+  <meta name="description" content="本文主要介绍了7种常见的Web安全的攻击以及防御，作为一个Web开发者应该去了解下">
+<meta name="keywords" content="Web安全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web安全">
+<meta property="og:url" content="http://yoursite.com/2017/12/06/Web安全/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="本文主要介绍了7种常见的Web安全的攻击以及防御，作为一个Web开发者应该去了解下">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-06T01:24:23.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="Web安全">
+<meta name="twitter:description" content="本文主要介绍了7种常见的Web安全的攻击以及防御，作为一个Web开发者应该去了解下">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -122,67 +127,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Web安全" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/CSS-Sprites/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/CSS-Sprites/">CSS Sprites</a>
+    <h1 class="article-title" itemprop="name">
+      Web安全
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/12/06/Web安全/" class="archive-article-date">
+  	<time datetime="2017-12-06T01:21:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要介绍了7种常见的Web安全的攻击以及防御，作为一个Web开发者应该去了解下<br><a id="more"></a></p>
+<h4 id="一、XSS-跨站脚本攻击"><a href="#一、XSS-跨站脚本攻击" class="headerlink" title="一、XSS(跨站脚本攻击)"></a>一、XSS(跨站脚本攻击)</h4><h5 id="1-1-XSS"><a href="#1-1-XSS" class="headerlink" title="1.1 XSS"></a>1.1 XSS</h5><ul>
+<li>XSS 攻击，全称是“跨站点脚本攻击”</li>
+<li>XSS是一种经常出现在web应用中的计算机安全漏洞，它允许恶意web用户将代码植入到提供给其他用户使用的页面中。</li>
+<li>XSS是针对Web站点的客户隐私的攻击，当客户详细信息失窃或受控时可能引发彻底的安全威胁</li>
+<li>XSS 攻击同时涉及三个群体：黑客、客户端和 Web 站点。</li>
+<li>XSS 攻击的<strong>目的</strong>是盗走客户端 cookies，或者任何可以用于在 Web 站点确定客户身份的其他敏感信息。手边有了合法用户的标记，黑客可以继续扮演用户与站点交互，从而冒充用户。 </li>
+<li>跨站脚本攻击有两种攻击形式： <ol>
+<li>反射型跨站脚本攻击 <ul>
+<li>攻击者会通过社会工程学手段，发送一个URL连接给用户打开，在用户打开页面的同时，浏览器会执行页面中嵌入的恶意脚本。 </li>
+</ul>
+</li>
+<li>存储型跨站脚本攻击 <ul>
+<li>攻击者利用web应用程序提供的录入或修改数据功能，将数据存储到服务器或用户cookie中，当其他用户浏览展示该数据的页面时，浏览器会执行页面中嵌入的恶意脚本。所有浏览者都会受到攻击。</li>
+</ul>
+</li>
+<li>DOM跨站攻击 <ul>
+<li>由于html页面中，定义了一段JS，根据用户的输入，显示一段html代码，攻击者可以在输入时，插入一段恶意脚本，最终展示时，会执行恶意脚本。 </li>
+</ul>
+</li>
+<li>DOM跨站和以上两个跨站攻击的差别是，DOM跨站是纯页面脚本的输出，只有规范使用javascript，才可以防御。</li>
+</ol>
+</li>
+</ul>
+<h5 id="1-2-原理"><a href="#1-2-原理" class="headerlink" title="1.2 原理"></a>1.2 原理</h5><ul>
+<li>攻击者可以在添加产品时插入恶意脚本；攻击者发布产品后，等待用户浏览产品列表页面；就会执行攻击者写的 inbreak.net/a.js 恶意脚本</li>
+<li>功能是获取当前浏览者的cookie，并发送到a.php，用户的cookie已经就会到攻击者的服务器上。攻击者利用浏览器插件，将自己的cookie替换成刚刚获取的用户的cookie，就可以狸猫换太子的冒充用户了。</li>
+</ul>
+<h5 id="1-3-防御"><a href="#1-3-防御" class="headerlink" title="1.3 防御"></a>1.3 防御</h5><ul>
+<li>最基本的防御就是对用户的输入在后台进行转义(因为直接保存输入的字符串再输出就会运行JS了)</li>
+</ul>
+<h4 id="二、CSRF跨站请求伪造攻击"><a href="#二、CSRF跨站请求伪造攻击" class="headerlink" title="二、CSRF跨站请求伪造攻击"></a>二、CSRF跨站请求伪造攻击</h4><h5 id="2-1-原理"><a href="#2-1-原理" class="headerlink" title="2.1 原理"></a>2.1 原理</h5><ul>
+<li>攻击者在用户浏览网页时，利用页面元素（例如img的src），强迫受害者的浏览器向Web应用程序发送一个改变用户信息的请求。 </li>
+<li>CSRF攻击可以从站外和站内发起。 <ul>
+<li>从站内发起CSRF攻击，需要利用网站本身的业务，比如“自定义头像”功能，恶意用户指定自己的头像URL是一个修改用户信息的链接，当其他已登录用户浏览恶意用户头像时，会自动向这个链接发送修改信息请求。 </li>
+<li>从站外发送请求，则需要恶意用户在自己的服务器上，放一个自动提交修改个人信息的htm页面，并把页面地址发给受害者用户，受害者用户打开时，会发起一个请求。 </li>
+</ul>
+</li>
+<li>如果恶意用户能够知道网站管理后台某项功能的URL，就可以直接攻击管理员，强迫管理员执行恶意用户定义的操作。</li>
+</ul>
+<h5 id="2-2-防御"><a href="#2-2-防御" class="headerlink" title="2.2 防御"></a>2.2 防御</h5><ul>
+<li>必须遵循以下三步<ol>
+<li>在用户登录时，设置一个随机的TOKEN也就是令牌，同时种植在用户的cookie中，当用户浏览器关闭、或用户再次登录时，清除TOKEN：</li>
+<li>在表单中生成一个隐藏域，它的值就是cookie中随机TOKEN：</li>
+<li>表单被提交后，就可以判断表单中的TOKEN和用户cookie中的TOKEN是否一致，如果不一致或没有这个值，就是CSRF攻击：</li>
+</ol>
+</li>
+</ul>
+<h4 id="三、SQL注入"><a href="#三、SQL注入" class="headerlink" title="三、SQL注入"></a>三、SQL注入</h4><h5 id="3-1-原理"><a href="#3-1-原理" class="headerlink" title="3.1 原理"></a>3.1 原理</h5><ul>
+<li>SQL注入攻击是通过非友好的SQL语句拼接来获取该用户没有权限访问的数据。 </li>
+<li>当应用程序将用户输入的内容，拼接到SQL语句中，一起提交给数据库执行时，就会产生SQL注入威胁。 </li>
+<li>由于用户的输入，也是SQL语句的一部分，所以攻击者可以利用这部分可以控制的内容，注入自己定义的语句，改变SQL语句执行逻辑，让数据库执行任意自己需要的指令。</li>
+</ul>
+<h5 id="3-2-防御"><a href="#3-2-防御" class="headerlink" title="3.2 防御"></a>3.2 防御</h5><ul>
+<li>在后台可以通过预处理执行SQL语句，并对所有传入SQL语句中的变量做绑定</li>
+</ul>
+<h4 id="四、XML注入"><a href="#四、XML注入" class="headerlink" title="四、XML注入"></a>四、XML注入</h4><h5 id="4-1-原理"><a href="#4-1-原理" class="headerlink" title="4.1 原理"></a>4.1 原理</h5><ul>
+<li>XML注入攻击，和SQL注入的原理一样，都是攻击者输入恶意的代码来执行自身权限以外的功能。</li>
+<li>XML是存储数据的一种方式，如果在修改或者查询时，没有做转义，直接输入或输出数据，都将导致XML注入漏洞。</li>
+<li>攻击者可以修改XML数据格式，增加新的XML节点，对数据处理流程产生影响。</li>
+</ul>
+<h5 id="4-2-防御"><a href="#4-2-防御" class="headerlink" title="4.2 防御"></a>4.2 防御</h5><p>对关键字符串进行转义<br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&amp;</span> <span class="literal">-</span><span class="literal">-</span>&gt; <span class="comment">&amp;amp;</span></div><div class="line"><span class="comment"></span> &lt; <span class="literal">-</span><span class="literal">-</span>&gt; <span class="comment">&amp;lt;</span></div><div class="line"><span class="comment"></span> &gt; <span class="literal">-</span><span class="literal">-</span>&gt; <span class="comment">&amp;gt;</span></div><div class="line"><span class="comment"></span> <span class="comment">"</span> <span class="literal">-</span><span class="literal">-</span>&gt; <span class="comment">&amp;quot;</span></div><div class="line"><span class="comment"></span> <span class="comment">'</span> <span class="literal">-</span><span class="literal">-</span>&gt; <span class="comment">&amp;#39;</span></div></pre></td></tr></table></figure></p>
+<h4 id="五、文件操作"><a href="#五、文件操作" class="headerlink" title="五、文件操作"></a>五、文件操作</h4><p>分为文件上传攻击和文件下载攻击。</p>
+<h5 id="5-1-文件上传攻击"><a href="#5-1-文件上传攻击" class="headerlink" title="5.1 文件上传攻击"></a>5.1 文件上传攻击</h5><p>Web应用程序在处理用户上传的文件时，没有判断文件的拓展名是否在允许的范围内，就把文件保存在服务器上，导致恶意用户可以上传任意文件，甚至上传木马到Web服务器上，直接控制服务器。</p>
+<h6 id="5-1-1-防御"><a href="#5-1-1-防御" class="headerlink" title="5.1.1 防御"></a>5.1.1 防御</h6><ul>
+<li>想要防止文件上传攻击，需要做到以下几点： <ol>
+<li>检测上传文件扩展名白名单，不属于白名单，不允许上传。 </li>
+<li>上传文件的目录必须是http请求无法直接访问到的，如果需要访问，必须上传到其他域名下，并设置该目录不解析php等脚本语言。 </li>
+<li>上传文件保存的文件名和目录名由系统根据时间生成，不允许用户自定义</li>
+<li>图片上传，要通过处理（压缩图、水印），无异常后才能保存到服务器。</li>
+</ol>
+</li>
+</ul>
+<h5 id="5-2-文件下载攻击"><a href="#5-2-文件下载攻击" class="headerlink" title="5.2 文件下载攻击"></a>5.2 文件下载攻击</h5><ul>
+<li>处理用户请求下载文件时，如果允许用户提交任意文件目录，并把服务器上对应的文件直接发送给用户，将造成任意文件下载攻击。如果让用户提交文件目录地址，就把目录下的文件列表发送给用户，会造成目录遍历安全威胁。 </li>
+<li>攻击者可以下载服务器上的敏感文件，比如数据库链接配置文件、网站源代码等。</li>
+</ul>
+<h6 id="5-2-1-防御"><a href="#5-2-1-防御" class="headerlink" title="5.2.1 防御"></a>5.2.1 防御</h6><ul>
+<li>要防止文件下载攻击，需要做到以下几点： <ol>
+<li>将要下载的文件地址保存在数据库中，让用户提交文件对应ID下载文件。 </li>
+<li>文件放在Web无法直接访问的目录 </li>
+<li>下载文件之前做权限判断。</li>
+</ol>
+</li>
+</ul>
+<h4 id="六、权限攻击"><a href="#六、权限攻击" class="headerlink" title="六、权限攻击"></a>六、权限攻击</h4><h5 id="6-1-水平权限攻击"><a href="#6-1-水平权限攻击" class="headerlink" title="6.1 水平权限攻击"></a>6.1 水平权限攻击</h5><p>水平权限攻击，也叫作访问控制攻击。Web应用程序接收到用户请求，修改某条数据时，没有判断数据的所属人，或者在判断数据所属人时从用户提交的表单参数中获取了userid。导致攻击者可以自行修改userid修改不属于自己的数据。所有的更新语句操作，都可能产生这个漏洞。</p>
+<h6 id="6-1-1-防御"><a href="#6-1-1-防御" class="headerlink" title="6.1.1 防御"></a>6.1.1 防御</h6><p>从用户的加密认证cookie中获取当前用户id，并且在执行的sql语句中加入当前用户id作为条件语句。由于cookie是加密的，所以攻击者无法修改加密信息。</p>
+<h5 id="6-2-垂直权限攻击"><a href="#6-2-垂直权限攻击" class="headerlink" title="6.2 垂直权限攻击"></a>6.2 垂直权限攻击</h5><p>垂直权限攻击又叫做权限提升攻击。其原理是由于Web应用没有做权限控制，或仅仅在菜单上做了权限控制，导致恶意用户只要猜测其他管理页面的URL，就可以访问或控制其他角色拥有的数据或页面，达到权限提升的目的。</p>
+<h6 id="6-2-1-防御"><a href="#6-2-1-防御" class="headerlink" title="6.2.1 防御"></a>6.2.1 防御</h6><p>在每个页面的加载之前进行权限验证即可。一个普通的权限系统，菜单是通过数据库中对应权限和角色来进行字符串拼接形成的，而不是静态的通过在页面上进行权限判断决定的。</p>
+<h4 id="七、（前端方法）Cookie管理"><a href="#七、（前端方法）Cookie管理" class="headerlink" title="七、（前端方法）Cookie管理"></a>七、（前端方法）Cookie管理</h4><p>对应之前的XSS攻击(原理是利用脚本读取用户Cookie从而造成用户信息泄露)</p>
+<h5 id="7-1-HttpOnly"><a href="#7-1-HttpOnly" class="headerlink" title="7.1 HttpOnly"></a>7.1 HttpOnly</h5><p>该属性值的作用就是防止Cookie值被页面脚本读取。一个没有设置HttpOnly的Cookie<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">setcookie(<span class="string">"name"</span>,<span class="string">"lf"</span>)<span class="comment">;</span></div><div class="line"></div><div class="line">//添加HttpOnly属性为<span class="literal">true</span></div><div class="line">setcookie(<span class="string">'age'</span>,<span class="string">'23'</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>,<span class="literal">TRUE</span>)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>切记HttpOnly属性只是增加了攻击者的难度，不能达到完全防御XSS攻击。</p>
+<h5 id="7-2-Secure"><a href="#7-2-Secure" class="headerlink" title="7.2 Secure"></a>7.2 Secure</h5><p>给Cookie设置Secure属性时，只有在https协议下访问的时候，浏览器才会发送该Cookie。<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//在之前添加HttpOnly属性为<span class="literal">true</span>的基础上</div><div class="line">setcookie(<span class="string">'age'</span>,<span class="string">'23'</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>,<span class="literal">NULL</span>,<span class="literal">TRUE</span>)<span class="comment">;</span></div><div class="line"></div><div class="line">//添加Secure属性为<span class="literal">true</span></div><div class="line">setcookie(<span class="string">'gf'</span>,<span class="string">'tyq'</span>,<span class="literal">Null</span>,<span class="literal">Null</span>,<span class="literal">Null</span>,<span class="literal">TRUE</span>,<span class="literal">Null</span>)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<h5 id="7-3-有效期"><a href="#7-3-有效期" class="headerlink" title="7.3 有效期"></a>7.3 有效期</h5><ul>
+<li>添加两个时间<ul>
+<li>即使在一直活动也要失效的时间</li>
+<li>长时间不活动的失效的时间<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 判断会员的cookie是否过期</span></div><div class="line"><span class="keyword">if</span> (isLogin) &#123;</div><div class="line">    <span class="keyword">String</span> timeStampStr = (<span class="keyword">String</span>) <span class="built_in">map</span>.<span class="built_in">get</span>(UserAuthenticationContext.TIMESTAMP);</div><div class="line">    <span class="keyword">long</span> loginTime = <span class="number">0</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        loginTime = Long.parseLong(timeStampStr);</div><div class="line">    &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</div><div class="line">        <span class="keyword">if</span> (logger.isInfoEnabled()) &#123;</div><div class="line">            logger.info(<span class="string">" loginId: "</span> + usr.getLoginId() + <span class="string">" timestamp has exception "</span> + timeStampStr);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">long</span> now = System.currentTimeMillis() / <span class="number">1000</span>;</div><div class="line">    <span class="keyword">if</span> (now - loginTime &gt; UserAuthenticationContext.COOKIE_VALIDITY) &#123;</div><div class="line">        usr.setAuthenticated(<span class="keyword">false</span>, <span class="keyword">true</span>);</div><div class="line">        <span class="keyword">if</span> (logger.isInfoEnabled()) &#123;</div><div class="line">            logger.info(<span class="string">"loginId: "</span> + usr.getLoginId() + <span class="string">" loginTime: "</span> + loginTime + <span class="string">" nowTime: "</span> + now);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图片</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Web安全</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/12/13/js作用域链和预解析/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js作用域链和预解析
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/12/04/cookie、sessionStorage和localStorage/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cookie、sessionStorage和localStorage</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/CSS/">&laquo; Prev</a><a class="page-number" href="/tags/CSS/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -206,9 +349,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
