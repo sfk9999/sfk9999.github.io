@@ -1,6 +1,7 @@
 ---
 title: js作用域链和预解析
 date: 2017-12-13 14:31:28
+toc: true
 tags:
     - JavaScript
 ---
@@ -74,6 +75,25 @@ function test() {
 test();
 //person和test函数地位相同
 //所以输出Aralic
+```
+###### 3.1.3 立即执行函数的作用域链问题
+```
+var bo = 10;//全局变量  值为10
+function foo() {
+    console.log(this)//此处this一直指向window 所以this.bo一直是10
+    console.log(bo);
+    //bo全局变量  打印10
+}
+(function() {//自执行函数 此处this指代window
+    var bo = 20;
+    console.log(this.bo)//10
+    foo();//依然打印10
+})();
+(function (func) {//自执行函数 此处this指代window
+    var bo = 30;
+    console.log(this.bo)//10
+    func();//依然打印10
+})(foo)
 ```
 
 ##### 3.2 预解析例子
