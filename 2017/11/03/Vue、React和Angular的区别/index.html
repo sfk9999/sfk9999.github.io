@@ -15,8 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/03/Vue、React和Angular的区别/index.html">
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="MVX框架模式：MVC+MVP+MVVM MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。 MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。 MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewMo">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-03T08:54:51.184Z">
+<meta property="og:updated_time" content="2017-12-21T03:04:35.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue、React和Angular的区别">
 <meta name="twitter:description" content="MVX框架模式：MVC+MVP+MVVM MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。 MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。 MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewMo">
@@ -153,30 +152,6 @@
     
     <!-- 目录内容 -->
     
-        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-              <span class="btn-bg"></span>
-              <span class="btn-text">文章导航</span>
-              </p>
-    	<div id="toc-article" class="toc-article">
-    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-    		<strong class="toc-title">文章目录</strong>
-               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MVX框架模式：MVC-MVP-MVVM"><span class="toc-number">1.</span> <span class="toc-text">MVX框架模式：MVC+MVP+MVVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue-js"><span class="toc-number">2.</span> <span class="toc-text">Vue.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与AngularJS的区别"><span class="toc-number">2.1.</span> <span class="toc-text">Vue.js与AngularJS的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与React的区别"><span class="toc-number">2.2.</span> <span class="toc-text">Vue.js与React的区别</span></a></li></ol></li></ol>
-             </div>
-       <script type="text/javascript">
-    	function showToc(){
-    		var toc_article = document.getElementById("toc-article");
-    		var show_toc_btn = document.getElementById("show-toc-btn");
-    		toc_article.setAttribute("style","display:block");
-    		show_toc_btn.setAttribute("style","display:none");
-    		};
-    	function showBtn(){
-    		var toc_article = document.getElementById("toc-article");
-    		var show_toc_btn = document.getElementById("show-toc-btn");
-    		toc_article.setAttribute("style","display:none");
-    		show_toc_btn.setAttribute("style","display:block");
-    		};
-       </script>
-          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -195,10 +170,11 @@
 <li>轻量级的框架</li>
 <li>双向数据绑定</li>
 <li>指令</li>
-<li>插件化<a id="more"></a>
-<h4 id="Vue-js与AngularJS的区别"><a href="#Vue-js与AngularJS的区别" class="headerlink" title="Vue.js与AngularJS的区别"></a>Vue.js与AngularJS的区别</h4></li>
+<li>插件化</li>
 </ol>
 </li>
+</ol>
+<h4 id="Vue-js与AngularJS的区别"><a href="#Vue-js与AngularJS的区别" class="headerlink" title="Vue.js与AngularJS的区别"></a>Vue.js与AngularJS的区别</h4><ol>
 <li>相同点：<ol>
 <li>都支持指令：内置指令和自定义指令。</li>
 <li>都支持过滤器：内置过滤器和自定义过滤器。</li>
@@ -262,15 +238,6 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/03/git的基本用法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git的基本用法
-        
-      </div>
-    </a>
-  
   
     <a href="/2017/11/02/Hexo搭建/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hexo搭建</div>
@@ -292,19 +259,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MVX框架模式：MVC-MVP-MVVM"><span class="toc-number">1.</span> <span class="toc-text">MVX框架模式：MVC+MVP+MVVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue-js"><span class="toc-number">2.</span> <span class="toc-text">Vue.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与AngularJS的区别"><span class="toc-number">2.1.</span> <span class="toc-text">Vue.js与AngularJS的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与React的区别"><span class="toc-number">2.2.</span> <span class="toc-text">Vue.js与React的区别</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
