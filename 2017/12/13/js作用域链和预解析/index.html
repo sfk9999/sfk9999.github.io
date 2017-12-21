@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-13T06:47:08.893Z">
+<meta property="og:updated_time" content="2017-12-21T02:08:52.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js作用域链和预解析">
 <meta name="twitter:description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
@@ -57,6 +57,8 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/dist">demo</a></li>
 	        
 			</ul>
 		</nav>
@@ -100,6 +102,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -112,7 +116,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/dist">demo</a></li>
 		        
 				</ul>
 			</nav>
@@ -147,6 +153,30 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、作用域"><span class="toc-number">1.</span> <span class="toc-text">一、作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、预解析"><span class="toc-number">2.</span> <span class="toc-text">二、预解析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-什么是js预解析"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 什么是js预解析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-在什么情况下进行预解析"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 在什么情况下进行预解析</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-2"><span class="toc-number">2.2.1.</span> <span class="toc-text">3.2.2</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-3-函数"><span class="toc-number">2.2.2.</span> <span class="toc-text">3.2.3 函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-4-函数，函数中无var"><span class="toc-number">2.2.3.</span> <span class="toc-text">3.2.4 函数，函数中无var</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-5-函数参数"><span class="toc-number">2.2.4.</span> <span class="toc-text">3.2.5 函数参数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-6-script标签"><span class="toc-number">2.2.5.</span> <span class="toc-text">3.2.6 script标签</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-7-script标签"><span class="toc-number">2.2.6.</span> <span class="toc-text">3.2.7 script标签</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-8-重复声明"><span class="toc-number">2.2.7.</span> <span class="toc-text">3.2.8 重复声明</span></a></li></ol></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -176,7 +206,8 @@
 <p>person();<br>//输出undefined<br>//在函数执行前，会将变量和函数声明提升，因此就变为<br>function person(){<br>    var name;<br>    console.log(name);<br>    name=””<br>}<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### <span class="number">3.1</span><span class="number">.2</span>.作用域链问题(找全局作用域)</div></pre></td></tr></table></figure></p>
 <p>var name = ‘Aralic’;<br>function person() {<br>    alert(name);<br>}</p>
 <p>function test() {<br>   var name = ‘tom’;<br>   person();<br>}</p>
-<p>test();<br>//person和test函数地位相同<br>//所以输出Aralic<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### <span class="number">3.2</span> 预解析例子</div><div class="line">###### <span class="number">3.2</span><span class="number">.1</span></div></pre></td></tr></table></figure></p>
+<p>test();<br>//person和test函数地位相同<br>//所以输出Aralic<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### <span class="number">3.1</span><span class="number">.3</span> 立即执行函数的作用域链问题</div></pre></td></tr></table></figure></p>
+<p>var bo = 10;//全局变量  值为10<br>function foo() {<br>    console.log(this)//此处this一直指向window 所以this.bo一直是10<br>    console.log(bo);<br>    //bo全局变量  打印10<br>}<br>(function() {//自执行函数 此处this指代window<br>    var bo = 20;<br>    console.log(this.bo)//10<br>    foo();//依然打印10<br>})();<br>(function (func) {//自执行函数 此处this指代window<br>    var bo = 30;<br>    console.log(this.bo)//10<br>    func();//依然打印10<br>})(foo)<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### <span class="number">3.2</span> 预解析例子</div><div class="line">###### <span class="number">3.2</span><span class="number">.1</span></div></pre></td></tr></table></figure></p>
 <p>alert(a);<br>var a = ‘我是变量’;<br>function a(){ alert(‘我是函数’) }<br>alert(a);</p>
 <p>// 输出<br>//function a(){ alert(‘我是函数’) }   (因为undefined代表空，但函数不是空。)<br>//‘我是变量’    (=可以改变初值)<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">alert(a);    </div><div class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span> <span class="params">()</span></span>&#123; <span class="string">'我是函数'</span> &#125;</div><div class="line"><span class="comment">//undefined,可以看出,凡是var,初始值都是undefined</span></div></pre></td></tr></table></figure></p>
 <h6 id="3-2-2"><a href="#3-2-2" class="headerlink" title="3.2.2"></a>3.2.2</h6><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">alert(a);    </div><div class="line">a++;</div><div class="line">alert(a);   </div><div class="line"><span class="keyword">var</span> a = <span class="string">'我是变量'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">()</span></span>&#123; alert(<span class="string">'我是函数'</span>) &#125;</div><div class="line">alert(a); </div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//function a()&#123; alert('我是函数') &#125;</span></div><div class="line"><span class="comment">//NaN   (++可以改变初始值)</span></div><div class="line"><span class="comment">//'我是变量'</span></div></pre></td></tr></table></figure>
@@ -257,6 +288,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、作用域"><span class="toc-number">1.</span> <span class="toc-text">一、作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、预解析"><span class="toc-number">2.</span> <span class="toc-text">二、预解析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-什么是js预解析"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 什么是js预解析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-在什么情况下进行预解析"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 在什么情况下进行预解析</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-2"><span class="toc-number">2.2.1.</span> <span class="toc-text">3.2.2</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-3-函数"><span class="toc-number">2.2.2.</span> <span class="toc-text">3.2.3 函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-4-函数，函数中无var"><span class="toc-number">2.2.3.</span> <span class="toc-text">3.2.4 函数，函数中无var</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-5-函数参数"><span class="toc-number">2.2.4.</span> <span class="toc-text">3.2.5 函数参数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-6-script标签"><span class="toc-number">2.2.5.</span> <span class="toc-text">3.2.6 script标签</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-7-script标签"><span class="toc-number">2.2.6.</span> <span class="toc-text">3.2.7 script标签</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2-8-重复声明"><span class="toc-number">2.2.7.</span> <span class="toc-text">3.2.8 重复声明</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
