@@ -1,0 +1,47 @@
+.m-head{
+    height: 160px;
+    text-align: center;
+    background: #eeeeee;
+    /*垂直水平居中*/
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.g-flow{
+    margin: 20px auto;
+    width: 960px;
+}
+.m-asdie{
+    float:left;
+    margin-right:20px;
+    width:200px;
+    background:#fff;
+    -webkit-box-shadow:0px 1px 2px #bbb;
+    box-shadow:0px 1px 2px #bbb;
+    cursor:pointer;
+}
+.m-asdie li{
+    text-align:center;
+    height: 40px;
+    line-height: 40px;
+    border-bottom:1px solid #ddd;
+}
+.m-asdie li:hover{
+    background:#f8f8f8;
+}
+/*权重关系*/
+.m-asdie li.active{
+    background: #fe8019;
+}
+
+.m-body{
+    box-shadow:0px 1px 2px #bbb;
+    overflow:hidden;
+}
+.m-body li{
+    display: inline-block;
+    width: 210px;
+    margin: 10px 15px;
+    border:1px solid #eee;
+}

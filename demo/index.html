@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="pagesDemo/css/index.css">
+    <link rel="stylesheet" href="pagesDemo/css/base/base.css">
+    <script src="pagesDemo/js/vue.js"></script>
+
+</head>
+<body>
+<div class="m-head">
+    <span>
+    1.下一步使用组件化的方式来实现菜单展示<br>
+    2. 使用路由的方式来跳转页面。
+    </span>
+</div>
+<div class="g-flow" id="g-side">
+    <div class="m-asdie">
+        <ul>
+            <li v-for="(item,index) in titles" @click="showToggle(index)" :class={active:item.isSubShow}>
+                {{item.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="m-body">
+        <ul v-for="item in titles">
+            <li v-show="item.isSubShow" v-for="detail in item.details" @click="gotoHref(detail.name)">
+                {{detail.name}}
+                <br>
+                {{detail.des}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var obj=[
+        {
+            "name":"css",
+            isSubShow:true,
+            "details":[
+                {
+                    "name":"css_center",
+                    "des":"水平垂直"
+                },
+                {
+                    "name":"css_sameHeight_flex",
+                    "des":"等高布局"
+                },
+                {
+                    "name":"css_sameHeight_float",
+                    "des":"等高布局"
+                }
+            ]
+        },
+        {
+            "name":"html",
+            isSubShow:false,
+            "details":[
+                {
+                    "name":"html_center",
+                    "des":"水平垂直"
+                },
+                {
+                    "name":"html_samHeight",
+                    "des":"等高布局"
+                }
+            ]
+        }
+    ];
+    new Vue({
+        el:'#g-side',
+        data:{
+            titles:obj
+        },
+        methods:{
+            showToggle:function(index){
+                for(var i =0 ; i<this.titles.length;i++){
+                    this.titles[i].isSubShow=false;
+                    if(i==index){
+                        this.titles[index].isSubShow=true;
+                    }
+                }
+            },
+            gotoHref:function (name) {
+                //接下来用路由实现
+                window.location.href='pagesDemo/'+name+'.html'
+            }
+        }
+    })
+</script>
+</body>
+</html>
