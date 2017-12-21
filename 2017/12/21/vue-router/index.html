@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: package | sun丶的博客</title>
+  <title>&#39;vue-router&#39; | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/tags/package/index.html">
+  <meta name="description" content="本文介绍vue-router如何搭建和使用">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#39;vue-router&#39;">
+<meta property="og:url" content="http://yoursite.com/2017/12/21/vue-router/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="本文介绍vue-router如何搭建和使用">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-21T04:56:35.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="&#39;vue-router&#39;">
+<meta name="twitter:description" content="本文介绍vue-router如何搭建和使用">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -128,68 +133,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue-router" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/08/package-json搭建/" class="archive-article-date">
-  	<time datetime="2017-11-08T03:03:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/08/package-json搭建/">package.json搭建</a>
+    <h1 class="article-title" itemprop="name">
+      &#39;vue-router&#39;
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2017/12/21/vue-router/" class="archive-article-date">
+  	<time datetime="2017-12-21T04:55:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-路由"><span class="toc-number">1.</span> <span class="toc-text">vue 路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、安装"><span class="toc-number">1.1.</span> <span class="toc-text">一、安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、基础"><span class="toc-number">1.2.</span> <span class="toc-text">二、基础</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-开始"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-动态路由匹配"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 动态路由匹配</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、router-js"><span class="toc-number">1.3.</span> <span class="toc-text">三、router.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、懒加载"><span class="toc-number">1.4.</span> <span class="toc-text">四、懒加载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、当前路由添加激活状态"><span class="toc-number">1.5.</span> <span class="toc-text">五、当前路由添加激活状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、路由跳转时添加过渡动效"><span class="toc-number">1.6.</span> <span class="toc-text">六、路由跳转时添加过渡动效</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、路由传参"><span class="toc-number">1.7.</span> <span class="toc-text">七、路由传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#八、编程式导航"><span class="toc-number">1.8.</span> <span class="toc-text">八、编程式导航</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
           
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文介绍vue-router如何搭建和使用<br><a id="more"></a></p>
+<h3 id="vue-路由"><a href="#vue-路由" class="headerlink" title="vue 路由"></a>vue 路由</h3><h4 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> vue-router <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p>如果在一个模块化工程中使用它，必须要通过 Vue.use() 明确地安装路由功能：<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在main.js中</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"></div><div class="line">Vue.use(VueRouter)</div></pre></td></tr></table></figure></p>
+<h4 id="二、基础"><a href="#二、基础" class="headerlink" title="二、基础"></a>二、基础</h4><h5 id="2-1-开始"><a href="#2-1-开始" class="headerlink" title="2.1 开始"></a>2.1 开始</h5><p>将组件(components)映射到路由(routes)，然后告诉 vue-router 在哪里渲染它们。<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//*.vue文件中</span></div><div class="line"><span class="params">&lt;router-link to="/first"&gt;</span>第一个路由<span class="params">&lt;/router-link&gt;</span></div><div class="line"><span class="comment">//使用 router-link 组件来导航</span></div><div class="line"><span class="comment">//通过传入 `to` 属性指定链接.</span></div><div class="line"><span class="comment">//&lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签</span></div></pre></td></tr></table></figure></p>
+<p>多层级的入口<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/mine"</span> <span class="attr">tag</span>=<span class="string">"li"</span>&gt;</span>       //tag指定标签名</div><div class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon-nav icon-nav5"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>我的<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 渲染结果 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon-nav icon-nav5"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>我的<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>路由出口<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>main.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1.定义路由</span></div><div class="line"><span class="keyword">import</span> first <span class="keyword">from</span> <span class="string">'@/components/first'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> routes=&#123;</div><div class="line">    path:<span class="string">'/first'</span>,</div><div class="line">    component:first</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//2.创建router实例，传"routes"配置</span></div><div class="line"><span class="keyword">import</span> routers <span class="keyword">from</span> <span class="string">'./router'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> router =<span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes  <span class="comment">//缩写，相当于 routes:routes</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//3. 创建和挂载根实例</span></div><div class="line"><span class="comment">// 记得要通过 router 配置参数注入路由，从而让整个应用都有路由功能</span></div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</div><div class="line">    router</div><div class="line">&#125;).$mount(<span class="string">'#app'</span>)</div></pre></td></tr></table></figure></p>
+<p>要注意，当 router-link 对应的路由匹配成功，将自动设置 class 属性值 .router-link-active。</p>
+<h5 id="2-2-动态路由匹配"><a href="#2-2-动态路由匹配" class="headerlink" title="2.2 动态路由匹配"></a>2.2 动态路由匹配</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VurRouter(&#123;</div><div class="line">    routes:[</div><div class="line">        &lt;!--动态路径参数 以冒号开头--&gt;</div><div class="line">        &#123;</div><div class="line">            path:<span class="string">'user/:id'</span>,</div><div class="line">            component:user</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>此时像/user/foo和/user/bar都能映射到路由里</p>
+<ul>
+<li>$route.params<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const User=&#123;</div><div class="line">    temp;ate:'&lt;<span class="keyword">div</span>&gt;&#123;&#123;$route.params.<span class="built_in">id</span>&#125;&#125;&lt;/<span class="keyword">div</span>&gt;'</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>存放着在路由中设置的动态路径参数</p>
+<h4 id="三、router-js"><a href="#三、router-js" class="headerlink" title="三、router.js"></a>三、router.js</h4><p>如果组件较多，可以单独把路由拿出来写一个router.js文件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 0. 如果使用模块化机制编程，进入Vue和VueRouter，要调用 Vue.use(VueRouter)  </span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>  </div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span>  </div><div class="line">Vue.use(VueRouter)  </div><div class="line">  </div><div class="line"><span class="comment">// 1. 定义（路由）组件。  </span></div><div class="line"><span class="comment">// 可以从其他文件 import 进来，我们一般都是建好了组件再来写路由的  </span></div><div class="line"><span class="comment">// 所以就会有好多这样的语句。  </span></div><div class="line"><span class="keyword">import</span> home <span class="keyword">from</span> <span class="string">"./components/home"</span>  </div><div class="line"><span class="keyword">import</span> login <span class="keyword">from</span> <span class="string">"./components/login"</span>  </div><div class="line">  </div><div class="line"><span class="comment">// 2. 定义路由  </span></div><div class="line">  routes: [ <span class="comment">//这里跟1.x有挺大区别，有接触的自己看清楚哦  </span></div><div class="line">    &#123;  </div><div class="line">      path: <span class="string">'/'</span>,    <span class="comment">//浏览器网路请求走通之后默认就会去找域名下的根目录，  </span></div><div class="line">      name: <span class="string">'home'</span>, <span class="comment">//所以我们就把这个组件作为默认首页  </span></div><div class="line">      component: home  </div><div class="line">    &#125;,  </div><div class="line">    &#123;  </div><div class="line">      path: <span class="string">'/login'</span>,  </div><div class="line">      name: <span class="string">'login'</span>,  <span class="comment">//添加name属性，可以在router-link中直接写name</span></div><div class="line">      component: login  </div><div class="line">    &#125;  </div><div class="line">   ]  </div><div class="line">  </div><div class="line"><span class="comment">// 3. 创建 router 实例，然后传 `routes` 配置  </span></div><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;        </div><div class="line">  routes,  <span class="comment">//（缩写）相当于 routes: routes  </span></div><div class="line">  mode: <span class="string">'history'</span>, <span class="comment">//history: 依赖 HTML5 History API 和服务器配置。URL 就像正常的 url</span></div><div class="line">  base: __dirname,</div><div class="line">&#125;)  </div><div class="line">  </div><div class="line"><span class="comment">// 4. 创建和挂载根实例。  </span></div><div class="line"><span class="comment">// 记得要通过 router 配置参数注入路由，  </span></div><div class="line"><span class="comment">// 从而让整个应用都有路由功能  </span></div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;  </div><div class="line">  router  </div><div class="line">&#125;).$mount(<span class="string">'#app'</span>)  </div><div class="line"><span class="comment">// 现在，应用已经启动了！</span></div></pre></td></tr></table></figure></p>
+<p>新建好的router.js文件要在main.js中import进来<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//main.js</span></div><div class="line"><span class="keyword">import</span> <span class="string">"./routers.js"</span></div><div class="line"></div><div class="line"><span class="comment">//如果你在options里声明了挂载的el，就不用再手动mount了</span></div><div class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</div><div class="line">    el: <span class="string">'#app'</span>,  <span class="comment">//不需要</span></div><div class="line">    router,</div><div class="line">    render: <span class="function"><span class="params">h</span> =&gt;</span> h(App) <span class="comment">//新添加的函数操作</span></div><div class="line">&#125;).$mount(<span class="string">'#app'</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="四、懒加载"><a href="#四、懒加载" class="headerlink" title="四、懒加载"></a>四、懒加载</h4><ol>
+<li>解决样式冲突问题 </li>
+<li>解决页面资源加载问题 </li>
+<li>路由被访问时才加载对应组件，提高应用加载效率</li>
+</ol>
+<ul>
+<li>做法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//将</span></div><div class="line"><span class="keyword">import</span> home form <span class="string">"./components/home"</span></div><div class="line"><span class="comment">//改为异步组件</span></div><div class="line"><span class="keyword">const</span> home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([<span class="string">'./home.vue'</span>], resolve)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="五、当前路由添加激活状态"><a href="#五、当前路由添加激活状态" class="headerlink" title="五、当前路由添加激活状态"></a>五、当前路由添加激活状态</h4><p>vue-router提供了当前路由激活时，自动添加类名，默认 router-link-active。我们也可以在创建vue-router实例的时候给他设置全局配置，修改默认添加类名。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">linkActiveClass:</span><span class="string">'link-active'</span></div></pre></td></tr></table></figure></p>
+<h4 id="六、路由跳转时添加过渡动效"><a href="#六、路由跳转时添加过渡动效" class="headerlink" title="六、路由跳转时添加过渡动效"></a>六、路由跳转时添加过渡动效</h4><p>在app.vue中<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"fade"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>css<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.fade-enter-active</span>, <span class="selector-class">.fade-leave-active</span> &#123;</div><div class="line">  <span class="attribute">transition</span>: opacity .<span class="number">5s</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.fade-enter</span>, <span class="selector-class">.fade-leave-active</span> &#123;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="七、路由传参"><a href="#七、路由传参" class="headerlink" title="七、路由传参"></a>七、路由传参</h4><p>拿到路由传来的参数：this.$route<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">router-link</span> </span></span></div><div class="line"><span class="xml">        :to="</span><span class="template-variable">&#123;</span></div><div class="line"><span class="template-variable">            name:'dataInput',</span></div><div class="line"><span class="template-variable">            params:&#123;</span></div><div class="line"><span class="template-variable">                value:mine.trueName,</span></div><div class="line"><span class="template-variable">                proName:'trueName',</span></div><div class="line"><span class="template-variable">                title:'修改名字'</span></div><div class="line"><span class="template-variable">            &#125;</span><span class="xml"></span></div><div class="line"><span class="xml">        &#125;"&gt;</span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>名字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"enter-btn"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../assets/img/enter-btng@3x.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"hint"</span>&gt;</span></span><span class="template-variable">&#123;&#123;mine.trueName&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<p>script中<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">data</span><span class="params">()</span></span>&#123;</div><div class="line">    return&#123;</div><div class="line">        choose: this.<span class="variable">$route</span><span class="selector-class">.params</span><span class="selector-class">.value</span>,</div><div class="line">        title: this.<span class="variable">$route</span><span class="selector-class">.params</span><span class="selector-class">.title</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="八、编程式导航"><a href="#八、编程式导航" class="headerlink" title="八、编程式导航"></a>八、编程式导航</h4><p>修改属性后，又回到原来的路由。参数是一个整数，意思是在 history 记录中向前或者后退多少步<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$router.go(<span class="number">-1</span>);</div></pre></td></tr></table></figure></p>
+<p>导航到不同的url<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">router.<span class="keyword">push</span>(location)</div><div class="line"><span class="comment">//这个方法会向 history 栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的 URL。</span></div></pre></td></tr></table></figure></p>
+<p>router.replace(location)：和push的区别是不会向history添加记录</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">package</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">包管理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/12/13/js作用域链和预解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js作用域链和预解析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-路由"><span class="toc-number">1.</span> <span class="toc-text">vue 路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、安装"><span class="toc-number">1.1.</span> <span class="toc-text">一、安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、基础"><span class="toc-number">1.2.</span> <span class="toc-text">二、基础</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-开始"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-动态路由匹配"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 动态路由匹配</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、router-js"><span class="toc-number">1.3.</span> <span class="toc-text">三、router.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、懒加载"><span class="toc-number">1.4.</span> <span class="toc-text">四、懒加载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、当前路由添加激活状态"><span class="toc-number">1.5.</span> <span class="toc-text">五、当前路由添加激活状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、路由跳转时添加过渡动效"><span class="toc-number">1.6.</span> <span class="toc-text">六、路由跳转时添加过渡动效</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、路由传参"><span class="toc-number">1.7.</span> <span class="toc-text">七、路由传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#八、编程式导航"><span class="toc-number">1.8.</span> <span class="toc-text">八、编程式导航</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -212,9 +317,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
