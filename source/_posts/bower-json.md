@@ -1,6 +1,7 @@
 ---
 title: bower.json
 date: 2017-11-19 15:13:32
+toc: true
 tags:
     - node
     - bower

@@ -1,9 +1,13 @@
 ---
 title: 'js中的相等,全等和if语句'
 date: 2017-12-03 19:15:38
+toc: true
 tags:
     - JavaScript
 ---
+本文介绍了js中==，===和if的转换方式
+<!--more-->
+
 
 #### 比较运算符==
 对于x==y比较，Type()为变量的类型。
