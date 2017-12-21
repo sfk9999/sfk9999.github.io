@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>js中的相等,全等和if语句 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="比较运算符==对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回 t">
+  <meta name="description" content="本文介绍了js中==，===和if的转换方式">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的相等,全等和if语句">
 <meta property="og:url" content="http://yoursite.com/2017/12/03/js中的相等-全等和if语句/index.html">
 <meta property="og:site_name" content="sun丶的博客">
-<meta property="og:description" content="比较运算符==对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回 t">
+<meta property="og:description" content="本文介绍了js中==，===和if的转换方式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-21T03:07:33.325Z">
+<meta property="og:updated_time" content="2017-12-21T05:48:36.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的相等,全等和if语句">
-<meta name="twitter:description" content="比较运算符==对于x==y比较，Type()为变量的类型。  若Type(x)与Type(y)相同，则 若 Type(x,y) 为 Undefined， 返回 true。 若 Type(x,y) 为 Null， 返回 true。 若 Type(x,y) 为 Number， 则 若 x 为 NaN， 返回 false。 若 y 为 NaN， 返回 false。 若 x 与 y 为相等数值， 返回 t">
+<meta name="twitter:description" content="本文介绍了js中==，===和if的转换方式">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -58,7 +58,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/demo">demo</a></li>
+				<li><a href="/demo">demo仓库</a></li>
 	        
 			</ul>
 		</nav>
@@ -118,7 +118,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/demo">demo</a></li>
+					<li style="width: 50%"><a href="/demo">demo仓库</a></li>
 		        
 				</ul>
 			</nav>
@@ -153,10 +153,35 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#比较运算符"><span class="toc-number">1.</span> <span class="toc-text">比较运算符==</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全等运算符"><span class="toc-number">2.</span> <span class="toc-text">全等运算符===</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if"><span class="toc-number">3.</span> <span class="toc-text">if()</span></a></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符=="></a>比较运算符==</h4><p>对于x==y比较，Type()为变量的类型。</p>
+        <p>本文介绍了js中==，===和if的转换方式<br><a id="more"></a></p>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符=="></a>比较运算符==</h4><p>对于x==y比较，Type()为变量的类型。</p>
 <ol>
 <li>若Type(x)与Type(y)相同，则<ol>
 <li>若 Type(x,y) 为 Undefined， 返回 true。</li>
@@ -279,6 +304,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#比较运算符"><span class="toc-number">1.</span> <span class="toc-text">比较运算符==</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全等运算符"><span class="toc-number">2.</span> <span class="toc-text">全等运算符===</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if"><span class="toc-number">3.</span> <span class="toc-text">if()</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -310,6 +348,17 @@
     </div>
   </div>
 </footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5b440298372d5acc26f355210b1d1775";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
     </div>
     <script>
 	var yiliaConfig = {

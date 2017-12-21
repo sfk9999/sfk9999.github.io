@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="bower的作用 它会为你节省寻找客户端的依赖关系的时间 每次我需要安装jQuery的时候，我都需要去jQuery网站下载包或使用CDN版本。但是有了Bower，你只需要输入一个命令，jquery就会安装在本地计算机上，你不需要去记版本号之类的东西，你也可以通过Bower的info命令去查看任意库的信息。 可以很容易地展现客户端的依赖关系。你可以创建一个名为bower.json的文件，在这个文件里">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-21T03:07:33.213Z">
+<meta property="og:updated_time" content="2017-12-21T05:48:31.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bower.json">
 <meta name="twitter:description" content="bower的作用 它会为你节省寻找客户端的依赖关系的时间 每次我需要安装jQuery的时候，我都需要去jQuery网站下载包或使用CDN版本。但是有了Bower，你只需要输入一个命令，jquery就会安装在本地计算机上，你不需要去记版本号之类的东西，你也可以通过Bower的info命令去查看任意库的信息。 可以很容易地展现客户端的依赖关系。你可以创建一个名为bower.json的文件，在这个文件里">
@@ -58,7 +58,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/demo">demo</a></li>
+				<li><a href="/demo">demo仓库</a></li>
 	        
 			</ul>
 		</nav>
@@ -118,7 +118,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/demo">demo</a></li>
+					<li style="width: 50%"><a href="/demo">demo仓库</a></li>
 		        
 				</ul>
 			</nav>
@@ -153,6 +153,30 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bower的作用"><span class="toc-number">1.</span> <span class="toc-text">bower的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提前准备"><span class="toc-number">2.</span> <span class="toc-text">提前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Bower"><span class="toc-number">3.</span> <span class="toc-text">安装Bower</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bower-json文件的使用"><span class="toc-number">4.</span> <span class="toc-text">bower.json文件的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包的安装"><span class="toc-number">5.</span> <span class="toc-text">包的安装</span></a></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -241,6 +265,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bower的作用"><span class="toc-number">1.</span> <span class="toc-text">bower的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提前准备"><span class="toc-number">2.</span> <span class="toc-text">提前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Bower"><span class="toc-number">3.</span> <span class="toc-text">安装Bower</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bower-json文件的使用"><span class="toc-number">4.</span> <span class="toc-text">bower.json文件的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包的安装"><span class="toc-number">5.</span> <span class="toc-text">包的安装</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -272,6 +309,17 @@
     </div>
   </div>
 </footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5b440298372d5acc26f355210b1d1775";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
     </div>
     <script>
 	var yiliaConfig = {

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="1. 同源政策1.1 含义 它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源” 同源指的是三个相同  协议相同 域名相同 端口相同1http://www.example.com/dir/page.html    这个地址  协议是http:// 域名是www.example.com 端口是80（默认端口可以省略）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-21T03:07:33.019Z">
+<meta property="og:updated_time" content="2017-12-21T05:48:34.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX跨域">
 <meta name="twitter:description" content="1. 同源政策1.1 含义 它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源” 同源指的是三个相同  协议相同 域名相同 端口相同1http://www.example.com/dir/page.html    这个地址  协议是http:// 域名是www.example.com 端口是80（默认端口可以省略）">
@@ -58,7 +58,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/demo">demo</a></li>
+				<li><a href="/demo">demo仓库</a></li>
 	        
 			</ul>
 		</nav>
@@ -118,7 +118,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/demo">demo</a></li>
+					<li style="width: 50%"><a href="/demo">demo仓库</a></li>
 		        
 				</ul>
 			</nav>
@@ -153,6 +153,30 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-同源政策"><span class="toc-number">1.</span> <span class="toc-text">1. 同源政策</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-含义"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-目的和限制范围"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 目的和限制范围</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-如何规避、限制"><span class="toc-number">2.</span> <span class="toc-text">2 如何规避、限制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一级域名和二级域名"><span class="toc-number">2.0.1.</span> <span class="toc-text">一级域名和二级域名</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Cookie，document-domain"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Cookie，document.domain</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-iframe"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 iframe</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-片段识别符"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 片段识别符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-window-name"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 window.name</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-window-postMessage-XDM"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 window.postMessage(XDM)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-4-LocalStorage"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.2.4 LocalStorage</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-AJAX"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 AJAX</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-JSONP"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 JSONP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-2-WebSocket"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 WebSocket</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-CORS"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 CORS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-CORS详解"><span class="toc-number">3.</span> <span class="toc-text">3 CORS详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-简介"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-两种请求"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 两种请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-简单请求"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 简单请求</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-1-基本流程"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 基本流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-2-withCredentials属性"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2 withCredentials属性</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-非简单请求"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 非简单请求</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-1-预检请求"><span class="toc-number">3.4.1.</span> <span class="toc-text">3.4.1 预检请求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-2-预检请求的回应"><span class="toc-number">3.4.2.</span> <span class="toc-text">3.4.2 预检请求的回应</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-3-浏览器的正常请求和回应"><span class="toc-number">3.4.3.</span> <span class="toc-text">3.4.3 浏览器的正常请求和回应</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-与JSONP的比较"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 与JSONP的比较</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -469,6 +493,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-同源政策"><span class="toc-number">1.</span> <span class="toc-text">1. 同源政策</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-含义"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-目的和限制范围"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 目的和限制范围</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-如何规避、限制"><span class="toc-number">2.</span> <span class="toc-text">2 如何规避、限制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一级域名和二级域名"><span class="toc-number">2.0.1.</span> <span class="toc-text">一级域名和二级域名</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Cookie，document-domain"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Cookie，document.domain</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-iframe"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 iframe</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-片段识别符"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 片段识别符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-window-name"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 window.name</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-window-postMessage-XDM"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 window.postMessage(XDM)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-4-LocalStorage"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.2.4 LocalStorage</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-AJAX"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 AJAX</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-1-JSONP"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 JSONP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-2-WebSocket"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 WebSocket</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-CORS"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 CORS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-CORS详解"><span class="toc-number">3.</span> <span class="toc-text">3 CORS详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-简介"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-两种请求"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 两种请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-简单请求"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 简单请求</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-1-基本流程"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 基本流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-2-withCredentials属性"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2 withCredentials属性</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-非简单请求"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 非简单请求</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-1-预检请求"><span class="toc-number">3.4.1.</span> <span class="toc-text">3.4.1 预检请求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-2-预检请求的回应"><span class="toc-number">3.4.2.</span> <span class="toc-text">3.4.2 预检请求的回应</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-3-浏览器的正常请求和回应"><span class="toc-number">3.4.3.</span> <span class="toc-text">3.4.3 浏览器的正常请求和回应</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-与JSONP的比较"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 与JSONP的比较</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -500,6 +537,17 @@
     </div>
   </div>
 </footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5b440298372d5acc26f355210b1d1775";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
     </div>
     <script>
 	var yiliaConfig = {
