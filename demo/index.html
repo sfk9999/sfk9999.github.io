@@ -11,8 +11,8 @@
 <body>
 <div class="m-head">
     <span>
-    1.下一步使用组件化的方式来实现菜单展示<br>
-    2. 使用路由的方式来跳转页面。
+        SUN的小仓库<br>
+        每天进步一点点
     </span>
 </div>
 <div class="g-flow" id="g-side">
@@ -26,7 +26,7 @@
     <div class="m-body">
         <ul v-for="item in titles">
             <li v-show="item.isSubShow" v-for="detail in item.details" @click="gotoHref(detail.name)">
-                {{detail.name}}
+                <strong>{{detail.name}}</strong>
                 <br>
                 {{detail.des}}
             </li>
@@ -37,35 +37,31 @@
 <script>
     var obj=[
         {
-            "name":"css",
+            "name":"布局",
             isSubShow:true,
             "details":[
-                {
-                    "name":"css_center",
-                    "des":"水平垂直"
-                },
-                {
-                    "name":"css_sameHeight_flex",
-                    "des":"等高布局"
-                },
-                {
-                    "name":"css_sameHeight_float",
-                    "des":"等高布局"
-                }
+                {name:"css_center",des:"absolute+transform水平垂直居中"},
+                {name:"css_center_flex",des:"flex水平垂直居中"},
+                { name:"css_center_table",des:"table水平垂直居中"},
+                { name:"css_center_text",des:"文字水平垂直居中"},
+                { name:"css_overflow",des:"overflow左列固定，右列自适应"},
+                { name:"css_sameHeight_flex",des:"等高的flex方法"},
+                { name:"css_sameHeight_float",des:"等高的float方法(伪等高)"},
+                { name:"css_sameHeight_table",des:"等高的table方法"},
+                { name:"css_sameWidth_flex",des:"等宽（等分布局）的flex方法"},
+                { name:"css_sameWidth_float",des:"等宽（等分布局）的float方法"},
+                { name:"ss_sameWidth_table",des:"等宽（等分布局）的table方法"},
+                { name:"css_threeColumn_flex",des:"两边固定中间自适应的三列布局"},
+                { name:"css_threeColumn_grail",des:"圣杯布局"},
+                { name:"css_threeColumn_wing",des:"淘宝双飞翼布局"},
+                { name:"css_triangle",des:"CSS三角形和平行四边形"}
             ]
         },
         {
-            "name":"html",
+            "name":"css",
             isSubShow:false,
             "details":[
-                {
-                    "name":"html_center",
-                    "des":"水平垂直"
-                },
-                {
-                    "name":"html_samHeight",
-                    "des":"等高布局"
-                }
+                { name:"css_triangle",des:"CSS三角形和平行四边形"}
             ]
         }
     ];
