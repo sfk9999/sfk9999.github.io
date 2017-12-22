@@ -80,7 +80,8 @@
             name:'jQuery',
             isSubShow:false,
             details:[
-                {name:'jquery_showBigImg',des:'显示大图'}
+                {name:'jquery_showBigImg',des:'显示大图'},
+                {name:'jquery_fullPage',des:'fullpage全屏滚动'}
             ]
         }
 
@@ -101,7 +102,8 @@
                 }
             },
             gotoHref:function (name) {
-                window.location.href='pagesDemo/'+name+'.html'
+//                window.location.href='pagesDemo/'+name+'.html';
+                window.open('pagesDemo/'+name+'.html');
             }
         }
     })
