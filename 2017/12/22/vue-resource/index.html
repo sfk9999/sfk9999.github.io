@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sun丶的博客</title>
+  <title>vue-resource | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="本文主要讲解vue-resource的作用及用法，该插件虽然不是vue的官方插件，但是也经常被用到获取服务器端的数据。">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-resource">
+<meta property="og:url" content="http://yoursite.com/2017/12/22/vue-resource/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="本文主要讲解vue-resource的作用及用法，该插件虽然不是vue的官方插件，但是也经常被用到获取服务器端的数据。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-22T02:59:45.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="vue-resource">
+<meta name="twitter:description" content="本文主要讲解vue-resource的作用及用法，该插件虽然不是vue的官方插件，但是也经常被用到获取服务器端的数据。">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -128,380 +133,219 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-js中的相等-全等和if语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-vue-resource" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/03/js中的相等-全等和if语句/">js中的相等,全等和if语句</a>
+    <h1 class="article-title" itemprop="name">
+      vue-resource
     </h1>
   
 
         
-        <a href="/2017/12/03/js中的相等-全等和if语句/" class="archive-article-date">
-  	<time datetime="2017-12-03T11:15:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
+        <a href="/2017/12/22/vue-resource/" class="archive-article-date">
+  	<time datetime="2017-12-22T02:58:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
 </a>
         
       </header>
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、安装"><span class="toc-number">1.</span> <span class="toc-text">一、安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、特点"><span class="toc-number">2.</span> <span class="toc-text">二、特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、用法"><span class="toc-number">3.</span> <span class="toc-text">三、用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、支持的HTTP方法"><span class="toc-number">4.</span> <span class="toc-text">四、支持的HTTP方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-options对象"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 options对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-response对象"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 response对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、示例"><span class="toc-number">5.</span> <span class="toc-text">五、示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、inteceptor拦截器"><span class="toc-number">6.</span> <span class="toc-text">六、inteceptor拦截器</span></a></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文介绍了js中==，===和if的转换方式<br></p>
-        
-          <a class="article-more-a" href="/2017/12/03/js中的相等-全等和if语句/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/03/js中的相等-全等和if语句/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-项目中git的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/项目中git的用法/">项目中git的用法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/29/项目中git的用法/" class="archive-article-date">
-  	<time datetime="2017-11-29T11:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令</p>
-<h3 id="一、基本操作"><a href="#一、基本操作" class="headerlink" title="一、基本操作"></a>一、基本操作</h3><h4 id="1-1-创建版本库"><a href="#1-1-创建版本库" class="headerlink" title="1.1 创建版本库"></a>1.1 创建版本库</h4><p>在空目录里，使用此命令将这个目录变成git可以管理的仓库<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git init</span></div></pre></td></tr></table></figure></p>
-<h4 id="1-2-将文件放到仓库"><a href="#1-2-将文件放到仓库" class="headerlink" title="1.2. 将文件放到仓库"></a>1.2. 将文件放到仓库</h4><p>将文件放到仓库需要两步</p>
-<ol>
-<li><p>将文件添加到仓库</p>
- <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span> .   <span class="comment">//用.是提交所有文件，可以把.换成单独的文件名</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>把文件提交到仓库</p>
- <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m<span class="string">"备注内容"</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-        
-          <a class="article-more-a" href="/2017/11/29/项目中git的用法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/29/项目中git的用法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-图片替换的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/26/图片替换的方法/">图片替换的方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/26/图片替换的方法/" class="archive-article-date">
-  	<time datetime="2017-11-26T11:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在设计过程中经常会碰到用图片来替换某段文字的问题，在用图片替换文字的过程中同时也需要考虑到html的语义化和SEO的问题<br></p>
-        
-          <a class="article-more-a" href="/2017/11/26/图片替换的方法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/26/图片替换的方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CSS样式hack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/26/CSS样式hack/">CSS样式hack</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/26/CSS样式hack/" class="archive-article-date">
-  	<time datetime="2017-11-26T11:06:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-什么是hack"><a href="#1-什么是hack" class="headerlink" title="1.什么是hack"></a>1.什么是hack</h4><p>由于不同厂商的流览器或某浏览器的不同版本（如IE6-IE11,Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时，我们为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器/不同版本写相应的CSS code的过程，叫做CSS hack!</p>
-<h4 id="2-hack的分类"><a href="#2-hack的分类" class="headerlink" title="2. hack的分类"></a>2. hack的分类</h4><ul>
-<li>大致分为3种表现形式：CSS属性前缀法、选择器前缀法以及IE条件注释法hack，<ul>
-<li>属性前缀法(即类内部Hack)：例如 IE6能识别下划线”<em>“和星号” <em> “，IE7能识别星号” </em> “，但不能识别下划线”</em>“，IE6~IE10都认识”\9”，但firefox前述三个都不能认识。</li>
-<li>选择器前缀法(即选择器Hack)：例如 IE6能识别<em>html .class{}，IE7能识别</em>+html .class{}或者*:first-child+html .class{}。</li>
-<li>IE条件注释法(即HTML条件注释Hack)：针对所有IE(注：IE10+已经不再支持条件注释)： <!--[if IE]>IE浏览器显示的内容 <![endif]-->，针对IE6及以下版本： <!--[if lt IE 6]>只在IE6-显示的内容 <![endif]-->。这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。</li></ul></li></ul>
-        
-          <a class="article-more-a" href="/2017/11/26/CSS样式hack/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/26/CSS样式hack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/23/AJAX跨域/">AJAX跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/23/AJAX跨域/" class="archive-article-date">
-  	<time datetime="2017-11-23T13:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-23</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-同源政策"><a href="#1-同源政策" class="headerlink" title="1. 同源政策"></a>1. 同源政策</h3><h4 id="1-1-含义"><a href="#1-1-含义" class="headerlink" title="1.1 含义"></a>1.1 含义</h4><ul>
-<li>它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源”</li>
-<li><p>同源指的是三个相同</p>
+        <p>本文主要讲解vue-resource的作用及用法，该插件虽然不是vue的官方插件，但是也经常被用到获取服务器端的数据。<br><a id="more"></a></p>
 <ul>
-<li>协议相同</li>
-<li>域名相同</li>
-<li>端口相同<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="regexp">//</span>www.example.com<span class="regexp">/dir/</span>page.html</div></pre></td></tr></table></figure>
+<li>这时候的页面都是静态的(数据在写程序的时候已经固定了不能修改)，而每个应用基本上都会请求外部数据以动态改变页面内容。对应有一个库叫 vue-resource 帮我们解决这个问题。</li>
+<li>vue-resource是一个通过XMLHttpRequrest或JSONP技术实现异步加载服务端数据的Vue插件<h4 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> vue-<span class="keyword">resource</span> <span class="comment">--save</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>在main.js引入并注册<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> VueResource <span class="keyword">from</span> <span class="string">'vue-resource'</span></div><div class="line">Vue.use(VueResource);</div></pre></td></tr></table></figure></p>
+<p>在second.vue来动态加载数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<h4 id="二、特点"><a href="#二、特点" class="headerlink" title="二、特点"></a>二、特点</h4><ol>
+<li>体积小<ul>
+<li>vue-resource非常小巧，在压缩以后只有大约12KB，服务端启用gzip压缩后只有4.5KB大小，这远比jQuery的体积要小得多。</li>
+</ul>
 </li>
-<li><p>这个地址</p>
-<ul>
-<li>协议是http://</li>
-<li>域名是www.example.com</li>
-<li>端口是80（默认端口可以省略）</li></ul></li></ul>
-        
-          <a class="article-more-a" href="/2017/11/23/AJAX跨域/#more">more >></a>
-        
+<li>支持主流的浏览器<ul>
+<li>和Vue.js一样，vue-resource除了不支持IE 9以下的浏览器，其他主流的浏览器都支持。<br>3.支持Promise API和URI Templates**</li>
+<li>Promise是ES6的特性，Promise的中文含义为“先知”，Promise对象用于异步计算。URI Templates表示URI模板，有些类似于ASP.NET MVC的路由模板。</li>
+</ul>
+</li>
+<li>支持拦截器<ul>
+<li>拦截器是全局的，拦截器可以在请求发送前和发送请求后做一些处理。拦截器在一些场景下会非常有用，比如请求发送前在headers中设置access_token，或者在请求失败时，提供共通的处理方式。</li>
+</ul>
+</li>
+<li>支持Promise API和URI Templates</li>
+</ol>
+<h4 id="三、用法"><a href="#三、用法" class="headerlink" title="三、用法"></a>三、用法</h4><p>引入vue-resource后，可以基于全局的Vue对象使用http，也可以基于某个Vue实例使用http。</p>
+<p>基于全局<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Vue.http.get(<span class="string">'/someUrl'</span>, [<span class="keyword">options</span>]).<span class="keyword">then</span>(successCallback, errorCallback);</div><div class="line">Vue.http.post(<span class="string">'/someUrl'</span>, [body], [<span class="keyword">options</span>]).<span class="keyword">then</span>(successCallback, errorCallback);</div></pre></td></tr></table></figure></p>
+<p>在实例中使用<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">this.<span class="symbol">$</span>http.get(<span class="string">'/someUrl'</span>, [<span class="keyword">options</span>]).<span class="keyword">then</span>(successCallback, errorCallback);</div><div class="line">this.<span class="symbol">$</span>http.post(<span class="string">'/someUrl'</span>, [body], [<span class="keyword">options</span>]).<span class="keyword">then</span>(successCallback, errorCallback);</div></pre></td></tr></table></figure></p>
+<p>then方法的回调函数<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$http.get(<span class="string">'/someUrl'</span>, [options]).then(<span class="function"><span class="keyword">function</span><span class="params">(response)</span></span>&#123;</div><div class="line">    <span class="comment">// 响应成功回调</span></div><div class="line">&#125;, <span class="function"><span class="keyword">function</span><span class="params">(response)</span></span>&#123;</div><div class="line">    <span class="comment">// 响应错误回调</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>Lambda写法<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$http.get(<span class="string">'/someUrl'</span>, [options]).<span class="keyword">then</span>(<span class="function"><span class="params">(response)</span> =&gt;</span> &#123;</div><div class="line">    <span class="regexp">//</span> 响应成功回调</div><div class="line">&#125;, <span class="function"><span class="params">(response)</span> =&gt;</span> &#123;</div><div class="line">    <span class="regexp">//</span> 响应错误回调</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="四、支持的HTTP方法"><a href="#四、支持的HTTP方法" class="headerlink" title="四、支持的HTTP方法"></a>四、支持的HTTP方法</h4><ol>
+<li>get(url, [options])</li>
+<li>head(url, [options])</li>
+<li>delete(url, [options])</li>
+<li>jsonp(url, [options])</li>
+<li>post(url, [body], [options])</li>
+<li>put(url, [body], [options])</li>
+<li>patch(url, [body], [options])</li>
+</ol>
+<h5 id="4-1-options对象"><a href="#4-1-options对象" class="headerlink" title="4.1 options对象"></a>4.1 options对象</h5><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>请求的URL</td>
+</tr>
+<tr>
+<td>method</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>body</td>
+<td>Object, FormDatastring</td>
+<td>request body</td>
+</tr>
+<tr>
+<td>params</td>
+<td>Object</td>
+<td>请求的URL参数对象</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>Object</td>
+<td>request header</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>number</td>
+<td>单位为毫秒的请求超时时间 (0 表示无超时时间)</td>
+</tr>
+<tr>
+<td>before</td>
+<td>function(request)</td>
+<td>请求发送前的处理函数，类似于jQuery的beforeSend函数</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>function(event)</td>
+<td>ProgressEvent回调处理函数</td>
+</tr>
+<tr>
+<td>credientials</td>
+<td>boolean</td>
+<td>表示跨域请求时是否需要使用凭证</td>
+</tr>
+<tr>
+<td>emulateHTTP</td>
+<td>boolean</td>
+<td>发送PUT, PATCH, DELETE请求时以HTTP POST的方式发送，并设置请求头的X-HTTP-Method-Override</td>
+</tr>
+<tr>
+<td>emulateJSON</td>
+<td>boolean</td>
+<td>将request body以application/x-www-form-urlencoded content type发送</td>
+</tr>
+</tbody>
+</table>
+<h5 id="4-2-response对象"><a href="#4-2-response对象" class="headerlink" title="4.2 response对象"></a>4.2 response对象</h5><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text()</td>
+<td>string</td>
+<td>以string形式返回response body</td>
+</tr>
+<tr>
+<td>json()</td>
+<td>Object</td>
+<td>以JSON对象形式返回response body</td>
+</tr>
+<tr>
+<td>blob()</td>
+<td>Blob</td>
+<td>以二进制形式返回response body</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ok</td>
+<td>boolean</td>
+<td>响应的HTTP状态码在200~299之间时，该属性为true</td>
+</tr>
+<tr>
+<td>status</td>
+<td>number</td>
+<td>响应的HTTP状态码</td>
+</tr>
+<tr>
+<td>statusText</td>
+<td>string</td>
+<td>响应的状态文本</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>Object</td>
+<td>响应头</td>
+</tr>
+</tbody>
+</table>
+<h4 id="五、示例"><a href="#五、示例" class="headerlink" title="五、示例"></a>五、示例</h4><p>get请求<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</div><div class="line">    el: <span class="string">'#app'</span>,</div><div class="line">    data: &#123;</div><div class="line">        gridColumns: [<span class="string">'customerId'</span>, <span class="string">'companyName'</span>, <span class="string">'contactName'</span>, <span class="string">'phone'</span>],</div><div class="line">        gridData: [],</div><div class="line">        apiUrl: <span class="string">'http://211.149.193.19:8080/api/customers'</span></div><div class="line">    &#125;,</div><div class="line">    ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.getCustomers()</div><div class="line">    &#125;,</div><div class="line">    methods: &#123;</div><div class="line">        getCustomers: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.$http.get(<span class="keyword">this</span>.apiUrl)</div><div class="line">                .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">                    <span class="keyword">this</span>.$set(<span class="string">'gridData'</span>, response.data)    <span class="comment">//$set()设置对象的属性</span></div><div class="line">                &#125;)</div><div class="line">                .catch(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">                    <span class="built_in">console</span>.log(response)</div><div class="line">                &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>POST请求<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">var demo = <span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="keyword">e</span><span class="variable">l:</span> <span class="string">'#app'</span>,</div><div class="line">    dat<span class="variable">a:</span> &#123;</div><div class="line">        sho<span class="variable">w:</span> false,</div><div class="line">        gridColumn<span class="variable">s:</span> [&#123;</div><div class="line">            name: <span class="string">'customerId'</span>,</div><div class="line">            isKey: true</div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'companyName'</span></div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'contactName'</span></div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'phone'</span></div><div class="line">        &#125;],</div><div class="line">        gridDat<span class="variable">a:</span> [],</div><div class="line">        apiUr<span class="variable">l:</span> <span class="string">'http://211.149.193.19:8080/api/customers'</span>,</div><div class="line">        item: &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    ready: <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></div><div class="line">        this.getCustomers()</div><div class="line">    &#125;,</div><div class="line">    method<span class="variable">s:</span> &#123;</div><div class="line">        closeDialo<span class="variable">g:</span> <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></div><div class="line">            this.show = false</div><div class="line">        &#125;,</div><div class="line">        getCustomer<span class="variable">s:</span> <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></div><div class="line">            var <span class="keyword">vm</span> = this</div><div class="line">            <span class="keyword">vm</span>.$http.<span class="built_in">get</span>(<span class="keyword">vm</span>.apiUrl)</div><div class="line">                .then((response) =&gt; &#123;</div><div class="line">                    <span class="keyword">vm</span>.$<span class="keyword">set</span>(<span class="string">'gridData'</span>, response.data)</div><div class="line">                &#125;)</div><div class="line">        &#125;,</div><div class="line">        createCustomer: <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></div><div class="line">            var <span class="keyword">vm</span> = this</div><div class="line">            <span class="keyword">vm</span>.$http.post(<span class="keyword">vm</span>.apiUrl, <span class="keyword">vm</span>.item)</div><div class="line">                .then((response) =&gt; &#123;</div><div class="line">                    <span class="keyword">vm</span>.$<span class="keyword">set</span>(<span class="string">'item'</span>, &#123;&#125;)</div><div class="line">                    <span class="keyword">vm</span>.getCustomers()</div><div class="line">                &#125;)</div><div class="line">            this.show = false</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>PUT请求(更新)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">updateCustomer: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> vm = <span class="keyword">this</span></div><div class="line">    vm.$http.put(<span class="keyword">this</span>.apiUrl + <span class="string">'/'</span> + vm.item.customerId, vm.item)</div><div class="line">        .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Delete请求<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deleteCustomer: <span class="function"><span class="keyword">function</span>(<span class="params">customer</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> vm = <span class="keyword">this</span></div><div class="line">    vm.$http.delete(<span class="keyword">this</span>.apiUrl + <span class="string">'/'</span> + customer.customerId)</div><div class="line">        .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">            vm.getCustomers()</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="六、inteceptor拦截器"><a href="#六、inteceptor拦截器" class="headerlink" title="六、inteceptor拦截器"></a>六、inteceptor拦截器</h4>
       
 
       
@@ -514,15 +358,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">跨域</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -531,16 +367,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/23/AJAX跨域/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/21/vue-router/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;vue-router&#39;</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -555,17 +399,32 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、安装"><span class="toc-number">1.</span> <span class="toc-text">一、安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、特点"><span class="toc-number">2.</span> <span class="toc-text">二、特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、用法"><span class="toc-number">3.</span> <span class="toc-text">三、用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、支持的HTTP方法"><span class="toc-number">4.</span> <span class="toc-text">四、支持的HTTP方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-options对象"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 options对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-response对象"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 response对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、示例"><span class="toc-number">5.</span> <span class="toc-text">五、示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、inteceptor拦截器"><span class="toc-number">6.</span> <span class="toc-text">六、inteceptor拦截器</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
+
+  
+
   
 
 
@@ -599,8 +458,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
