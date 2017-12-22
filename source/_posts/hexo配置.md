@@ -1,10 +1,9 @@
 ---
 title: Hexo配置
-date: 2017-11-03 16:03:01
+date: 2017-9-05 16:03:01
 toc: true
 tags:
     - Hexo
-    - 配置
 ---
 Hexo中的_config.yml配置文件的简单注释
 <!--more-->

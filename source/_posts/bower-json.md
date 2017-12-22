@@ -1,10 +1,9 @@
 ---
 title: bower.json
-date: 2017-11-19 15:13:32
+date: 2017-10-19 15:13:32
 toc: true
 tags:
     - node
-    - bower
 ---
 
 ### bower的作用

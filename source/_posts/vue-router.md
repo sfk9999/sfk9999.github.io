@@ -1,6 +1,6 @@
 ---
-title: '''vue-router'''
-date: 2017-12-21 12:55:35
+title: vue-router
+date: 2017-12-17 12:55:35
 toc: true
 tags:
     - vue

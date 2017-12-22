@@ -1,10 +1,9 @@
 ---
 title: css3动画和js动画的区别
 date: 2017-11-11 15:56:21
+toc: true
 tags:
     - CSS3
-    - 动画
-    - 对比
 ---
 ### CSS3动画和js动画的区别
 #### CSS动画：
