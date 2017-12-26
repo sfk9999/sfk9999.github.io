@@ -4,11 +4,6 @@
     <list default="true" id="310033a3-ee01-4dc0-95c6-4e328f78e545" name="Default" comment="e">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/yilia" afterPath="$PROJECT_DIR$/themes/yilia" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/js中的相等-全等和if语句.md" afterPath="$PROJECT_DIR$/source/_posts/js中的相等-全等和if语句.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/js设计模式.md" afterPath="$PROJECT_DIR$/source/_posts/js设计模式.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/npm搭建.md" afterPath="$PROJECT_DIR$/source/_posts/npm搭建.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/package-json搭建.md" afterPath="$PROJECT_DIR$/source/_posts/package-json搭建.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/vue实战笔记.md" afterPath="$PROJECT_DIR$/source/_posts/vue实战笔记.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -743,12 +738,20 @@
       <workItem from="1513950154196" duration="2743000" />
       <workItem from="1513998718469" duration="5049000" />
       <workItem from="1514020192238" duration="1510000" />
-      <workItem from="1514257276385" duration="155000" />
+      <workItem from="1514257276385" duration="216000" />
     </task>
+    <task id="LOCAL-00001" summary="e">
+      <created>1514257457191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514257457191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57498000" />
+    <option name="totallyTimeSpent" value="57559000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
