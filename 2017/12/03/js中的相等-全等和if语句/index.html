@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>js中的相等,全等和if语句 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文介绍了js中==，===和if的转换方式">
+  <meta name="description" content="本文介绍了js中==，===和if的转换方式以及判断流程">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的相等,全等和if语句">
 <meta property="og:url" content="http://yoursite.com/2017/12/03/js中的相等-全等和if语句/index.html">
 <meta property="og:site_name" content="sun丶的博客">
-<meta property="og:description" content="本文介绍了js中==，===和if的转换方式">
+<meta property="og:description" content="本文介绍了js中==，===和if的转换方式以及判断流程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-21T05:48:36.749Z">
+<meta property="og:updated_time" content="2017-12-23T05:40:22.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的相等,全等和if语句">
-<meta name="twitter:description" content="本文介绍了js中==，===和if的转换方式">
+<meta name="twitter:description" content="本文介绍了js中==，===和if的转换方式以及判断流程">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -176,7 +176,7 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文介绍了js中==，===和if的转换方式<br><a id="more"></a></p>
+        <p>本文介绍了js中==，===和if的转换方式以及判断流程<br><a id="more"></a></p>
 <h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符=="></a>比较运算符==</h4><p>对于x==y比较，Type()为变量的类型。</p>
 <ol>
 <li>若Type(x)与Type(y)相同，则<ol>
@@ -211,6 +211,19 @@
 <li>要比较相等性之前，不能将null和undefined转换成其他任何值。</li>
 <li>NaN不等于NaN</li>
 </ol>
+<p>判断流程：</p>
+<ol>
+<li>若类型不同，则按===规则判断</li>
+<li>类型不同，则启用隐式类型转换<ol>
+<li>有NAN，一律返回false</li>
+<li>有布尔类型，布尔类型转换成数字比较</li>
+<li>有string类型，两种情况： 1. 对象，对象用toString方法转换成string相比。2.数字，string类型转换成数字进行比较</li>
+<li>null和undefined不会相互转换，相等</li>
+<li>有数字类型，和对象相比，对象用valueof转换成原始值进行比较</li>
+<li>其他情况，一律返回false</li>
+</ol>
+</li>
+</ol>
 <h4 id="全等运算符"><a href="#全等运算符" class="headerlink" title="全等运算符==="></a>全等运算符===</h4><p>对于x===y比较，Type()为变量的类型</p>
 <ol>
 <li>如果 Type(x) 与 Type(y) 的结果不一致，返回 false，否则</li>
@@ -228,6 +241,14 @@
 <li>如果 Type(x,y) 结果为 String，如果 x 与 y 为完全相同的字符序列（相同的长度和相同的字符对应相同的位置），返回 true，否则，返回 false</li>
 <li>如果 Type(x,y) 结果为 Boolean，如果 x 与 y 都为 true 或 false，则返回 true，否则，返回 false</li>
 <li>如果 x 和 y 引用到同一个 Object 对象，返回 true，否则，返回 false</li>
+</ol>
+<p>判断流程</p>
+<ol>
+<li>类型不同，不等</li>
+<li>null，undefined，boolean，number这四个类型的只要值(数值)相等，就相等，-0 === 0 //true</li>
+<li>只要其中有一个为NAN，则不等</li>
+<li>string类型，长度/内容/编码不同，都是不等，相同位置包含相同的16位，相等</li>
+<li>指向相同的对象，数组，函数，则相等，若指向不同对象，不等</li>
 </ol>
 <h4 id="if"><a href="#if" class="headerlink" title="if()"></a>if()</h4><ul>
 <li>if()会对条件进行Boolean转换</li>
@@ -269,11 +290,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/04/cookie、sessionStorage和localStorage/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/06/Web安全/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          cookie、sessionStorage和localStorage
+          Web安全
         
       </div>
     </a>
@@ -422,15 +443,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
+                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -446,47 +471,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">bower</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对比</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,19 +479,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color5">glup</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">package</a>
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">包管理</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">

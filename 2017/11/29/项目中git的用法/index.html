@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令 一、基本操作1.1 创建版本库在空目录里，使用此命令将这个目录变成git可以管理的仓库1git init 1.2. 将文件放到仓库将文件放到仓库需要两步  将文件添加到仓库  1git add .   //用.是提交所有文件，可以把.换成单独的文件名  把文件提交到仓库  1git commit -m&quot;备注内容&quot;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-21T05:17:01.319Z">
+<meta property="og:updated_time" content="2017-12-22T06:24:01.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目中git的用法">
 <meta name="twitter:description" content="之前弄个一个git的基本语法，现在来总结一下真正项目的过程中git经常用到的命令 一、基本操作1.1 创建版本库在空目录里，使用此命令将这个目录变成git可以管理的仓库1git init 1.2. 将文件放到仓库将文件放到仓库需要两步  将文件添加到仓库  1git add .   //用.是提交所有文件，可以把.换成单独的文件名  把文件提交到仓库  1git commit -m&quot;备注内容&quot;">
@@ -149,6 +149,30 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、基本操作"><span class="toc-number">1.</span> <span class="toc-text">一、基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-创建版本库"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 创建版本库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-将文件放到仓库"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. 将文件放到仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-查看状态"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. 查看状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-查看日志"><span class="toc-number">1.4.</span> <span class="toc-text">1.4. 查看日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-版本回退"><span class="toc-number">1.5.</span> <span class="toc-text">1.5. 版本回退</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6-删除文件"><span class="toc-number">1.6.</span> <span class="toc-text">1.6. 删除文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-从github克隆"><span class="toc-number">1.7.</span> <span class="toc-text">1.7. 从github克隆</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、分支"><span class="toc-number">2.</span> <span class="toc-text">二、分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-创建分支"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 创建分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-合并分支"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-删除分支"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 删除分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-解决冲突"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 解决冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-分支挂起"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 分支挂起</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -256,8 +280,8 @@
     </a>
   
   
-    <a href="/2017/11/26/图片替换的方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">图片替换的方法</div>
+    <a href="/2017/11/20/数组扁平化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组扁平化</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -276,6 +300,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、基本操作"><span class="toc-number">1.</span> <span class="toc-text">一、基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-创建版本库"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 创建版本库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-将文件放到仓库"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. 将文件放到仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-查看状态"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. 查看状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-查看日志"><span class="toc-number">1.4.</span> <span class="toc-text">1.4. 查看日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-版本回退"><span class="toc-number">1.5.</span> <span class="toc-text">1.5. 版本回退</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6-删除文件"><span class="toc-number">1.6.</span> <span class="toc-text">1.6. 删除文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-从github克隆"><span class="toc-number">1.7.</span> <span class="toc-text">1.7. 从github克隆</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、分支"><span class="toc-number">2.</span> <span class="toc-text">二、分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-创建分支"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 创建分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-合并分支"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-删除分支"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 删除分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-解决冲突"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 解决冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-分支挂起"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 分支挂起</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -386,15 +423,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
+                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,47 +451,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">bower</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对比</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -458,19 +459,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color5">glup</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">package</a>
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">包管理</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">

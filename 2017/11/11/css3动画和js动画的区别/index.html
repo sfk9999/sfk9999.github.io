@@ -9,14 +9,14 @@
   <title>css3动画和js动画的区别 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="CSS3动画和js动画的区别CSS动画： 优点： 浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）。性能上稍微好一点。 代码相对简单,性能调优方向固定 对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码   缺点： 运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定">
-<meta name="keywords" content="CSS3,动画,对比">
+<meta name="keywords" content="CSS3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css3动画和js动画的区别">
 <meta property="og:url" content="http://yoursite.com/2017/11/11/css3动画和js动画的区别/index.html">
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="CSS3动画和js动画的区别CSS动画： 优点： 浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）。性能上稍微好一点。 代码相对简单,性能调优方向固定 对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码   缺点： 运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-21T05:17:01.279Z">
+<meta property="og:updated_time" content="2017-12-22T06:20:04.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3动画和js动画的区别">
 <meta name="twitter:description" content="CSS3动画和js动画的区别CSS动画： 优点： 浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）。性能上稍微好一点。 代码相对简单,性能调优方向固定 对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码   缺点： 运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定">
@@ -149,6 +149,30 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3动画和js动画的区别"><span class="toc-number">1.</span> <span class="toc-text">CSS3动画和js动画的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS动画："><span class="toc-number">1.1.</span> <span class="toc-text">CSS动画：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS动画"><span class="toc-number">1.2.</span> <span class="toc-text">JS动画</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -194,14 +218,6 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">动画</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对比</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -219,18 +235,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/11/IE6常见BUG与相应解决办法/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/20/数组扁平化/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          IE6常见BUG与相应解决办法
+          数组扁平化
         
       </div>
     </a>
   
   
-    <a href="/2017/11/10/CSS-Sprites/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS Sprites</div>
+    <a href="/2017/11/04/cookie、sessionStorage和localStorage/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cookie、sessionStorage和localStorage</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -249,6 +265,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3动画和js动画的区别"><span class="toc-number">1.</span> <span class="toc-text">CSS3动画和js动画的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS动画："><span class="toc-number">1.1.</span> <span class="toc-text">CSS动画：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS动画"><span class="toc-number">1.2.</span> <span class="toc-text">JS动画</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -359,15 +388,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图片</a>
+                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -383,47 +416,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">bower</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对比</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -431,19 +424,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color5">glup</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">package</a>
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">包管理</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
