@@ -3,8 +3,7 @@ title: npm搭建
 date: 2017-10-03 16:18:06
 toc: true
 tags:
-    - npm
-    - 搭建
+    - node
 ---
 ### NPM使用介绍
 NPM（Node Package Manager）是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：

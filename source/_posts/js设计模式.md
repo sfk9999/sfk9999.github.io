@@ -1,7 +1,7 @@
 ---
 title: js设计模式
 date: 2017-12-22 16:05:31
-toc:true
+toc: true
 tags:
     - JavaScript
 ---

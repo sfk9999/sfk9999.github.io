@@ -1,7 +1,7 @@
 ---
 title: vue实战笔记
 date: 2017-12-22 14:24:32
-toc:true
+toc: true
 tags:
     - vue
 ---
