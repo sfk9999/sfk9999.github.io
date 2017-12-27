@@ -6,7 +6,7 @@ var gulp = require('gulp')
     plumber = require('gulp-plumber');
 
 var paths = {
-    less: ['./pagesDemo/less/*.less']
+    less: ['./public/demo/pagesDemo/less/*.less']
 }
 
 gulp.task('less', function () {
@@ -16,10 +16,11 @@ gulp.task('less', function () {
         .pipe(sourcemaps.write('./map'))
         .pipe(cssmin())
         .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
-        .pipe(gulp.dest('./pagesDemo/css'))
+        .pipe(gulp.dest('./public/demo/pagesDemo/css'))
 })
 
 gulp.task('watch', function() {
     gulp.watch(paths.less, ['less'])
     console.log('********您已开启watch*********');
 })
+gulp.task('watch',['watch:less']);
