@@ -18,5 +18,12 @@
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0",
+    "gulp-sourcemaps": "^2.6.2",
+    "yargs": "^10.0.3"
   }
 }
