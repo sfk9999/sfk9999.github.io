@@ -23,4 +23,3 @@ gulp.task('watch', function() {
     gulp.watch(paths.less, ['less'])
     console.log('********您已开启watch*********');
 })
-gulp.task('watch',['watch:less']);
