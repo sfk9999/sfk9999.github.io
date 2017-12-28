@@ -58,3 +58,6 @@ figure{
     -o-transform: translateX(-50%) rotateY(-180deg);
     transform: translateX(-50%) rotateY(-180deg);
 }
+#btn{
+    margin-top: 50px;
+}
