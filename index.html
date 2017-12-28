@@ -126,6 +126,122 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-less" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/28/less/">less</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/28/less/" class="archive-article-date">
+  	<time datetime="2017-12-28T06:07:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>变量</li>
+<li>混合（Mixins）</li>
+<li>嵌套规则</li>
+<li>运算</li>
+<li>函数</li>
+<li>命名空间</li>
+<li>作用域</li>
+<li>注释</li>
+<li>导入（Import）</li>
+</ol>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>本质上，less 包含一套自定义的语法及一个解析器，用户根据这些语法定义自己的样式规则，这些规则最终会通过解析器，less 把这些样式规则编译成浏览器可以识别的 css 样式。less 并没有裁剪 css 原有的特性，更不是用来取代 css 的，而是在现有 css 语法的基础上，为 css 加入程序式语言的特性。less 最终需要编译成 css 文件才能起到样式的效果，我们可以称 less 为 css 样式生成工具。</p>
+<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>beforecreated：el 和 data 并未初始化<br>created:完成了 data 数据的初始化，el没有<br>beforeMount：完成了 el 和 data 初始化 ，此时el是，用的虚拟DOM，先把坑占住<br>mounted(安装) ：完成挂载，将el填上</p>
+<h4 id="一、入门"><a href="#一、入门" class="headerlink" title="一、入门"></a>一、入门</h4><p>扩充了 CSS 语言：增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。</p>
+<h4 id="二、使用Less"><a href="#二、使用Less" class="headerlink" title="二、使用Less"></a>二、使用Less</h4><h5 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g <span class="keyword">less</span></div></pre></td></tr></table></figure>
+<h5 id="2-2-命令行用法"><a href="#2-2-命令行用法" class="headerlink" title="2.2 命令行用法"></a>2.2 命令行用法</h5><ul>
+<li><p>将less文件编译为css</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">lessc</span> <span class="selector-tag">style</span><span class="selector-class">.less</span> &gt; <span class="selector-tag">style</span><span class="selector-class">.css</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>若要输出压缩过的css，则添加-x选项。</p>
+  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lessc style<span class="selector-class">.less</span> &gt; style<span class="selector-class">.css</span> -n</div></pre></td></tr></table></figure>
+</li>
+<li><p>可以通过 –clean-css 选项启用 Clean CSS 进行压缩(需要安装)</p>
+</li>
+</ul>
+<h4 id="二、概览"><a href="#二、概览" class="headerlink" title="二、概览"></a>二、概览</h4><h6 id="2-1-1-变量"><a href="#2-1-1-变量" class="headerlink" title="2.1.1 变量"></a>2.1.1 变量</h6><ul>
+<li><p>基本用法</p>
+  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@nice-blue:</span><span class="number">#5B83AD</span>;</div><div class="line"><span class="selector-id">#header</span>&#123;</div><div class="line">    <span class="attribute">color</span>:<span class="variable">@niec-blue</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>URLS</p>
+  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@images:</span><span class="string">"../img"</span>;</div><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">background</span>:url(<span class="string">"@&#123;images&#125;/123.png"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Variables</span></div><div class="line"><span class="variable">@themes:</span> <span class="string">"../../src/themes"</span>;</div><div class="line"></div><div class="line"><span class="comment">// Usage</span></div><div class="line"><span class="keyword">@import</span> <span class="string">"@&#123;themes&#125;/tidal-wave.less"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ul>
+<h6 id="2-1-2-混合-Mixin"><a href="#2-1-2-混合-Mixin" class="headerlink" title="2.1.2 混合(Mixin)"></a>2.1.2 混合(Mixin)</h6><p>混合可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.rounded-corners</span> (<span class="variable">@radius</span>: <span class="number">5px</span>) &#123;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="variable">@radius</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#header</span> &#123;</div><div class="line">    <span class="selector-class">.rounded-corners</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#footer</span> &#123;</div><div class="line">    <span class="selector-class">.rounded-corners</span>(<span class="number">10px</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h6 id="2-1-3-嵌套"><a href="#2-1-3-嵌套" class="headerlink" title="2.1.3 嵌套"></a>2.1.3 嵌套</h6><p>可以在一个选择器中嵌套另一个选择器来实现继承<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#header</span> &#123;</div><div class="line">    <span class="selector-tag">h1</span> &#123;</div><div class="line">        <span class="attribute">font-size</span>: <span class="number">26px</span>;</div><div class="line">        <span class="attribute">font-weight</span>: bold;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//编译为</span></div><div class="line"><span class="selector-id">#header</span> <span class="selector-tag">h1</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">26px</span>;</div><div class="line">    <span class="attribute">font-weight</span>: bold;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。<br></p>
+        
+          <a class="article-more-a" href="/2017/12/28/less/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/28/less/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js命名空间" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -445,85 +561,6 @@
 
 
   
-    <article id="post-js设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/22/js设计模式/">js设计模式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/22/js设计模式/" class="archive-article-date">
-  	<time datetime="2017-12-22T08:05:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一、什么是设计模式"><a href="#一、什么是设计模式" class="headerlink" title="一、什么是设计模式"></a>一、什么是设计模式</h4><p>设计模式是命名、抽象和识别对可重用的面向对象设计有用的的通用设计结构。设计模式确定类和他们的实体、他们的角色和协作、还有他们的责任分配。目的是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
-        
-          <a class="article-more-a" href="/2017/12/22/js设计模式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/22/js设计模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -632,19 +669,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -673,6 +710,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">glup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
