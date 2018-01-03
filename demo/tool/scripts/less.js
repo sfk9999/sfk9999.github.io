@@ -15,11 +15,11 @@ gulp.task('less', function () {
         .pipe(less())
         .pipe(sourcemaps.write('./map'))
         .pipe(cssmin())
-        .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+        .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message="" %="">')}))
         .pipe(gulp.dest('./public/demo/pagesDemo/css'))
 })
 
 gulp.task('watch', function() {
     gulp.watch(paths.less, ['less'])
     console.log('********您已开启watch*********');
-})
+})</%=>
