@@ -2,122 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="310033a3-ee01-4dc0-95c6-4e328f78e545" name="Default" comment="e">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/base/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/base/f.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/base/highlight/rainbow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/base/reset.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_center.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_center_flex.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_center_table.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_center_text.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_easyLayout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_overflow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_sameHeight_flex.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_sameHeight_float.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_sameHeight_table.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_sameWidth_flex.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_sameWidth_float.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_sameWidth_table.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_threeColumn_flex.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_threeColumn_grail.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_threeColumn_wing.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_transformsCard.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/css_triangle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/jquery.fullPage.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/jquery_animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/jquery_myMerry.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_drag.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_formCheck.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_formLinkage.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_navShow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_pictureCar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_pictureSlide.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/js_rollingNav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/m_iscroll_nav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/map/m_iscroll_nav.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/map/temp.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css/temp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_center.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_center_flex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_center_table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_center_text.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_easyLayout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_overflow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_sameHeight_flex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_sameHeight_float.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_sameHeight_table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_sameWidth_flex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_sameWidth_float.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_sameWidth_table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_threeColumn_flex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_threeColumn_grail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_threeColumn_wing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_transformsCard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/css_triangle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/css_easyLayout/demo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/css_easyLayout/header.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_lazyload/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_1_bigger.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_2_bigger.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_3_bigger.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/jquery_showBigImg/apple_4_bigger.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureCar/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureCar/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureCar/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureCar/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureSlide/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureSlide/02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureSlide/03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureSlide/04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/imgs/js_pictureSlide/05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/jquery_animate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/jquery_fullPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/jquery_lazyload.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/jquery_myMerry.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/jquery_showBigImg.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/highlight/highlight.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/iscroll-infinite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/iscroll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/jquery.fullPage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/jquery.lazyload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/jquery_myMerry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/js_formCheck.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/js_pictureSlide.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js/vue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_drag.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_dragfile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_formCheck.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_formLinkage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_imgUp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_navShow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_pictureCar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_pictureSlide.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/js_rollingNav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/less/base/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/less/m_iscroll_nav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/less/temp.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/m_iscroll_nav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/temp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/pagesDemo/tempOld.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/tool/scripts/less.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/source/demo/tool/scripts/newPagesDemo.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/yilia" afterPath="$PROJECT_DIR$/themes/yilia" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -144,12 +28,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/demo/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaScript-常用方法总结.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/JavaScript-常用方法总结.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="297">
+                <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -205,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/_posts/Hexo搭建.md" />
         <option value="$PROJECT_DIR$/source/_posts/IE6常见BUG与相应解决办法.md" />
         <option value="$PROJECT_DIR$/source/_posts/vue-resource.md" />
         <option value="$PROJECT_DIR$/source/_posts/vue-router.md" />
@@ -256,6 +162,7 @@
         <option value="$PROJECT_DIR$/source/_posts/js优雅的实现方式.md" />
         <option value="$PROJECT_DIR$/public/demo/index.html" />
         <option value="$PROJECT_DIR$/public/demo/tool/scripts/newPagesDemo.js" />
+        <option value="$PROJECT_DIR$/source/_posts/JavaScript-常用方法总结.md" />
       </list>
     </option>
   </component>
@@ -269,10 +176,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
+    <option name="x" value="2391" />
     <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="width" value="2418" />
+    <option name="height" value="1318" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -289,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -302,10 +208,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myHexo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myHexo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myHexo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myHexo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -819,7 +758,9 @@
       <workItem from="1514600230770" duration="599000" />
       <workItem from="1514954385497" duration="831000" />
       <workItem from="1514961583027" duration="93000" />
-      <workItem from="1514961734963" duration="187000" />
+      <workItem from="1514961734963" duration="328000" />
+      <workItem from="1515115128777" duration="21000" />
+      <workItem from="1515117384638" duration="151000" />
     </task>
     <task id="LOCAL-00001" summary="e">
       <created>1514257457191</created>
@@ -832,7 +773,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79573000" />
+    <option name="totallyTimeSpent" value="79886000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -844,7 +785,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="2391" y="-9" width="2418" height="1318" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -857,10 +799,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21857305" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21856028" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23229614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2380546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -905,16 +847,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/vue-resource.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="54">
-            <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/package-json搭建.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1235,19 +1167,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/demo/tool/scripts/newPagesDemo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,6 +1179,25 @@
         <state relative-caret-position="216">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/JavaScript-常用方法总结.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="297">
+            <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
