@@ -4,7 +4,6 @@ date: 2017-12-17 12:55:35
 toc: true
 tags:
     - vue
-    
 ---
 本文介绍vue-router如何搭建和使用
 <!--more-->
