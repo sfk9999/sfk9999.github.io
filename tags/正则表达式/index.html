@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>less | sun丶的博客</title>
+  <title>Tag: 正则表达式 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。">
-<meta name="keywords" content="css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="less">
-<meta property="og:url" content="http://yoursite.com/2017/12/28/less/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="sun丶的博客">
+<meta property="og:url" content="http://yoursite.com/tags/正则表达式/index.html">
 <meta property="og:site_name" content="sun丶的博客">
-<meta property="og:description" content="Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-28T09:02:23.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="less">
-<meta name="twitter:description" content="Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。">
+<meta name="twitter:title" content="sun丶的博客">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -129,186 +124,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-less" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      less
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/09/常用正则表达式整理/" class="archive-article-date">
+  	<time datetime="2018-01-09T00:57:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/01/09/常用正则表达式整理/">常用正则表达式整理</a>
     </h1>
   
 
-        
-        <a href="/2017/12/28/less/" class="archive-article-date">
-  	<time datetime="2017-12-28T06:07:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-              <span class="btn-bg"></span>
-              <span class="btn-text">文章导航</span>
-              </p>
-    	<div id="toc-article" class="toc-article">
-    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-    		<strong class="toc-title">文章目录</strong>
-               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#特点"><span class="toc-number">1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#原理"><span class="toc-number">2.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生命周期"><span class="toc-number">3.</span> <span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一、入门"><span class="toc-number">4.</span> <span class="toc-text">一、入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、使用Less"><span class="toc-number">5.</span> <span class="toc-text">二、使用Less</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-安装"><span class="toc-number">5.1.</span> <span class="toc-text">2.1 安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-命令行用法"><span class="toc-number">5.2.</span> <span class="toc-text">2.2 命令行用法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、概览"><span class="toc-number">6.</span> <span class="toc-text">二、概览</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-1-变量"><span class="toc-number">6.0.1.</span> <span class="toc-text">2.1.1 变量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-2-混合-Mixin"><span class="toc-number">6.0.2.</span> <span class="toc-text">2.1.2 混合(Mixin)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-3-嵌套"><span class="toc-number">6.0.3.</span> <span class="toc-text">2.1.3 嵌套</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-4-运算"><span class="toc-number">6.0.4.</span> <span class="toc-text">2.1.4 运算</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-5-函数"><span class="toc-number">6.0.5.</span> <span class="toc-text">2.1.5 函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-6-导入"><span class="toc-number">6.0.6.</span> <span class="toc-text">2.1.6 导入</span></a></li></ol></li></ol></li></ol>
-             </div>
-       <script type="text/javascript">
-    	function showToc(){
-    		var toc_article = document.getElementById("toc-article");
-    		var show_toc_btn = document.getElementById("show-toc-btn");
-    		toc_article.setAttribute("style","display:block");
-    		show_toc_btn.setAttribute("style","display:none");
-    		};
-    	function showBtn(){
-    		var toc_article = document.getElementById("toc-article");
-    		var show_toc_btn = document.getElementById("show-toc-btn");
-    		toc_article.setAttribute("style","display:none");
-    		show_toc_btn.setAttribute("style","display:block");
-    		};
-       </script>
+        <div class="article-info info-on-right">
           
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。<br><a id="more"></a></p>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
-<li>变量</li>
-<li>混合（Mixins）</li>
-<li>嵌套规则</li>
-<li>运算</li>
-<li>函数</li>
-<li>命名空间</li>
-<li>作用域</li>
-<li>注释</li>
-<li>导入（Import）</li>
-</ol>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>本质上，less 包含一套自定义的语法及一个解析器，用户根据这些语法定义自己的样式规则，这些规则最终会通过解析器，less 把这些样式规则编译成浏览器可以识别的 css 样式。less 并没有裁剪 css 原有的特性，更不是用来取代 css 的，而是在现有 css 语法的基础上，为 css 加入程序式语言的特性。less 最终需要编译成 css 文件才能起到样式的效果，我们可以称 less 为 css 样式生成工具。</p>
-<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>beforecreated：el 和 data 并未初始化<br>created:完成了 data 数据的初始化，el没有<br>beforeMount：完成了 el 和 data 初始化 ，此时el是，用的虚拟DOM，先把坑占住<br>mounted(安装) ：完成挂载，将el填上</p>
-<h4 id="一、入门"><a href="#一、入门" class="headerlink" title="一、入门"></a>一、入门</h4><p>扩充了 CSS 语言：增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。</p>
-<h4 id="二、使用Less"><a href="#二、使用Less" class="headerlink" title="二、使用Less"></a>二、使用Less</h4><h5 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g <span class="keyword">less</span></div></pre></td></tr></table></figure>
-<h5 id="2-2-命令行用法"><a href="#2-2-命令行用法" class="headerlink" title="2.2 命令行用法"></a>2.2 命令行用法</h5><ul>
-<li><p>将less文件编译为css</p>
-  <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">lessc</span> <span class="selector-tag">style</span><span class="selector-class">.less</span> &gt; <span class="selector-tag">style</span><span class="selector-class">.css</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>若要输出压缩过的css，则添加-x选项。</p>
-  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lessc style<span class="selector-class">.less</span> &gt; style<span class="selector-class">.css</span> -n</div></pre></td></tr></table></figure>
-</li>
-<li><p>可以通过 –clean-css 选项启用 Clean CSS 进行压缩(需要安装)</p>
-</li>
-</ul>
-<h4 id="二、概览"><a href="#二、概览" class="headerlink" title="二、概览"></a>二、概览</h4><h6 id="2-1-1-变量"><a href="#2-1-1-变量" class="headerlink" title="2.1.1 变量"></a>2.1.1 变量</h6><ul>
-<li><p>基本用法</p>
-  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@nice-blue:</span><span class="number">#5B83AD</span>;</div><div class="line"><span class="selector-id">#header</span>&#123;</div><div class="line">    <span class="attribute">color</span>:<span class="variable">@niec-blue</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>URLS</p>
-  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@images:</span><span class="string">"../img"</span>;</div><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">background</span>:url(<span class="string">"@&#123;images&#125;/123.png"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Variables</span></div><div class="line"><span class="variable">@themes:</span> <span class="string">"../../src/themes"</span>;</div><div class="line"></div><div class="line"><span class="comment">// Usage</span></div><div class="line"><span class="keyword">@import</span> <span class="string">"@&#123;themes&#125;/tidal-wave.less"</span>;</div></pre></td></tr></table></figure>
-</li>
-<li></li>
-</ul>
-<h6 id="2-1-2-混合-Mixin"><a href="#2-1-2-混合-Mixin" class="headerlink" title="2.1.2 混合(Mixin)"></a>2.1.2 混合(Mixin)</h6><p>混合可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.rounded-corners</span> (<span class="variable">@radius</span>: <span class="number">5px</span>) &#123;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="variable">@radius</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#header</span> &#123;</div><div class="line">    <span class="selector-class">.rounded-corners</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#footer</span> &#123;</div><div class="line">    <span class="selector-class">.rounded-corners</span>(<span class="number">10px</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h6 id="2-1-3-嵌套"><a href="#2-1-3-嵌套" class="headerlink" title="2.1.3 嵌套"></a>2.1.3 嵌套</h6><p>可以在一个选择器中嵌套另一个选择器来实现继承<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#header</span> &#123;</div><div class="line">    <span class="selector-tag">h1</span> &#123;</div><div class="line">        <span class="attribute">font-size</span>: <span class="number">26px</span>;</div><div class="line">        <span class="attribute">font-weight</span>: bold;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//编译为</span></div><div class="line"><span class="selector-id">#header</span> <span class="selector-tag">h1</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">26px</span>;</div><div class="line">    <span class="attribute">font-weight</span>: bold;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h6 id="2-1-4-运算"><a href="#2-1-4-运算" class="headerlink" title="2.1.4 运算"></a>2.1.4 运算</h6><ul>
-<li>运算提供了加，减，乘，除操作,我们可以做属性值和颜色的运算</li>
-</ul>
-<h6 id="2-1-5-函数"><a href="#2-1-5-函数" class="headerlink" title="2.1.5 函数"></a>2.1.5 函数</h6><p>Less内置了多种函数用于转换颜色、处理字符串、算术运算等。</p>
-<h6 id="2-1-6-导入"><a href="#2-1-6-导入" class="headerlink" title="2.1.6 导入"></a>2.1.6 导入</h6><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">import</span> <span class="string">"library"</span>;  <span class="comment">//library.less</span></div><div class="line">@<span class="keyword">import</span> <span class="string">"typo.css"</span>;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/01/08/js优雅的实现方式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js优雅的实现方式
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/12/28/js命名空间/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js命名空间</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#特点"><span class="toc-number">1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#原理"><span class="toc-number">2.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生命周期"><span class="toc-number">3.</span> <span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一、入门"><span class="toc-number">4.</span> <span class="toc-text">一、入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、使用Less"><span class="toc-number">5.</span> <span class="toc-text">二、使用Less</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-安装"><span class="toc-number">5.1.</span> <span class="toc-text">2.1 安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-命令行用法"><span class="toc-number">5.2.</span> <span class="toc-text">2.2 命令行用法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、概览"><span class="toc-number">6.</span> <span class="toc-text">二、概览</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-1-变量"><span class="toc-number">6.0.1.</span> <span class="toc-text">2.1.1 变量</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-2-混合-Mixin"><span class="toc-number">6.0.2.</span> <span class="toc-text">2.1.2 混合(Mixin)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-3-嵌套"><span class="toc-number">6.0.3.</span> <span class="toc-text">2.1.3 嵌套</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-4-运算"><span class="toc-number">6.0.4.</span> <span class="toc-text">2.1.4 运算</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-5-函数"><span class="toc-number">6.0.5.</span> <span class="toc-text">2.1.5 函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1-6-导入"><span class="toc-number">6.0.6.</span> <span class="toc-text">2.1.6 导入</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -342,9 +215,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
