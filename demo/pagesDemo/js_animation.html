@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_animation</title>
+    <link rel="stylesheet" href="css/base/base.css">
+    <link rel="stylesheet" href="css/js_animation.css">
+</head>
+<body>
+<div id="a-setTime">
+    0%
+</div>
+<button id="s-btn">setTimeout</button>
+
+<div id="a-raf">
+    0%
+</div>
+<button id="r-btn">raf</button>
+
+<script>
+var sDiv = document.getElementById('a-setTime');
+var sBtn = document.getElementById('s-btn');
+var rDiv = document.getElementById('a-raf');
+var rBtn = document.getElementById('r-btn');
+var sTimer;
+var rTimer;
+
+sBtn.onclick=function(){
+    sDiv.style.width=0;
+    clearTimeout(sTimer);
+    sTimer=setTimeout(function fn(){
+        if(parseInt(sDiv.style.width)<500){
+            sDiv.style.width=parseInt(sDiv.style.width)+5+'px';
+            sDiv.innerHTML=parseInt(sDiv.style.width)/5+'%';
+            sTimer=setTimeout(fn,16);
+        }else {
+            clearTimeout(sTimer);
+        }
+    },16);
+};
+
+
+
+rBtn.onclick=function(){
+    rDiv.style.width=0;
+    cancelAnimationFrame(rTimer);
+    rTimer=requestAnimationFrame(function fn(){
+        if(parseInt(rDiv.style.width)<500){
+            rDiv.style.width=parseInt(rDiv.style.width)+5+'px';
+            rDiv.innerHTML=parseInt(rDiv.style.width)/5 +'%';
+            rTimer=requestAnimationFrame(fn);
+        }else {
+            cancelAnimationFrame(rTimer);
+        }
+    });
+};
+
+</script>
+
+</body>
+</html>
