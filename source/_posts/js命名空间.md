@@ -1,6 +1,6 @@
 ---
 title: js命名空间
-date: 2017-12-28 10:02:34
+date: 2017-11-28 10:02:34
 toc: true
 tags:
     - JavaScript
