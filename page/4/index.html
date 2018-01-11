@@ -126,189 +126,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-css3动画和js动画的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/css3动画和js动画的区别/">css3动画和js动画的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/css3动画和js动画的区别/" class="archive-article-date">
-  	<time datetime="2017-11-11T07:56:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="CSS3动画和js动画的区别"><a href="#CSS3动画和js动画的区别" class="headerlink" title="CSS3动画和js动画的区别"></a>CSS3动画和js动画的区别</h3><h4 id="CSS动画："><a href="#CSS动画：" class="headerlink" title="CSS动画："></a>CSS动画：</h4><ul>
-<li>优点：<ol>
-<li>浏览器可以对动画进行优化：更少的的cpu，gpu和内存使用量，强制使用硬件加速 （通过 GPU 来提高动画性能）。性能上稍微好一点。</li>
-<li>代码相对简单,性能调优方向固定</li>
-<li>对于帧速表现不好的低版本浏览器，CSS3可以做到自然降级，而JS则需要撰写额外代码</li>
-</ol>
-</li>
-<li>缺点：<ol>
-<li>运行过程控制较弱,无法附加事件绑定回调函数（CSS动画只能暂停,不能在动画中寻找一个特定的时间点，不能在半路反转动画，不能变换时间尺度，不能在特定的位置添加回调函数或是绑定回放事件,无进度报告）–控制上不够灵活</li>
-<li>代码冗长（ rǒng）。想用 CSS 实现稍微复杂一点动画,最后CSS代码都会变得非常笨重</li>
-<li>兼容性不好</li>
-</ol>
-</li>
-</ul>
-<h4 id="JS动画"><a href="#JS动画" class="headerlink" title="JS动画"></a>JS动画</h4><ul>
-<li>优点：<ol>
-<li>JavaScript动画控制能力很强, 可以在动画播放过程中对动画进行控制：开始、暂停、回放、终止、取消都是可以做到的。</li>
-<li>动画效果比css3动画丰富,有些动画效果，比如曲线运动,冲击闪烁,视差滚动效果，只有JavaScript动画才能完成</li>
-<li>CSS3有兼容性问题，而JS大多时候没有兼容性问题</li>
-</ol>
-</li>
-<li>缺点：<ol>
-<li>JavaScript在浏览器的主线程中运行，而主线程中还有其它需要运行的JavaScript脚本、样式计算、布局、绘制任务等,对其干扰导致线程可能出现阻塞，从而造成丢帧的情况。–计算没有css快。</li>
-<li>代码的复杂度高于CSS动画</li>
-</ol>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/css3动画和js动画的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cookie、sessionStorage和localStorage" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/04/cookie、sessionStorage和localStorage/">cookie、sessionStorage和localStorage</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/04/cookie、sessionStorage和localStorage/" class="archive-article-date">
-  	<time datetime="2017-11-04T13:23:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-04</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-cookie"><a href="#1-cookie" class="headerlink" title="1. cookie"></a>1. cookie</h4><p>cookie:存储在用户本地终端上的数据。有时也用cookies，指某些网站为了辨别用户身份，进行session跟踪而存储在本地终端上的数据，通常经过加密。</p>
-<h4 id="2-HTML5的2种方法"><a href="#2-HTML5的2种方法" class="headerlink" title="2. HTML5的2种方法"></a>2. HTML5的2种方法</h4><p>都是仅在客户端（浏览器）中保存，不参与服务器的通信<br></p>
-        
-          <a class="article-more-a" href="/2017/11/04/cookie、sessionStorage和localStorage/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/04/cookie、sessionStorage和localStorage/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Intellij小问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -396,20 +213,20 @@
 
 
   
-    <article id="post-git的基本用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-AJAX跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/03/git的基本用法/">git的基本用法</a>
+      <a class="article-title" href="/2017/10/23/AJAX跨域/">AJAX跨域</a>
     </h1>
   
 
         
-        <a href="/2017/11/03/git的基本用法/" class="archive-article-date">
-  	<time datetime="2017-11-03T07:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-03</time>
+        <a href="/2017/10/23/AJAX跨域/" class="archive-article-date">
+  	<time datetime="2017-10-23T13:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
 </a>
         
       </header>
@@ -419,20 +236,9 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><p>git分为三个区域：工作目录，暂存区，提交区</p>
-<h5 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h5><ul>
-<li><p>配置</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git-<span class="built_in">config</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>配置级别</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">-local /<span class="regexp">/默认，高优先级：只影响本仓库</span></span></div><div class="line"><span class="ruby">--global /<span class="regexp">/中优先级: 影响到所有当前用户的git仓库</span></span></div><div class="line"><span class="ruby">--system /<span class="regexp">/低优先级：影响到全系统的git仓库</span></span></div></pre></td></tr></table></figure>
-</li>
-<li><p>初始化仓库</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git-init</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
+        <p>本文主要讲了什么是同源政策以及ajax跨域的常用的方法。<br></p>
         
-          <a class="article-more-a" href="/2017/11/03/git的基本用法/#more">more >></a>
+          <a class="article-more-a" href="/2017/10/23/AJAX跨域/#more">more >></a>
         
       
 
@@ -446,7 +252,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -456,7 +266,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/03/git的基本用法/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/23/AJAX跨域/">展开全文 >></a>
         </p>
       
 
@@ -486,20 +296,20 @@
 
 
   
-    <article id="post-Vue、React和Angular的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-bower-json" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/03/Vue、React和Angular的区别/">Vue、React和Angular的区别</a>
+      <a class="article-title" href="/2017/10/19/bower-json/">bower.json</a>
     </h1>
   
 
         
-        <a href="/2017/11/03/Vue、React和Angular的区别/" class="archive-article-date">
-  	<time datetime="2017-11-03T00:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-03</time>
+        <a href="/2017/10/19/bower-json/" class="archive-article-date">
+  	<time datetime="2017-10-19T07:13:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
 </a>
         
       </header>
@@ -509,24 +319,13 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="MVX框架模式：MVC-MVP-MVVM"><a href="#MVX框架模式：MVC-MVP-MVVM" class="headerlink" title="MVX框架模式：MVC+MVP+MVVM"></a>MVX框架模式：MVC+MVP+MVVM</h3><ol>
-<li>MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。</li>
-<li>MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。</li>
-<li>MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewModel。Model+View+ViewModel。<ol>
-<li>View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。示。</li>
-<li>这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。</li>
-</ol>
-</li>
-</ol>
-<h3 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h3><ol>
-<li>是一个构建数据驱动的Web界面的库。Vue.js通过简单的API（应用程序编程接口）提供高效的数据绑定和灵活的组件系统.</li>
-<li>Vue.js的特性如下：<ol>
-<li>轻量级的框架</li>
-<li>双向数据绑定</li>
-<li>指令</li>
-<li>插件化</li></ol></li></ol>
+        <h3 id="bower的作用"><a href="#bower的作用" class="headerlink" title="bower的作用"></a>bower的作用</h3><ul>
+<li>它会为你节省寻找客户端的依赖关系的时间</li>
+<li>每次我需要安装jQuery的时候，我都需要去jQuery网站下载包或使用CDN版本。但是有了Bower，你只需要输入一个命令，jquery就会安装在本地计算机上，你不需要去记版本号之类的东西，你也可以通过Bower的info命令去查看任意库的信息。</li>
+<li>可以很容易地展现客户端的依赖关系。你可以创建一个名为bower.json的文件，在这个文件里你可以指定所有客户端的依赖关系，任何时候你需要弄清楚你正在使用哪些库，你可以参考这个文件。</li>
+</ul>
         
-          <a class="article-more-a" href="/2017/11/03/Vue、React和Angular的区别/#more">more >></a>
+          <a class="article-more-a" href="/2017/10/19/bower-json/#more">more >></a>
         
       
 
@@ -540,7 +339,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端框架</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
         		</li>
       		
 		</ul>
@@ -550,7 +349,178 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/03/Vue、React和Angular的区别/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/19/bower-json/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-IE6常见BUG与相应解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/11/IE6常见BUG与相应解决办法/">IE6常见BUG与相应解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/11/IE6常见BUG与相应解决办法/" class="archive-article-date">
+  	<time datetime="2017-10-11T07:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-11</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="IE6-BUG"><a href="#IE6-BUG" class="headerlink" title="IE6 BUG"></a>IE6 BUG</h3><p>IE6是兼容BUG最多的浏览器，它不支持PNG alpha通道暂且不论。</p>
+<h4 id="一、IE6双倍边距bug"><a href="#一、IE6双倍边距bug" class="headerlink" title="一、IE6双倍边距bug"></a>一、IE6双倍边距bug</h4><ul>
+<li>当页面上的元素使用float浮动时，不管是向左还是向右浮动；只要该元素带有margin像素都会使该值乘以2，例如“margin-left:10px” 在IE6中，该值就会被解析为20px。</li>
+<li>解决：需要在该元素中加入display:inline 或 display:block 明确其元素类型即可解决双倍边距的BUG</li>
+</ul>
+<h4 id="二、IE6中3像素问题及解决办法"><a href="#二、IE6中3像素问题及解决办法" class="headerlink" title="二、IE6中3像素问题及解决办法"></a>二、IE6中3像素问题及解决办法</h4><ul>
+<li>当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。</li>
+<li>诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。</li>
+<li>解决：需要使布局在同一行的元素都加上float浮动</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/10/11/IE6常见BUG与相应解决办法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IE6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BUG</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/11/IE6常见BUG与相应解决办法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-package-json搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/package-json搭建/">package.json搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/08/package-json搭建/" class="archive-article-date">
+  	<time datetime="2017-10-08T03:03:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-08</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）</p>
+        
+          <a class="article-more-a" href="/2017/10/08/package-json搭建/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/08/package-json搭建/">展开全文 >></a>
         </p>
       
 
