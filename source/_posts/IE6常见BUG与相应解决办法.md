@@ -1,6 +1,6 @@
 ---
 title: IE6常见BUG与相应解决办法
-date: 2017-10-11 15:58:57
+date: 2017-7-17 15:58:57
 toc: true
 tags:
     - IE6
