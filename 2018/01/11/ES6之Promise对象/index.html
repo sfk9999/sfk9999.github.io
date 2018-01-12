@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue、React和Angular的区别 | sun丶的博客</title>
+  <title>ES6之Promise对象 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MVX框架模式：MVC+MVP+MVVM MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。 MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。 MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewMo">
-<meta name="keywords" content="前端框架">
+  <meta name="description" content="Promise是用来传递异步操作的消息对象，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。 1. Promise含义 Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。 所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。 从语法上说，Promise 是">
+<meta name="keywords" content="JavaScript,ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue、React和Angular的区别">
-<meta property="og:url" content="http://yoursite.com/2017/08/03/Vue、React和Angular的区别/index.html">
+<meta property="og:title" content="ES6之Promise对象">
+<meta property="og:url" content="http://yoursite.com/2018/01/11/ES6之Promise对象/index.html">
 <meta property="og:site_name" content="sun丶的博客">
-<meta property="og:description" content="MVX框架模式：MVC+MVP+MVVM MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。 MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。 MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewMo">
+<meta property="og:description" content="Promise是用来传递异步操作的消息对象，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。 1. Promise含义 Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。 所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。 从语法上说，Promise 是">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-11T01:25:28.516Z">
+<meta property="og:updated_time" content="2018-01-12T08:53:43.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue、React和Angular的区别">
-<meta name="twitter:description" content="MVX框架模式：MVC+MVP+MVVM MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。 MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。 MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewMo">
+<meta name="twitter:title" content="ES6之Promise对象">
+<meta name="twitter:description" content="Promise是用来传递异步操作的消息对象，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。 1. Promise含义 Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。 所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。 从语法上说，Promise 是">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -129,20 +129,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue、React和Angular的区别" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES6之Promise对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue、React和Angular的区别
+      ES6之Promise对象
     </h1>
   
 
         
-        <a href="/2017/08/03/Vue、React和Angular的区别/" class="archive-article-date">
-  	<time datetime="2017-08-03T00:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
+        <a href="/2018/01/11/ES6之Promise对象/" class="archive-article-date">
+  	<time datetime="2018-01-11T08:51:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
 </a>
         
       </header>
@@ -156,7 +156,7 @@
     	<div id="toc-article" class="toc-article">
     	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     		<strong class="toc-title">文章目录</strong>
-               <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MVX框架模式：MVC-MVP-MVVM"><span class="toc-number">1.</span> <span class="toc-text">MVX框架模式：MVC+MVP+MVVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue-js"><span class="toc-number">2.</span> <span class="toc-text">Vue.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与AngularJS的区别"><span class="toc-number">2.1.</span> <span class="toc-text">Vue.js与AngularJS的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与React的区别"><span class="toc-number">2.2.</span> <span class="toc-text">Vue.js与React的区别</span></a></li></ol></li></ol>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Promise含义"><span class="toc-number">1.</span> <span class="toc-text">1. Promise含义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-特点"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 特点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-基本用法"><span class="toc-number">2.</span> <span class="toc-text">2. 基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Promise-prototype-then"><span class="toc-number">3.</span> <span class="toc-text">3. Promise.prototype.then()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Promise-prototype-catch"><span class="toc-number">4.</span> <span class="toc-text">4. Promise.prototype.catch()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-实例"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 实例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-Promise-all"><span class="toc-number">5.</span> <span class="toc-text">5. Promise.all()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-Promise-race"><span class="toc-number">6.</span> <span class="toc-text">6. Promise.race()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-Promise-resolve"><span class="toc-number">7.</span> <span class="toc-text">7. Promise.resolve()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-Promise-reject"><span class="toc-number">8.</span> <span class="toc-text">8. Promise.reject()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-附加方法"><span class="toc-number">9.</span> <span class="toc-text">9. 附加方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-应用"><span class="toc-number">10.</span> <span class="toc-text">10. 应用</span></a></li></ol>
              </div>
        <script type="text/javascript">
     	function showToc(){
@@ -176,56 +176,79 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="MVX框架模式：MVC-MVP-MVVM"><a href="#MVX框架模式：MVC-MVP-MVVM" class="headerlink" title="MVX框架模式：MVC+MVP+MVVM"></a>MVX框架模式：MVC+MVP+MVVM</h3><ol>
-<li>MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。</li>
-<li>MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。</li>
-<li>MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewModel。Model+View+ViewModel。<ol>
-<li>View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。示。</li>
-<li>这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。</li>
-</ol>
+        <p>Promise是用来传递异步操作的消息对象，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。</p>
+<h4 id="1-Promise含义"><a href="#1-Promise含义" class="headerlink" title="1. Promise含义"></a>1. Promise含义</h4><ul>
+<li>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。</li>
+<li>所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。</li>
+<li>从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。</li>
+</ul>
+<h5 id="1-1-特点"><a href="#1-1-特点" class="headerlink" title="1.1 特点"></a>1.1 特点</h5><ol>
+<li>对象的状态不受外界影响：<ul>
+<li>有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。</li>
+<li>只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。</li>
+</ul>
+</li>
+<li>一旦状态改变，就不会再变，任何时候都可以得到这个结果<ul>
+<li>Promise对象的状态改变，只有两种可能：从pending变为fulfilled和从pending变为rejected</li>
+</ul>
 </li>
 </ol>
-<h3 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h3><ol>
-<li>是一个构建数据驱动的Web界面的库。Vue.js通过简单的API（应用程序编程接口）提供高效的数据绑定和灵活的组件系统.</li>
-<li>Vue.js的特性如下：<ol>
-<li>轻量级的框架</li>
-<li>双向数据绑定</li>
-<li>指令</li>
-<li>插件化<a id="more"></a>
-<h4 id="Vue-js与AngularJS的区别"><a href="#Vue-js与AngularJS的区别" class="headerlink" title="Vue.js与AngularJS的区别"></a>Vue.js与AngularJS的区别</h4></li>
-</ol>
+<ul>
+<li>缺点：<ul>
+<li>无法取消Promise，一旦新建它就会立即执行，无法中途取消。</li>
+<li>如果不设置回调函数，Promise内部抛出的错误，不会反应到外部</li>
+<li>当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。</li>
+</ul>
 </li>
-<li>相同点：<ol>
-<li>都支持指令：内置指令和自定义指令。</li>
-<li>都支持过滤器：内置过滤器和自定义过滤器。</li>
-<li>都支持双向数据绑定。</li>
-<li>都不支持低端浏览器。</li>
-</ol>
+</ul>
+<a id="more"></a>
+<h4 id="2-基本用法"><a href="#2-基本用法" class="headerlink" title="2. 基本用法"></a>2. 基本用法</h4><p>Promise对象是一个构造函数，用来生成Promise实例。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="comment">/*异步操作成功*/</span>)&#123;</div><div class="line">        resolve(value);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        reject(error);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<ul>
+<li>resolve和reject两个函数，由 JavaScript 引擎提供，不用自己部署。<ul>
+<li>resolve函数：状态从“未完成”变为“成功”，在异步操作成功时调用，并将异步操作的结果，作为参数传递出去</li>
+<li>reject函数：状态从“未完成”变为“失败”，在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。</li>
+</ul>
 </li>
-<li>不同点：<ol>
-<li>AngularJS的学习成本高，比如增加了Dependency Injection特性，而Vue.js本身提供的API都比较简单、直观。</li>
-<li>在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢。  </li>
-</ol>
+</ul>
+<h4 id="3-Promise-prototype-then"><a href="#3-Promise-prototype-then" class="headerlink" title="3. Promise.prototype.then()"></a>3. Promise.prototype.then()</h4><p>then()方法：Promise实例生成以后，可以用then方法分别指定resolved状态和rejected状态的回调函数。<br><figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">promise.<span class="keyword">then</span>(<span class="function"><span class="keyword">function</span><span class="params">(value)</span>&#123;</span></div><div class="line">    <span class="comment">//success</span></div><div class="line">&#125;,<span class="function"><span class="keyword">function</span><span class="params">(error)</span>&#123;</span></div><div class="line">    <span class="comment">//failure</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<ul>
+<li>参数：then方法可以接受两个回调函数作为参数。<ul>
+<li>第一个回调函数是Promise对象的状态变为resolved时调用，</li>
+<li>第二个回调函数是Promise对象的状态变为rejected时调用。</li>
+<li>其中，第二个函数是可选的，不一定要提供。</li>
+</ul>
 </li>
-<li>Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发的。</li>
-</ol>
-<h4 id="Vue-js与React的区别"><a href="#Vue-js与React的区别" class="headerlink" title="Vue.js与React的区别"></a>Vue.js与React的区别</h4><ol>
-<li>相同点：<ol>
-<li>React采用特殊的JSX语法，Vue.js在组件开发中也推崇编写.vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用。</li>
-<li>中心思想相同：一切都是组件，组件实例之间可以嵌套。</li>
-<li>都提供合理的钩子函数，可以让开发者定制化地去处理需求。</li>
-<li>都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载。</li>
-<li>在组件开发中都支持mixins的特性。</li>
-</ol>
+<li>返回值：then方法返回的是一个新的Promise实例（注意，不是原来那个Promise实例）</li>
+</ul>
+<blockquote>
+<p>then方法指定的回调函数，将在当前脚本所有同步任务执行完才会执行</p>
+</blockquote>
+<p>链式调用then()：第一个回调函数完成以后，会将返回结果作为参数，传入第二个回调函数。<br><figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">getJSON(<span class="string">"/posts.json"</span>).<span class="keyword">then</span>(<span class="function"><span class="keyword">function</span><span class="params">(json)</span> &#123;</span></div><div class="line">  <span class="keyword">return</span> json.post;</div><div class="line">&#125;).<span class="keyword">then</span>(<span class="function"><span class="keyword">function</span><span class="params">(post)</span> &#123;</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="4-Promise-prototype-catch"><a href="#4-Promise-prototype-catch" class="headerlink" title="4. Promise.prototype.catch()"></a>4. Promise.prototype.catch()</h4><p>Promise.prototype.catch方法是.then(null, rejection)的别名，用于指定发生错误时的回调函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'test'</span>);</div><div class="line">&#125;);</div><div class="line">promise.catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(error);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//等同</span></div><div class="line">promise.then(<span class="literal">null</span>,<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(error);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h5 id="4-1-实例"><a href="#4-1-实例" class="headerlink" title="4.1 实例"></a>4.1 实例</h5><p>一般总是建议，Promise 对象后面要跟catch方法，这样可以处理 Promise 内部发生的错误。catch方法返回的还是一个 Promise 对象，因此后面还可以接着调用then方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> someAsyncThing = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">    <span class="comment">// 下面一行会报错，因为x没有声明</span></div><div class="line">    resolve(x + <span class="number">2</span>);</div><div class="line">  &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">someAsyncThing()</div><div class="line">.catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'oh no'</span>, error);</div><div class="line">&#125;)</div><div class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'carry on'</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//如果没有报错，则会跳过catch方法。</span></div></pre></td></tr></table></figure></p>
+<h4 id="5-Promise-all"><a href="#5-Promise-all" class="headerlink" title="5. Promise.all()"></a>5. Promise.all()</h4><p>Promise.all方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">const</span> p = Promise.all([<span class="built_in">p1</span>, <span class="built_in">p2</span>, <span class="built_in">p3</span>])<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>p的状态由p1、p2、p3决定，分成两种情况。<ul>
+<li>只有p1、p2、p3的状态都变成fulfilled，p的状态才会变成fulfilled，此时p1、p2、p3的返回值组成一个数组，传递给p的回调函数。</li>
+<li>只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。</li>
+</ul>
 </li>
-<li>不同点<ol>
-<li>React依赖Virtual DOM,而Vue.js使用的是DOM模板。React采用的Virtual DOM会对渲染出来的结果做脏检查。（有疑问）</li>
-<li>Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作DOM。</li>
-<li>Vue的性能高于React，Vue 每秒最高处理 10 帧，而 React 每秒最高处理不到 1 帧。这是由于 React 有大量的检查机制，这会让它提供许多有用的警告和错误提示信息。</li>
-<li>React 的生态系统相比 Vue 更加繁荣</li>
-</ol>
+</ul>
+<h4 id="6-Promise-race"><a href="#6-Promise-race" class="headerlink" title="6. Promise.race()"></a>6. Promise.race()</h4><p>Promise.race方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">const</span> p = Promise.race([<span class="built_in">p1</span>, <span class="built_in">p2</span>, <span class="built_in">p3</span>])<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>只要p1、p2、p3之中有一个实例率先改变状态，p的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给p的回调函数。</p>
+<h4 id="7-Promise-resolve"><a href="#7-Promise-resolve" class="headerlink" title="7. Promise.resolve()"></a>7. Promise.resolve()</h4><p>起到将现有对象转为 Promise 对象的作用</p>
+<ul>
+<li>参数的四种情况<ul>
+<li>1：一个Promise实例：不做任何修改</li>
+<li>2：一个thenable对象：指的是具有then方法的对象：转为 Promise 对象，然后就立即执行thenable对象的then方法。</li>
+<li>3：不是具有then方法的对象，或根本就不是对象：返回一个新的 Promise 对象，状态为resolved。</li>
+<li>4：不带有任何参数：直接返回一个resolved状态的 Promise 对象。</li>
+</ul>
 </li>
-</ol>
+</ul>
+<h4 id="8-Promise-reject"><a href="#8-Promise-reject" class="headerlink" title="8. Promise.reject()"></a>8. Promise.reject()</h4><p>Promise.reject(reason)方法也会返回一个新的 Promise 实例，该实例的状态为rejected。</p>
+<h4 id="9-附加方法"><a href="#9-附加方法" class="headerlink" title="9. 附加方法"></a>9. 附加方法</h4><p>done()和finally()</p>
+<h4 id="10-应用"><a href="#10-应用" class="headerlink" title="10. 应用"></a>10. 应用</h4><p>加载图片<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> preloadImage = <span class="function"><span class="keyword">function</span> (<span class="params">path</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">    <span class="keyword">const</span> image = <span class="keyword">new</span> Image();</div><div class="line">    image.onload  = resolve;</div><div class="line">    image.onerror = reject;</div><div class="line">    image.src = path;</div><div class="line">  &#125;);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 
       
 
@@ -239,7 +262,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端框架</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
@@ -258,18 +285,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/08/flex布局/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          flex布局
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/13/去除inline-block元素间间距的方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">去除inline-block元素间间距的方法</div>
+    <a href="/2018/01/09/常用正则表达式整理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用正则表达式整理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -296,7 +314,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MVX框架模式：MVC-MVP-MVVM"><span class="toc-number">1.</span> <span class="toc-text">MVX框架模式：MVC+MVP+MVVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue-js"><span class="toc-number">2.</span> <span class="toc-text">Vue.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与AngularJS的区别"><span class="toc-number">2.1.</span> <span class="toc-text">Vue.js与AngularJS的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-js与React的区别"><span class="toc-number">2.2.</span> <span class="toc-text">Vue.js与React的区别</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Promise含义"><span class="toc-number">1.</span> <span class="toc-text">1. Promise含义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-特点"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 特点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-基本用法"><span class="toc-number">2.</span> <span class="toc-text">2. 基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Promise-prototype-then"><span class="toc-number">3.</span> <span class="toc-text">3. Promise.prototype.then()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Promise-prototype-catch"><span class="toc-number">4.</span> <span class="toc-text">4. Promise.prototype.catch()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-实例"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 实例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-Promise-all"><span class="toc-number">5.</span> <span class="toc-text">5. Promise.all()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-Promise-race"><span class="toc-number">6.</span> <span class="toc-text">6. Promise.race()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-Promise-resolve"><span class="toc-number">7.</span> <span class="toc-text">7. Promise.resolve()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-Promise-reject"><span class="toc-number">8.</span> <span class="toc-text">8. Promise.reject()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-附加方法"><span class="toc-number">9.</span> <span class="toc-text">9. 附加方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-应用"><span class="toc-number">10.</span> <span class="toc-text">10. 应用</span></a></li></ol>
                     </div>
                 </span>
             </div>
