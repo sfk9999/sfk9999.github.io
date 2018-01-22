@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sun丶的博客</title>
+  <title>js性能优化 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="本文将对前端优化的方法即场景进行总结，不间断更新">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js性能优化">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/js性能优化/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="本文将对前端优化的方法即场景进行总结，不间断更新">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-22T02:21:31.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="js性能优化">
+<meta name="twitter:description" content="本文将对前端优化的方法即场景进行总结，不间断更新">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -124,16 +129,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-js性能优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-js性能优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/20/js性能优化/">js性能优化</a>
+    <h1 class="article-title" itemprop="name">
+      js性能优化
     </h1>
   
 
@@ -146,364 +149,66 @@
     
     <!-- 目录内容 -->
     
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-ajax的应用场景："><span class="toc-number">1.1.</span> <span class="toc-text">一. ajax的应用场景：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-data缓存："><span class="toc-number">1.2.</span> <span class="toc-text">二. data缓存：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-CDN托管："><span class="toc-number">1.3.</span> <span class="toc-text">三. CDN托管：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-减少DOM操作："><span class="toc-number">1.4.</span> <span class="toc-text">四. 减少DOM操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-用className代替style："><span class="toc-number">1.5.</span> <span class="toc-text">五. 用className代替style：</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文将对前端优化的方法即场景进行总结，不间断更新<br></p>
-        
-          <a class="article-more-a" href="/2018/01/20/js性能优化/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/20/js性能优化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-vue的生命周期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/15/vue的生命周期/">vue的生命周期</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/15/vue的生命周期/" class="archive-article-date">
-  	<time datetime="2018-01-15T02:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-15</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文重新对vue的声明周期进行了总结</p>
-<h4 id="vue的声明周期"><a href="#vue的声明周期" class="headerlink" title="vue的声明周期"></a>vue的声明周期</h4><p>vue的生命周期主要分为8个阶段：</p>
-<p>创建前后，挂载前后，更新前后，销毁前后</p>
-<p><img src="/2018/01/15/vue的生命周期/1.png" alt="img"></p>
-        
-          <a class="article-more-a" href="/2018/01/15/vue的生命周期/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/15/vue的生命周期/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ES6之Promise对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/11/ES6之Promise对象/">ES6之Promise对象</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/11/ES6之Promise对象/" class="archive-article-date">
-  	<time datetime="2018-01-11T08:51:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Promise是用来传递异步操作的消息对象，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。</p>
-<h4 id="1-Promise含义"><a href="#1-Promise含义" class="headerlink" title="1. Promise含义"></a>1. Promise含义</h4><ul>
-<li>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。</li>
-<li>所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。</li>
-<li>从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。</li>
-</ul>
-<h5 id="1-1-特点"><a href="#1-1-特点" class="headerlink" title="1.1 特点"></a>1.1 特点</h5><ol>
-<li>对象的状态不受外界影响：<ul>
-<li>有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。</li>
-<li>只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。</li>
-</ul>
+        <p>本文将对前端优化的方法即场景进行总结，不间断更新<br><a id="more"></a></p>
+<h4 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h4><h5 id="一-ajax的应用场景："><a href="#一-ajax的应用场景：" class="headerlink" title="一. ajax的应用场景："></a>一. ajax的应用场景：</h5><ol>
+<li>用Ajax进行数据验证：整个过程不需要弹出新窗口，也不需要将整个页面提交到服务器，快速而又不加重服务器负担。</li>
+<li>按需取数据：<ol>
+<li>页面会根据用户的操作向服务器请求它所需要的数据，这样就不会存在数据的冗余，减少了数据下载总量。</li>
+<li>同时，更新页面时不需要重载所有内容，只更新需要更新的那部分内容即可</li>
+</ol>
 </li>
-<li>一旦状态改变，就不会再变，任何时候都可以得到这个结果<ul>
-<li>Promise对象的状态改变，只有两种可能：从pending变为fulfilled和从pending变为rejected</li>
-</ul>
+<li>自动更新局部页面</li>
+</ol>
+<h5 id="二-data缓存："><a href="#二-data缓存：" class="headerlink" title="二. data缓存："></a>二. data缓存：</h5><ol>
+<li>cookie</li>
+<li>localStorage</li>
+<li>sessionStorage</li>
+</ol>
+<h5 id="三-CDN托管："><a href="#三-CDN托管：" class="headerlink" title="三. CDN托管："></a>三. CDN托管：</h5><ol>
+<li>能提供本地的数据中心；</li>
+<li>分配负载，节省带宽；</li>
+<li>可以通过不同的域名来加载文件。分布式存储</li>
+</ol>
+<h5 id="四-减少DOM操作："><a href="#四-减少DOM操作：" class="headerlink" title="四. 减少DOM操作："></a>四. 减少DOM操作：</h5><ol>
+<li><p>缓存DOM对象：比如我们获得了一个很多元素的数组data[]，需要将其每个值生成一个li元素插入到一个id为container的ul元素中。每一次循环都会去查找id为container的元素，效率自然非常低，所以我们需要将元素在循环前查询完毕，在循环中仅仅是引用就行了。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ulNode = <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>);<span class="comment">//把查找提取出来</span></div><div class="line"><span class="keyword">var</span> liNode, i, m;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>, m = data.length; i &lt; m; i++) &#123;</div><div class="line">    liNode = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</div><div class="line">    liNode.innerText = data[i];</div><div class="line">    ulNode.appendChild(liNode);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在内存中操作元素：由于DOM操作会造成样式计算和节点重绘，方法就是加入元素时不要修改页面上已经存在的元素，而是在内存中的节点进行大量的操作，最后再一并将修改运用到页面上。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ulNode = <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>);</div><div class="line"><span class="keyword">var</span> liNode, i, m;</div><div class="line"><span class="keyword">var</span> fragment = <span class="built_in">document</span>.createDocumentFragment();<span class="comment">//储存页面节点片段</span></div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>, m = data.length; i &lt; m; i++) &#123;</div><div class="line">    liNode = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</div><div class="line">    liNode.innerText = data[i];</div><div class="line">    fragment.appendChild(liNode);</div><div class="line">&#125;</div><div class="line">ulNode.appendChild(fragment);</div></pre></td></tr></table></figure>
+</li>
+<li><p>一次性DOM节点生成：可以通过innerHTML属性来一次性生成节点，具体的思路就是使用字符串拼接的方式，先生成相应的HTML字符串，最后一次性写入到ul的innerHTML中</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ulNode = document.getElementById(<span class="string">"container"</span>);</div><div class="line"><span class="keyword">var</span> fragmentHtml = <span class="string">""</span>, i, m;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>, m = <span class="keyword">data</span>.length; i &lt; m; i++) &#123;</div><div class="line">    fragmentHtml += <span class="string">"&lt;li&gt;"</span> + <span class="keyword">data</span>[i] + <span class="string">"&lt;/li&gt;"</span>;</div><div class="line">&#125;</div><div class="line">ulNode.innerHTML = fragmentHtml;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<ul>
-<li>缺点：<ul>
-<li>无法取消Promise，一旦新建它就会立即执行，无法中途取消。</li>
-<li>如果不设置回调函数，Promise内部抛出的错误，不会反应到外部</li>
-<li>当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/01/11/ES6之Promise对象/#more">more >></a>
-        
-      
+<h5 id="五-用className代替style："><a href="#五-用className代替style：" class="headerlink" title="五. 用className代替style："></a>五. 用className代替style：</h5><p>每次修改style属性后都会触发元素的重绘，如果修改了的属性涉及大小和位置</p>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/11/ES6之Promise对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-常用正则表达式整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/09/常用正则表达式整理/">常用正则表达式整理</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/09/常用正则表达式整理/" class="archive-article-date">
-  	<time datetime="2018-01-09T00:57:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文整理一些可能会用到的正则表达式，方便自己在项目中用到方便查找。不定期更新。<br></p>
-        
-          <a class="article-more-a" href="/2018/01/09/常用正则表达式整理/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/09/常用正则表达式整理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js优雅的实现方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/08/js优雅的实现方式/">js优雅的实现方式</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/08/js优雅的实现方式/" class="archive-article-date">
-  	<time datetime="2018-01-08T11:25:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文总结了一些常用的js方法的实现，不定期更新<br></p>
-        
-          <a class="article-more-a" href="/2018/01/08/js优雅的实现方式/#more">more >></a>
-        
       
 
       
@@ -525,16 +230,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/08/js优雅的实现方式/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/15/vue的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue的生命周期</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -549,17 +262,32 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-ajax的应用场景："><span class="toc-number">1.1.</span> <span class="toc-text">一. ajax的应用场景：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-data缓存："><span class="toc-number">1.2.</span> <span class="toc-text">二. data缓存：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-CDN托管："><span class="toc-number">1.3.</span> <span class="toc-text">三. CDN托管：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-减少DOM操作："><span class="toc-number">1.4.</span> <span class="toc-text">四. 减少DOM操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-用className代替style："><span class="toc-number">1.5.</span> <span class="toc-text">五. 用className代替style：</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
+  
 
   
+
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+
+  
+
   
 
 
@@ -593,8 +321,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
