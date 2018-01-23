@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="本文将对前端优化的方法即场景进行总结，不间断更新">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-22T02:21:31.216Z">
+<meta property="og:updated_time" content="2018-01-22T03:02:18.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js性能优化">
 <meta name="twitter:description" content="本文将对前端优化的方法即场景进行总结，不间断更新">
@@ -156,7 +156,7 @@
     	<div id="toc-article" class="toc-article">
     	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     		<strong class="toc-title">文章目录</strong>
-               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-ajax的应用场景："><span class="toc-number">1.1.</span> <span class="toc-text">一. ajax的应用场景：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-data缓存："><span class="toc-number">1.2.</span> <span class="toc-text">二. data缓存：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-CDN托管："><span class="toc-number">1.3.</span> <span class="toc-text">三. CDN托管：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-减少DOM操作："><span class="toc-number">1.4.</span> <span class="toc-text">四. 减少DOM操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-用className代替style："><span class="toc-number">1.5.</span> <span class="toc-text">五. 用className代替style：</span></a></li></ol></li></ol>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-ajax的应用场景："><span class="toc-number">1.1.</span> <span class="toc-text">一. ajax的应用场景：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-data缓存："><span class="toc-number">1.2.</span> <span class="toc-text">二. data缓存：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-CDN托管："><span class="toc-number">1.3.</span> <span class="toc-text">三. CDN托管：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-减少DOM操作："><span class="toc-number">1.4.</span> <span class="toc-text">四. 减少DOM操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-用className代替style："><span class="toc-number">1.5.</span> <span class="toc-text">五. 用className代替style：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#六-减少HTTP请求"><span class="toc-number">1.6.</span> <span class="toc-text">六. 减少HTTP请求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#七-图片懒加载"><span class="toc-number">1.7.</span> <span class="toc-text">七. 图片懒加载</span></a></li></ol></li></ol>
              </div>
        <script type="text/javascript">
     	function showToc(){
@@ -208,7 +208,11 @@
 </li>
 </ol>
 <h5 id="五-用className代替style："><a href="#五-用className代替style：" class="headerlink" title="五. 用className代替style："></a>五. 用className代替style：</h5><p>每次修改style属性后都会触发元素的重绘，如果修改了的属性涉及大小和位置</p>
-
+<h5 id="六-减少HTTP请求"><a href="#六-减少HTTP请求" class="headerlink" title="六. 减少HTTP请求"></a>六. 减少HTTP请求</h5><ol>
+<li>CSS Sprites</li>
+<li>JS和CSS源码压缩，合并</li>
+</ol>
+<h5 id="七-图片懒加载"><a href="#七-图片懒加载" class="headerlink" title="七. 图片懒加载"></a>七. 图片懒加载</h5>
       
 
       
@@ -240,6 +244,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/01/23/ES6之Class/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ES6之Class
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/01/15/vue的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">vue的生命周期</div>
@@ -269,7 +282,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-ajax的应用场景："><span class="toc-number">1.1.</span> <span class="toc-text">一. ajax的应用场景：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-data缓存："><span class="toc-number">1.2.</span> <span class="toc-text">二. data缓存：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-CDN托管："><span class="toc-number">1.3.</span> <span class="toc-text">三. CDN托管：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-减少DOM操作："><span class="toc-number">1.4.</span> <span class="toc-text">四. 减少DOM操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-用className代替style："><span class="toc-number">1.5.</span> <span class="toc-text">五. 用className代替style：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-ajax的应用场景："><span class="toc-number">1.1.</span> <span class="toc-text">一. ajax的应用场景：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-data缓存："><span class="toc-number">1.2.</span> <span class="toc-text">二. data缓存：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-CDN托管："><span class="toc-number">1.3.</span> <span class="toc-text">三. CDN托管：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-减少DOM操作："><span class="toc-number">1.4.</span> <span class="toc-text">四. 减少DOM操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-用className代替style："><span class="toc-number">1.5.</span> <span class="toc-text">五. 用className代替style：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#六-减少HTTP请求"><span class="toc-number">1.6.</span> <span class="toc-text">六. 减少HTTP请求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#七-图片懒加载"><span class="toc-number">1.7.</span> <span class="toc-text">七. 图片懒加载</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -376,6 +389,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
@@ -384,19 +401,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -408,15 +421,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+                <a href="javascript:void(0)" class="js-tag color4">IE6</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -424,15 +433,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">

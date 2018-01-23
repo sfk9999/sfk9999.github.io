@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | sun丶的博客</title>
+  <title>ES6之Class | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/2/index.html">
+  <meta name="description" content="本文介绍了ES6的Class，已经如何用它实现继承 1. 简介 类不存在变量提升 允许继承原生构造函数定义子类">
+<meta name="keywords" content="JavaScript,ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6之Class">
+<meta property="og:url" content="http://yoursite.com/2018/01/23/ES6之Class/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="本文介绍了ES6的Class，已经如何用它实现继承 1. 简介 类不存在变量提升 允许继承原生构造函数定义子类">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-23T08:14:01.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="ES6之Class">
+<meta name="twitter:description" content="本文介绍了ES6的Class，已经如何用它实现继承 1. 简介 类不存在变量提升 允许继承原生构造函数定义子类">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -124,36 +129,102 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ES6之Class" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/13/js作用域链和预解析/" class="archive-article-date">
-  	<time datetime="2017-11-13T06:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/13/js作用域链和预解析/">js作用域链和预解析</a>
+    <h1 class="article-title" itemprop="name">
+      ES6之Class
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2018/01/23/ES6之Class/" class="archive-article-date">
+  	<time datetime="2018-01-23T08:12:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-23</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-简介"><span class="toc-number">1.</span> <span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-constructor方法"><span class="toc-number">2.</span> <span class="toc-text">2. constructor方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-class表达式"><span class="toc-number">3.</span> <span class="toc-text">3. class表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-class继承"><span class="toc-number">4.</span> <span class="toc-text">4. class继承</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-super关键字"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 super关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-1-1-当函数调用"><span class="toc-number">4.1.1.</span> <span class="toc-text">4.1.1 当函数调用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-1-2-作为对象时"><span class="toc-number">4.1.2.</span> <span class="toc-text">4.1.2 作为对象时</span></a></li></ol></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
           
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文介绍了ES6的Class，已经如何用它实现继承</p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h4><ul>
+<li>类不存在变量提升</li>
+<li>允许继承原生构造函数定义子类</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span>()&#123;</span></div><div class="line">    doStuff()&#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> b = <span class="function"><span class="keyword">new</span> <span class="title">Bar</span>();</span></div><div class="line"><span class="function"><span class="title">b</span>.<span class="title">doStuff</span>();</span></div></pre></td></tr></table></figure>
+<p>等同于<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Bar.prototype=&#123;</span></div><div class="line"><span class="keyword"> </span>   doStuff()&#123;&#125;</div><div class="line">&#125;<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>类的内部所有的定义的方法，都是不可枚举的。</p>
+<h4 id="2-constructor方法"><a href="#2-constructor方法" class="headerlink" title="2. constructor方法"></a>2. constructor方法</h4><p>constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。</p>
+<h4 id="3-class表达式"><a href="#3-class表达式" class="headerlink" title="3. class表达式"></a>3. class表达式</h4><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyClass = <span class="class"><span class="keyword">class</span> <span class="title">Me</span></span>&#123;</div><div class="line">    getClassName()&#123;</div><div class="line">        <span class="keyword">return</span> Me.name;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//这个类的名字是MyClass</span></div><div class="line"><span class="comment">//Me只是在Class的内部代码可用，指代当前类</span></div></pre></td></tr></table></figure>
+<p>可以省略<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyClass = <span class="class"><span class="keyword">class</span> </span>&#123;&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="4-class继承"><a href="#4-class继承" class="headerlink" title="4. class继承"></a>4. class继承</h4><p>可以通过extends关键字实现继承<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</div><div class="line">    </div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPoint</span> <span class="keyword">extends</span> <span class="title">Point</span></span>&#123;</div><div class="line">    constructor(x,y,color)&#123;</div><div class="line">        <span class="keyword">super</span>(x,y);<span class="comment">//调用父类的constructor(x,y)</span></div><div class="line">        <span class="keyword">this</span>.color=color;</div><div class="line">    &#125;    </div><div class="line">    toString()&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.color+''+<span class="keyword">super</span>.toStrng();<span class="comment">//调用父类的toStrng()</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>super关键字，表示父类的构造函数，用来新建父类的this对象</p>
+<p>子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不调用super方法，子类就得不到this对象。</p>
+<h5 id="4-1-super关键字"><a href="#4-1-super关键字" class="headerlink" title="4.1 super关键字"></a>4.1 super关键字</h5><p>既可以当函数使用，也可以当对象使用。</p>
+<h6 id="4-1-1-当函数调用"><a href="#4-1-1-当函数调用" class="headerlink" title="4.1.1 当函数调用"></a>4.1.1 当函数调用</h6><p>super()当函数调用，代表父类的构造函数。并且只能用在子类的构造函数constructor()中。<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</div><div class="line">  constructor() &#123;</div><div class="line">    console.log(<span class="keyword">new</span>.target.name);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span> </span>&#123;</div><div class="line">  constructor() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">new</span> <span class="type">A</span>() <span class="comment">// A</span></div><div class="line"><span class="keyword">new</span> <span class="type">B</span>() <span class="comment">// B</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意，super虽然代表了父类A的构造函数，但是返回的是子类B的实例，即super内部的this指的是B，因此super()在这里相当于A.prototype.constructor.call(this)。</p>
+</blockquote>
+<p>意味着通过super的this指向子类</p>
+<h6 id="4-1-2-作为对象时"><a href="#4-1-2-作为对象时" class="headerlink" title="4.1.2 作为对象时"></a>4.1.2 作为对象时</h6><ul>
+<li>super作为对象时<ul>
+<li>在普通方法中，指向父类的原型对象：由于super指向父类的原型对象，所以定义在父类实例上的方法或属性，是无法通过super调用的。</li>
+<li>在静态方法中，指向父类</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>在普通方法中<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;&#125;</div><div class="line"><span class="type">A</span>.prototype.x = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span> </span>&#123;</div><div class="line">  constructor() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    console.log(<span class="keyword">super</span>.x) <span class="comment">// 2</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">let b = <span class="keyword">new</span> <span class="type">B</span>();</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>this的指向问题<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></div><div class="line">  constructor() &#123;</div><div class="line">    <span class="keyword">this</span>.x = <span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">print</span>() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span> &#123;</span></div><div class="line">  constructor() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    <span class="keyword">this</span>.x = <span class="number">2</span>;</div><div class="line">    <span class="keyword">super</span>.x=<span class="number">3</span>;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">super</span>.x);<span class="regexp">//</span><span class="literal">undefined</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);<span class="regexp">//</span><span class="number">3</span></div><div class="line">  &#125;</div><div class="line">  m() &#123;</div><div class="line">    <span class="keyword">super</span>.<span class="built_in">print</span>();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">let b = <span class="keyword">new</span> B();</div><div class="line">b.m() <span class="regexp">//</span> <span class="number">2</span></div><div class="line"></div><div class="line"><span class="regexp">//</span><span class="keyword">super</span>.<span class="built_in">print</span>()虽然调用的是A.prototype.<span class="built_in">print</span>()，但是A.prototype.<span class="built_in">print</span>()内部的<span class="keyword">this</span>指向子类B，导致输出的是<span class="number">2</span>，而不是<span class="number">1</span>。也就是说，实际上执行的是<span class="keyword">super</span>.<span class="built_in">print</span>.call(<span class="keyword">this</span>)。</div><div class="line"></div><div class="line"><span class="regexp">//</span>由于<span class="keyword">this</span>指向子类，所以如果通过<span class="keyword">super</span>对某个属性赋值，这时<span class="keyword">super</span>就是<span class="keyword">this</span>，赋值的属性会变成子类实例的属性。</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>ES6 规定，通过super调用父类的方法时，方法内部的this指向子类。</p>
+</blockquote>
+<ol>
+<li>在静态方法中super将指向父类<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span>&#123;</span></div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="title">myMethod</span><span class="params">(msg)</span></span>&#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>静态方法：如果在一个方法前， 加上static关键字， 就表示该方法不会被实例继承， 而是直接通过类来调用<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> <span class="title">Foo</span> &#123;  </div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="title">classMethod</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">        <span class="keyword">return</span> <span class="string">'hello'</span>;  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">Foo.classMethod() <span class="comment">// 'hello'  </span></div><div class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Foo();  </div><div class="line">foo.classMethod()  <span class="comment">// TypeError: foo.classMethod is not a function</span></div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -161,178 +232,75 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/06/less/" class="archive-article-date">
-  	<time datetime="2017-11-06T06:07:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/06/less/">less</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/28/js命名空间/" class="archive-article-date">
-  	<time datetime="2017-10-28T02:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/20/js性能优化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js性能优化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/28/js命名空间/">js命名空间</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-简介"><span class="toc-number">1.</span> <span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-constructor方法"><span class="toc-number">2.</span> <span class="toc-text">2. constructor方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-class表达式"><span class="toc-number">3.</span> <span class="toc-text">3. class表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-class继承"><span class="toc-number">4.</span> <span class="toc-text">4. class继承</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-super关键字"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 super关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-1-1-当函数调用"><span class="toc-number">4.1.1.</span> <span class="toc-text">4.1.1 当函数调用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-1-2-作为对象时"><span class="toc-number">4.1.2.</span> <span class="toc-text">4.1.2 作为对象时</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/27/glup之less自动转化css实例/" class="archive-article-date">
-  	<time datetime="2017-10-27T06:28:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/27/glup之less自动转化css实例/">glup之less自动转化css实例</a>
-    </h1>
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">glup</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/26/glup自动化构建项目实例/" class="archive-article-date">
-  	<time datetime="2017-10-26T03:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/26/glup自动化构建项目实例/">glup自动化构建项目实例</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">glup</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2017/page/3/">3</a><a class="page-number" href="/archives/2017/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/8/">8</a><a class="extend next" rel="next" href="/archives/2017/page/3/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -367,8 +335,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
