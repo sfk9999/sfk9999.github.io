@@ -62,3 +62,8 @@ ulNode.innerHTML = fragmentHtml;
 ##### 五. 用className代替style：
 每次修改style属性后都会触发元素的重绘，如果修改了的属性涉及大小和位置
 
+##### 六. 减少HTTP请求
+1. CSS Sprites
+2. JS和CSS源码压缩，合并
+
+##### 七. 图片懒加载
