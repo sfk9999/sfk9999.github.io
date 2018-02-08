@@ -20,8 +20,10 @@ tags:
     - 只要存在调用内部函数的可能，JavaScript就需要保留被引用的函数。而且JavaScript运行时需要跟踪引用这个内部函数的所有变量，直到最后一个变量废弃，JavaScript的垃圾收集器才能释放相应的内存空间。
     - 消耗内存大
 
+
 #### 二、预解析
 ##### 2.1 什么是js预解析
+在当前作用域下,js运行之前，会把带有var和function关键字的事先声明，并在内存中安排好。然后再从上到下执行js语句。
 ##### 2.2 在什么情况下进行预解析
 1. 遇到```<script></script>```标签对时
 2. 遇到函数时（因为变量是有作用域的）
@@ -94,6 +96,17 @@ function foo() {
     console.log(this.bo)//10
     func();//依然打印10
 })(foo)
+```
+###### 3.1.4 范围
+```
+(function() {
+   var a = b = 5;
+})();
+
+console.log(b);
+
+//打印5
+//在立即执行函数表达式（IIFE）中，有两个命名，但是其中变量是通过关键词var来声明的。这就意味着a是这个函数的局部变量。与此相反，b是在全局作用域下的。
 ```
 
 ##### 3.2 预解析例子
@@ -231,5 +244,69 @@ func1( num );
     - num = 456,对num进行赋值
     - 第二个console.log( num ) => 456
     - 函数执行结束,回到外层
+
+###### 3.2.9 return
+```
+function test() {
+   console.log(a);
+   console.log(foo());
+
+   var a = 1;
+   function foo() {
+      return 2;
+   }
+}
+
+test();
+
+//返回undefined和2
+```
+###### 3.2.10 
+```
+var a = 1;
+function fn() {
+  console.log('1:' + a);
+  a = 2
+}
+
+a = 3;
+function bar() {
+  console.log('2:' + a);
+}
+
+fn();
+bar();
+
+//第一个 a 打印的值是 1:3，既不是 undefined 也不是 1。首先， fn 中的 a = 2 是给变量 a 赋值，并没有定义变量。然后，执行函数 fn，在查找变量 a 时，此时查找的变量就是全局变量 a，不过此时 a 的值为3。
+
+//第二个 a 打印的值是 2:2。函数 bar 所能访问的作用域链为 bar->global，在执行函数 bar 时，a 的值已经被修改成了 2。
+
+```
+
+#### this的指向问题
+```
+var fullname = 'John Doe';
+var obj = {
+   fullname: 'Colin Ihrig',
+   prop: {
+      fullname: 'Aurelio De Rosa',
+      getFullname: function() {
+         return this.fullname;
+      }
+   }
+};
+
+console.log(obj.prop.getFullname());
+
+var test = obj.prop.getFullname;
+
+console.log(test());
+
+//打印
+//Aurelio De Rosa：这里的上下文环境指向obj.prop并且函数返回this对象的 fullname属性
+//John Doe：当 getFullname() 被赋为test变量的值时，那个语境指向全局对象(window);修正的方式：console.log(test.call(obj.prop));
+```
+
+
 
 
