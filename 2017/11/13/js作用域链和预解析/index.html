@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sun丶的博客">
 <meta property="og:description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-11T01:24:53.563Z">
+<meta property="og:updated_time" content="2018-02-08T02:54:18.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js作用域链和预解析">
 <meta name="twitter:description" content="本文主要介绍了作用域和预解析，并附上简单的小例子解释作用域和预解析是怎么工作的">
@@ -194,7 +194,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="二、预解析"><a href="#二、预解析" class="headerlink" title="二、预解析"></a>二、预解析</h4><h5 id="2-1-什么是js预解析"><a href="#2-1-什么是js预解析" class="headerlink" title="2.1 什么是js预解析"></a>2.1 什么是js预解析</h5><h5 id="2-2-在什么情况下进行预解析"><a href="#2-2-在什么情况下进行预解析" class="headerlink" title="2.2 在什么情况下进行预解析"></a>2.2 在什么情况下进行预解析</h5><ol>
+<h4 id="二、预解析"><a href="#二、预解析" class="headerlink" title="二、预解析"></a>二、预解析</h4><h5 id="2-1-什么是js预解析"><a href="#2-1-什么是js预解析" class="headerlink" title="2.1 什么是js预解析"></a>2.1 什么是js预解析</h5><p>在当前作用域下,js运行之前，会把带有var和function关键字的事先声明，并在内存中安排好。然后再从上到下执行js语句。</p>
+<h5 id="2-2-在什么情况下进行预解析"><a href="#2-2-在什么情况下进行预解析" class="headerlink" title="2.2 在什么情况下进行预解析"></a>2.2 在什么情况下进行预解析</h5><ol>
 <li>遇到<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">2. 遇到函数时（因为变量是有作用域的）</div><div class="line"></div><div class="line">##### 2.3 js对什么进行预解析</div><div class="line">1. **var**后面的变量</div><div class="line">2. **函数**</div><div class="line">3. 函数传参的变量</div><div class="line"></div><div class="line">##### 2.4 给这些变量、函数赋予什么初始值</div><div class="line">1. 凡是var 的，都会赋予一个``` undefined``` 作为初始值；</div><div class="line">2. 凡是函数，直接赋予 函数本身 作为初始值；（所以这就是为什么我们可以把 函数调用 放到  函数声明 之前的原因）</div><div class="line"></div><div class="line">##### 2.5 什么情况会改变预解析赋予的初始值</div><div class="line">有赋值功能的符号：=,  +=,  -=,  *=,  /=,  ++,  --等</div><div class="line"></div><div class="line">#### 三、例子</div><div class="line">##### 3.1作用域链例子</div><div class="line">###### 3.1.1.作用域链问题</div></pre></td></tr></table></figure></li>
 </ol>
 <p>var  name = “Aralic”;</p>
@@ -203,7 +204,10 @@
 <p>var name = ‘Aralic’;<br>function person() {<br>    alert(name);<br>}</p>
 <p>function test() {<br>   var name = ‘tom’;<br>   person();<br>}</p>
 <p>test();<br>//person和test函数地位相同<br>//所以输出Aralic<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### <span class="number">3.1</span><span class="number">.3</span> 立即执行函数的作用域链问题</div></pre></td></tr></table></figure></p>
-<p>var bo = 10;//全局变量  值为10<br>function foo() {<br>    console.log(this)//此处this一直指向window 所以this.bo一直是10<br>    console.log(bo);<br>    //bo全局变量  打印10<br>}<br>(function() {//自执行函数 此处this指代window<br>    var bo = 20;<br>    console.log(this.bo)//10<br>    foo();//依然打印10<br>})();<br>(function (func) {//自执行函数 此处this指代window<br>    var bo = 30;<br>    console.log(this.bo)//10<br>    func();//依然打印10<br>})(foo)<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### <span class="number">3.2</span> 预解析例子</div><div class="line">###### <span class="number">3.2</span><span class="number">.1</span></div></pre></td></tr></table></figure></p>
+<p>var bo = 10;//全局变量  值为10<br>function foo() {<br>    console.log(this)//此处this一直指向window 所以this.bo一直是10<br>    console.log(bo);<br>    //bo全局变量  打印10<br>}<br>(function() {//自执行函数 此处this指代window<br>    var bo = 20;<br>    console.log(this.bo)//10<br>    foo();//依然打印10<br>})();<br>(function (func) {//自执行函数 此处this指代window<br>    var bo = 30;<br>    console.log(this.bo)//10<br>    func();//依然打印10<br>})(foo)<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### <span class="number">3.1</span><span class="number">.4</span> 范围</div></pre></td></tr></table></figure></p>
+<p>(function() {<br>   var a = b = 5;<br>})();</p>
+<p>console.log(b);</p>
+<p>//打印5<br>//在立即执行函数表达式（IIFE）中，有两个命名，但是其中变量是通过关键词var来声明的。这就意味着a是这个函数的局部变量。与此相反，b是在全局作用域下的。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### <span class="number">3.2</span> 预解析例子</div><div class="line">###### <span class="number">3.2</span><span class="number">.1</span></div></pre></td></tr></table></figure></p>
 <p>alert(a);<br>var a = ‘我是变量’;<br>function a(){ alert(‘我是函数’) }<br>alert(a);</p>
 <p>// 输出<br>//function a(){ alert(‘我是函数’) }   (因为undefined代表空，但函数不是空。)<br>//‘我是变量’    (=可以改变初值)<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">alert(a);    </div><div class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span> <span class="params">()</span></span>&#123; <span class="string">'我是函数'</span> &#125;</div><div class="line"><span class="comment">//undefined,可以看出,凡是var,初始值都是undefined</span></div></pre></td></tr></table></figure></p>
 <h6 id="3-2-2"><a href="#3-2-2" class="headerlink" title="3.2.2"></a>3.2.2</h6><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">alert(a);    </div><div class="line">a++;</div><div class="line">alert(a);   </div><div class="line"><span class="keyword">var</span> a = <span class="string">'我是变量'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">()</span></span>&#123; alert(<span class="string">'我是函数'</span>) &#125;</div><div class="line">alert(a); </div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line"><span class="comment">//function a()&#123; alert('我是函数') &#125;</span></div><div class="line"><span class="comment">//NaN   (++可以改变初始值)</span></div><div class="line"><span class="comment">//'我是变量'</span></div></pre></td></tr></table></figure>
@@ -214,23 +218,23 @@
 <h6 id="3-2-7-script标签"><a href="#3-2-7-script标签" class="headerlink" title="3.2.7 script标签"></a>3.2.7 script标签</h6><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">    <span class="keyword">var</span> a=<span class="number">0</span>;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    alert(a);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">//输出：</div><div class="line">//undefined (虽然这个<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">标签对没有定义a，但会往上查找)</span></div></pre></td></tr></table></figure>
 <h6 id="3-2-8-重复声明"><a href="#3-2-8-重复声明" class="headerlink" title="3.2.8 重复声明"></a>3.2.8 重复声明</h6><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func1 ( <span class="built_in">num</span> ) &#123;</div><div class="line">  console.<span class="built_in">log</span>( <span class="built_in">num</span> );</div><div class="line">  <span class="built_in">var</span> <span class="built_in">num</span> = <span class="number">456</span>;</div><div class="line">  console.<span class="built_in">log</span>( <span class="built_in">num</span> );</div><div class="line">&#125;</div><div class="line"><span class="built_in">var</span> <span class="built_in">num</span> = <span class="number">123</span>;</div><div class="line">func1( <span class="built_in">num</span> );</div></pre></td></tr></table></figure>
 <ol>
-<li>进行预解析,观察声明有两个,一个函数声明func1,一个是变量声明``var num```<ul>
-<li>func1被预解析记录,并与函数体相连</li>
-<li><code>var num</code> 被记录</li>
-</ul>
-</li>
-<li>预解析结束,开始执行代码<ul>
-<li>执行第一句话为:<code>`num = 123</code>,对num进行赋值</li>
-<li>调用func1( num );</li>
-<li>在进入函数体前,开辟函数内存需要的内存空间,将函数的参数var num = 123进行声明</li>
-<li>进入函数体,开始执行预解析,观察到有个<code>var num</code>,重复声明,忽略</li>
-<li>执行函数体,第一个console.log( num ) =&gt; 123</li>
-<li>num = 456,对num进行赋值</li>
-<li>第二个console.log( num ) =&gt; 456</li>
-<li>函数执行结束,回到外层</li>
-</ul>
-</li>
+<li>进行预解析,观察声明有两个,一个函数声明func1,一个是变量声明``var num<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">    -<span class="ruby"> func1被预解析记录,并与函数体相连</span></div><div class="line"><span class="ruby">    - <span class="string">``</span><span class="string">`var num`</span><span class="string">``</span> 被记录</span></div><div class="line"><span class="ruby"><span class="number">2</span>. 预解析结束,开始执行代码</span></div><div class="line"><span class="ruby">    - 执行第一句话为<span class="symbol">:<span class="string">``</span><span class="string">`num = 123`</span><span class="string">`,对num进行赋值</span></span></span></div><div class="line"><span class="ruby">    - 调用func1( num );</span></div><div class="line"><span class="ruby">    - 在进入函数体前,开辟函数内存需要的内存空间,将函数的参数var num = <span class="number">123</span>进行声明</span></div><div class="line"><span class="ruby">    - 进入函数体,开始执行预解析,观察到有个<span class="string">``</span><span class="string">`var num`</span><span class="string">``</span>,重复声明,忽略</span></div><div class="line"><span class="ruby">    - 执行函数体,第一个console.log( num ) =&gt; <span class="number">123</span></span></div><div class="line"><span class="ruby">    - num = <span class="number">456</span>,对num进行赋值</span></div><div class="line"><span class="ruby">    - 第二个console.log( num ) =&gt; <span class="number">456</span></span></div><div class="line"><span class="ruby">    - 函数执行结束,回到外层</span></div><div class="line"><span class="ruby"></span></div><div class="line"><span class="ruby"><span class="comment">###### 3.2.9 return</span></span></div></pre></td></tr></table></figure></li>
 </ol>
+<p>function test() {<br>   console.log(a);<br>   console.log(foo());</p>
+<p>   var a = 1;<br>   function foo() {<br>      return 2;<br>   }<br>}</p>
+<p>test();</p>
+<p>//返回undefined和2<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">###### <span class="number">3.2</span><span class="number">.10</span></div></pre></td></tr></table></figure></p>
+<p>var a = 1;<br>function fn() {<br>  console.log(‘1:’ + a);<br>  a = 2<br>}</p>
+<p>a = 3;<br>function bar() {<br>  console.log(‘2:’ + a);<br>}</p>
+<p>fn();<br>bar();</p>
+<p>//第一个 a 打印的值是 1:3，既不是 undefined 也不是 1。首先， fn 中的 a = 2 是给变量 a 赋值，并没有定义变量。然后，执行函数 fn，在查找变量 a 时，此时查找的变量就是全局变量 a，不过此时 a 的值为3。</p>
+<p>//第二个 a 打印的值是 2:2。函数 bar 所能访问的作用域链为 bar-&gt;global，在执行函数 bar 时，a 的值已经被修改成了 2。</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### this的指向问题</div></pre></td></tr></table></figure>
+<p>var fullname = ‘John Doe’;<br>var obj = {<br>   fullname: ‘Colin Ihrig’,<br>   prop: {<br>      fullname: ‘Aurelio De Rosa’,<br>      getFullname: function() {<br>         return this.fullname;<br>      }<br>   }<br>};</p>
+<p>console.log(obj.prop.getFullname());</p>
+<p>var test = obj.prop.getFullname;</p>
+<p>console.log(test());</p>
+<p>//打印<br>//Aurelio De Rosa：这里的上下文环境指向obj.prop并且函数返回this对象的 fullname属性<br>//John Doe：当 getFullname() 被赋为test变量的值时，那个语境指向全局对象(window);修正的方式：console.log(test.call(obj.prop));<br>```</p>
 
       
 
@@ -456,10 +460,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
@@ -468,11 +468,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
