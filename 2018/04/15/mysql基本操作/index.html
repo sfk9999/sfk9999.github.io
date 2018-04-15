@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | sun丶的博客</title>
+  <title>mysql基本操作 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/8/index.html">
+  <meta name="description" content="一、启动mysql12345mysqld_safe &amp;amp;  //启动mysqlmysqladmin -u root -p shutdown //关闭mysqlps -e | grep mysql //查看mysql进程">
+<meta name="keywords" content="true">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql基本操作">
+<meta property="og:url" content="http://yoursite.com/2018/04/15/mysql基本操作/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="一、启动mysql12345mysqld_safe &amp;amp;  //启动mysqlmysqladmin -u root -p shutdown //关闭mysqlps -e | grep mysql //查看mysql进程">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-15T02:57:49.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="mysql基本操作">
+<meta name="twitter:description" content="一、启动mysql12345mysqld_safe &amp;amp;  //启动mysqlmysqladmin -u root -p shutdown //关闭mysqlps -e | grep mysql //查看mysql进程">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -124,177 +129,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-mysql基本操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mysql基本操作
+    </h1>
+  
+
+        
+        <a href="/2018/04/15/mysql基本操作/" class="archive-article-date">
+  	<time datetime="2018-04-15T02:57:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
+</a>
+        
+      </header>
     
+    <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、启动mysql"><span class="toc-number">1.</span> <span class="toc-text">一、启动mysql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、进入mysql"><span class="toc-number">2.</span> <span class="toc-text">二、进入mysql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、mysql命令"><span class="toc-number">3.</span> <span class="toc-text">三、mysql命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-常用命令"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 常用命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-查看操作"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 查看操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-创建数据库"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 创建数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-where"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 where</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#insert插入操作"><span class="toc-number">3.5.</span> <span class="toc-text">insert插入操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-update"><span class="toc-number">3.6.</span> <span class="toc-text">3.5 update</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-delete"><span class="toc-number">3.7.</span> <span class="toc-text">3.6 delete</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-7-like"><span class="toc-number">3.8.</span> <span class="toc-text">3.7 like</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-8-union"><span class="toc-number">3.9.</span> <span class="toc-text">3.8 union</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-9-order-by"><span class="toc-number">3.10.</span> <span class="toc-text">3.9 order by</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-10-group-by"><span class="toc-number">3.11.</span> <span class="toc-text">3.10 group by</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-11-join"><span class="toc-number">3.12.</span> <span class="toc-text">3.11 join</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-12-NULL"><span class="toc-number">3.13.</span> <span class="toc-text">3.12 NULL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-13-正则-REGEXP"><span class="toc-number">3.14.</span> <span class="toc-text">3.13 正则 REGEXP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-14-ALTER命令"><span class="toc-number">3.15.</span> <span class="toc-text">3.14 ALTER命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-15-索引"><span class="toc-number">3.16.</span> <span class="toc-text">3.15 索引</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、启动mysql"><a href="#一、启动mysql" class="headerlink" title="一、启动mysql"></a>一、启动mysql</h4><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mysqld_safe <span class="meta">&amp;  <span class="comment">//启动mysql</span></span></div><div class="line"></div><div class="line">mysqladmin -u root -p shutdown <span class="comment">//关闭mysql</span></div><div class="line"></div><div class="line">ps -e <span class="string">| grep mysql //查看mysql进程</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="二、进入mysql"><a href="#二、进入mysql" class="headerlink" title="二、进入mysql"></a>二、进入mysql</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql -uroot -pPWord</div><div class="line">mysql -h hostName -uroot -<span class="selector-tag">p</span>  <span class="comment">//用不同的Host来登陆</span></div></pre></td></tr></table></figure>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">可能是修改密码</div><div class="line">mysqladmin -uroot -新密码 password "PWord"</div><div class="line"></div><div class="line">修改密码方法2：</div><div class="line">mysql&gt; use mysql;</div><div class="line"></div><div class="line">mysql&gt; <span class="keyword">UPDATE</span> <span class="keyword">user</span> <span class="keyword">SET</span> <span class="keyword">Password</span> = <span class="keyword">PASSWORD</span>(<span class="string">'PWord'</span>) <span class="keyword">WHERE</span> <span class="keyword">user</span> = <span class="string">'root'</span>;</div></pre></td></tr></table></figure>
+<h4 id="三、mysql命令"><a href="#三、mysql命令" class="headerlink" title="三、mysql命令"></a>三、mysql命令</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div><div class="line"><span class="keyword">use</span> mysql //用这个数据库</div><div class="line"><span class="keyword">show</span> <span class="keyword">tables</span>; //查看这个数据库的表</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span>;  </div><div class="line">\G  //查询末尾加\G，格式化输出</div><div class="line">\q  //退出数据库</div></pre></td></tr></table></figure>
+<p>其他命令<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> database db_name <span class="comment">//创建新数据库</span></div></pre></td></tr></table></figure></p>
+<h5 id="3-1-常用命令"><a href="#3-1-常用命令" class="headerlink" title="3.1 常用命令"></a>3.1 常用命令</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> 表</div><div class="line"><span class="keyword">where</span>   //特定条件  <span class="keyword">select</span> * <span class="keyword">from</span> employees <span class="keyword">where</span> age&gt;<span class="number">20</span> &amp;&amp; age&lt;<span class="number">30</span></div><div class="line">//<span class="keyword">select</span> * <span class="keyword">from</span> employees1 <span class="keyword">where</span> age <span class="keyword">like</span> <span class="string">'2%'</span> 以<span class="number">2</span>开头的</div><div class="line"><span class="keyword">order</span> <span class="keyword">by</span> lastname (<span class="keyword">asc</span>/decs)    //排序</div><div class="line"><span class="keyword">limit</span>   //只显示数据行的一个子集</div></pre></td></tr></table></figure>
+<h5 id="3-2-查看操作"><a href="#3-2-查看操作" class="headerlink" title="3.2 查看操作"></a>3.2 查看操作</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>; //列出数据库</div><div class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;    //显示指定数据库的所有表，要先<span class="keyword">use</span></div><div class="line"><span class="keyword">show</span> <span class="keyword">columns</span> <span class="keyword">from</span> 数据表; //显示表的属性，属性类型，主键，是否为Nul，默认值等</div><div class="line"><span class="keyword">show</span> <span class="keyword">index</span> <span class="keyword">from</span> 数据表; //显示数据表的详细索引信息</div></pre></td></tr></table></figure>
+<h5 id="3-3-创建数据库"><a href="#3-3-创建数据库" class="headerlink" title="3.3 创建数据库"></a>3.3 创建数据库</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysqladmin -uroot -p creat 数据库名</div><div class="line"></div><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> appspider <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;   //创建数据库appspider</div></pre></td></tr></table></figure>
+<h5 id="3-4-where"><a href="#3-4-where" class="headerlink" title="3.4 where"></a>3.4 where</h5><p>MySQL 的 WHERE 子句的字符串比较是不区分大小写的。 你可以使用 BINARY 关键字来设定 WHERE 子句的字符串比较是区分大小写的。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl <span class="keyword">WHERE</span> <span class="built_in">BINARY</span> runoob_author=<span class="string">'runoob.com'</span>;</div></pre></td></tr></table></figure></p>
+<h5 id="insert插入操作"><a href="#insert插入操作" class="headerlink" title="insert插入操作"></a>insert插入操作</h5><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> tableName [(字段)] <span class="keyword">values</span> (值<span class="number">1</span>,值<span class="number">2</span>);</div></pre></td></tr></table></figure>
+<h5 id="3-5-update"><a href="#3-5-update" class="headerlink" title="3.5 update"></a>3.5 update</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">update</span> <span class="keyword">table</span>-<span class="keyword">name</span> <span class="keyword">set</span> <span class="keyword">name</span>=<span class="keyword">new</span>-<span class="keyword">value</span> [<span class="keyword">where</span> <span class="keyword">id</span>=n];</div></pre></td></tr></table></figure>
+<h5 id="3-6-delete"><a href="#3-6-delete" class="headerlink" title="3.6 delete"></a>3.6 delete</h5><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">delete</span> <span class="keyword">from</span> table_name [<span class="keyword">where</span> clause]   //没有<span class="keyword">where</span>则删除整个表</div></pre></td></tr></table></figure>
+<p>如果想删除数据后Id重新从1开始用truncate<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">truncate <span class="keyword">table</span> table_name</div></pre></td></tr></table></figure></p>
+<h5 id="3-7-like"><a href="#3-7-like" class="headerlink" title="3.7 like"></a>3.7 like</h5><ul>
+<li>like通常与%同时使用；</li>
+<li>可以用AND或者OR指定一个或多个条件<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table_name <span class="keyword">where</span> author like <span class="string">'%COM'</span>   <span class="comment">//含有COM的内容</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="3-8-union"><a href="#3-8-union" class="headerlink" title="3.8 union"></a>3.8 union</h5><p>用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> expression1,expression2 from tables [where conditions] <span class="class"><span class="keyword">union</span> [<span class="title">all</span>|<span class="title">distinct</span>] <span class="title">select</span> <span class="title">expression1</span>,<span class="title">expression2</span> <span class="title">from</span> <span class="title">tables</span> [<span class="title">where</span> <span class="title">conditions</span>]</span></div><div class="line">/<span class="regexp">/DISTINCT: 可选，删除结果集中重复的数据。默认</span></div><div class="line"><span class="regexp">/</span><span class="regexp">/ALL：可选，返回所有结果集，包含重复数据。</span></div></pre></td></tr></table></figure></p>
+<h5 id="3-9-order-by"><a href="#3-9-order-by" class="headerlink" title="3.9 order by"></a>3.9 order by</h5><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">asc</span>|<span class="keyword">desc</span> <span class="comment">//升序|降序</span></div></pre></td></tr></table></figure>
+<h5 id="3-10-group-by"><a href="#3-10-group-by" class="headerlink" title="3.10 group by"></a>3.10 group by</h5><p>sum,avg,count<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table_name <span class="keyword">where</span> <span class="keyword">name</span>=<span class="keyword">value</span> <span class="keyword">group</span> <span class="keyword">by</span> column_name; //按照name进行分组</div><div class="line"></div><div class="line"><span class="keyword">select</span> <span class="keyword">name</span>,<span class="keyword">COUNT</span>(*) <span class="keyword">from</span> table_name <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span>; //统计该name出现的数量</div></pre></td></tr></table></figure></p>
+<p>with rollup：可以实现在分组统计数据基础上再进行相同的统计<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> nam,<span class="keyword">sum</span>(字段) <span class="keyword">as</span> 新字段 <span class="keyword">from</span> table_name <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span> <span class="keyword">with</span> <span class="keyword">rollup</span>;   //统计每个name的'字段'的数据之和；并且NULL表示总和</div></pre></td></tr></table></figure></p>
+<p>coalesce来设置一个取代NULL的名称<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">select</span> <span class="title">coalesce</span>(<span class="params">a,b,c</span>)</span>;<span class="comment">//如果a==null,则选择b；如果b==null,则选择c；如果a!=null,则选择a；如果a b c 都为null ，则返回为null（没意义）</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(<span class="keyword">name</span>,<span class="string">'总和'</span>),<span class="keyword">sum</span>(字段) <span class="keyword">as</span> 新字段 <span class="keyword">from</span> table_name <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">name</span> <span class="keyword">with</span> <span class="keyword">rollup</span>;</div></pre></td></tr></table></figure>
+<h5 id="3-11-join"><a href="#3-11-join" class="headerlink" title="3.11 join"></a>3.11 join</h5><h5 id="3-12-NULL"><a href="#3-12-NULL" class="headerlink" title="3.12 NULL"></a>3.12 NULL</h5><p>关于 NULL 的条件比较运算是比较特殊的。你不能使用 = NULL 或 != NULL 在列中查找 NULL 值 。在 MySQL 中，NULL 值与任何其它值的比较（即使是 NULL）永远返回 false，即 NULL = NULL 返回false 。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">IS</span> <span class="literal">NULL</span> <span class="string">//当列的值是</span> <span class="literal">NULL</span><span class="string">,此运算符返回</span> <span class="literal">true</span><span class="string">。</span></div><div class="line"><span class="string">IS</span> <span class="string">NOT</span> <span class="literal">NULL</span> <span class="string">//当列的值不为</span> <span class="literal">NULL</span><span class="string">,</span> <span class="string">运算符返回</span> <span class="literal">true</span><span class="string">。</span></div><div class="line"><span class="string">&lt;=&gt;</span> <span class="string">//比较操作符（不同于=运算符），当比较的的两个值为</span> <span class="literal">NULL</span> <span class="string">时返回</span> <span class="literal">true</span><span class="string">。</span></div></pre></td></tr></table></figure></p>
+<p>例子<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> runoob_test_tbl <span class="keyword">WHERE</span> runoob_count <span class="keyword">IS</span> <span class="literal">NULL</span>;</div></pre></td></tr></table></figure></p>
+<h5 id="3-13-正则-REGEXP"><a href="#3-13-正则-REGEXP" class="headerlink" title="3.13 正则 REGEXP"></a>3.13 正则 REGEXP</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> person_tbl <span class="keyword">WHERE</span> <span class="keyword">name</span> REGEXP <span class="string">'^st'</span>;</div></pre></td></tr></table></figure>
+<h5 id="3-14-ALTER命令"><a href="#3-14-ALTER命令" class="headerlink" title="3.14 ALTER命令"></a>3.14 ALTER命令</h5><p>删除字段，只剩一个无法删除<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl  <span class="keyword">DROP</span> i;  //删除testalter_tbl表中的i字段</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ALTER</span> i <span class="keyword">DROP</span> <span class="keyword">DEFAULT</span>;  //删除字段的默认值</div></pre></td></tr></table></figure></p>
+<p>添加字段<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> i <span class="built_in">INT</span>;</div></pre></td></tr></table></figure></p>
+<p>如果要指定新增字段的位置，可以用FIRST(设定位第一列)，AFTER(设定位于某个字段之后)<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> i <span class="built_in">INT</span> <span class="keyword">FIRST</span>;</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> i <span class="built_in">INT</span> <span class="keyword">AFTER</span> c;</div></pre></td></tr></table></figure></p>
+<p>修改： MODIFY 或 CHANGE<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">MODIFY</span> c <span class="built_in">CHAR</span>(<span class="number">10</span>);    //修改表testalter_tbl中c字段的类型</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">CHANGE</span> j j <span class="built_in">INT</span>;   //在 <span class="keyword">CHANGE</span> 关键字之后，紧跟着的是你要修改的字段名，然后指定新字段名及类型。</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">MODIFY</span> j <span class="built_in">BIGINT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">100</span>;//指定字段 j 为 NOT NULL 且默认值为100，否则默认为NLL</div></pre></td></tr></table></figure></p>
+<p>修改表名<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">RENAME</span> <span class="keyword">TO</span> alter_tbl;</div></pre></td></tr></table></figure></p>
+<p>修改表的类型<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ENGINE</span> = MYISAM;</div></pre></td></tr></table></figure></p>
+<h5 id="3-15-索引"><a href="#3-15-索引" class="headerlink" title="3.15 索引"></a>3.15 索引</h5><ul>
+<li>索引分单列索引和组合索引<ul>
+<li>单列索引：即一个索引只包含单个列，一个表可以有多个单列索引</li>
+<li>组合索引：即一个索引包含多个列。</li>
+</ul>
+</li>
+<li>索引大大提高了查询速度，同时却会降低更新表的速度<ul>
+<li>如对表进行INSERT、UPDATE和DELETE；因为更新表时，MySQL不仅要保存数据，还要保存一下索引文件。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo<span class="built_in"> service </span>mysql star</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/26/CSS样式hack/" class="archive-article-date">
-  	<time datetime="2017-05-26T11:06:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/26/CSS样式hack/">CSS样式hack</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">true</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/16/CSS中的BFC/" class="archive-article-date">
-  	<time datetime="2017-05-16T13:55:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/05/bootstrap/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">bootstrap</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/16/CSS中的BFC/">CSS中的BFC</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、启动mysql"><span class="toc-number">1.</span> <span class="toc-text">一、启动mysql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、进入mysql"><span class="toc-number">2.</span> <span class="toc-text">二、进入mysql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、mysql命令"><span class="toc-number">3.</span> <span class="toc-text">三、mysql命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-常用命令"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 常用命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-查看操作"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 查看操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-创建数据库"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 创建数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-where"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 where</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#insert插入操作"><span class="toc-number">3.5.</span> <span class="toc-text">insert插入操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-update"><span class="toc-number">3.6.</span> <span class="toc-text">3.5 update</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-delete"><span class="toc-number">3.7.</span> <span class="toc-text">3.6 delete</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-7-like"><span class="toc-number">3.8.</span> <span class="toc-text">3.7 like</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-8-union"><span class="toc-number">3.9.</span> <span class="toc-text">3.8 union</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-9-order-by"><span class="toc-number">3.10.</span> <span class="toc-text">3.9 order by</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-10-group-by"><span class="toc-number">3.11.</span> <span class="toc-text">3.10 group by</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-11-join"><span class="toc-number">3.12.</span> <span class="toc-text">3.11 join</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-12-NULL"><span class="toc-number">3.13.</span> <span class="toc-text">3.12 NULL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-13-正则-REGEXP"><span class="toc-number">3.14.</span> <span class="toc-text">3.13 正则 REGEXP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-14-ALTER命令"><span class="toc-number">3.15.</span> <span class="toc-text">3.14 ALTER命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-15-索引"><span class="toc-number">3.16.</span> <span class="toc-text">3.15 索引</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/05/hexo配置/" class="archive-article-date">
-  	<time datetime="2017-04-05T08:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/05/hexo配置/">Hexo配置</a>
-    </h1>
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/Hexo搭建/" class="archive-article-date">
-  	<time datetime="2017-03-02T13:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/Hexo搭建/">Hexo搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/page/7/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/6/">6</a><a class="page-number" href="/archives/2017/page/7/">7</a><span class="page-number current">8</span>
-    </nav>
+  
+
   
 
 
@@ -329,8 +336,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
