@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | sun丶的博客</title>
+  <title>为什么JSONP只支持GET请求 | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sun丶的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/8/index.html">
+  <meta name="description" content="JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？ 首先我先介绍一下他的原理">
+<meta name="keywords" content="AJAX,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么JSONP只支持GET请求">
+<meta property="og:url" content="http://yoursite.com/2018/04/19/为什么JSONP只支持GET请求/index.html">
 <meta property="og:site_name" content="sun丶的博客">
+<meta property="og:description" content="JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？ 首先我先介绍一下他的原理">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-19T00:27:11.127Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sun丶的博客">
+<meta name="twitter:title" content="为什么JSONP只支持GET请求">
+<meta name="twitter:description" content="JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？ 首先我先介绍一下他的原理">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -124,177 +129,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-为什么JSONP只支持GET请求" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      为什么JSONP只支持GET请求
+    </h1>
+  
+
+        
+        <a href="/2018/04/19/为什么JSONP只支持GET请求/" class="archive-article-date">
+  	<time datetime="2018-04-19T00:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+</a>
+        
+      </header>
     
+    <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+    	<div id="toc-article" class="toc-article">
+    	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    		<strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSONP"><span class="toc-number">1.</span> <span class="toc-text">JSONP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么只能用GET"><span class="toc-number">2.</span> <span class="toc-text">为什么只能用GET</span></a></li></ol>
+             </div>
+       <script type="text/javascript">
+    	function showToc(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:block");
+    		show_toc_btn.setAttribute("style","display:none");
+    		};
+    	function showBtn(){
+    		var toc_article = document.getElementById("toc-article");
+    		var show_toc_btn = document.getElementById("show-toc-btn");
+    		toc_article.setAttribute("style","display:none");
+    		show_toc_btn.setAttribute("style","display:block");
+    		};
+       </script>
+          
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？</p>
+<p>首先我先介绍一下他的原理</p>
+<a id="more"></a>
+<h4 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h4><ul>
+<li>JSONP是服务器与客户端跨源通信的常用方法</li>
+<li>特点：简单适用，老式浏览器全部支持，服务器改造非常小。</li>
+<li>基本思想: 网页通过添加一个script元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。</li>
+<li>并且是异步的</li>
+<li><p>步骤</p>
+<ul>
+<li><p>首先，网页动态插入script元素，由它向跨源网址发出请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addScriptTag</span>(<span class="params">src</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">  script.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);</div><div class="line">  script.src = src;</div><div class="line">  <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  addScriptTag(<span class="string">'http://example.com/ip?callback=foo'</span>);</div><div class="line">  <span class="comment">// 该请求的查询字符串有一个callback参数，用来指定回调函数的名字，这对于JSONP是必需的。</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Your public IP address is: '</span> + data.ip);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>服务器收到这个请求以后，会将数据放在回调函数的参数位置返回。</p>
+</li>
+</ul>
+</li>
+<li>由于script元素请求的脚本，直接作为代码运行。这时，只要浏览器定义了foo函数，该函数就会立即调用。作为参数的JSON数据被视为JavaScript对象，而不是字符串，因此避免了使用JSON.parse的步骤。</li>
+</ul>
+<h4 id="为什么只能用GET"><a href="#为什么只能用GET" class="headerlink" title="为什么只能用GET"></a>为什么只能用GET</h4><p>其实背后的流程是：</p>
+<ul>
+<li><p>触发script标签中的src属性的地址，这个请求带有回调函数。</p>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://path/to/server/b?A=a&amp;B=b&amp;callbackFunctionName=myCallback"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>处理好了请求后，返回回调的函数myCallback()</p>
+</li>
+<li>完成跨域</li>
+</ul>
+<p>可以看到，JSONP的最终目的是要向服务器请求数据然后回调，但是其实真真实的原因是post和xmlHttpRequest方法在使用的时候都会去检查是否跨域，而get方法会欺骗浏览器而得到所需要的数据。</p>
+<ul>
+<li>这里所用的欺骗的意思是，<ul>
+<li>代码向浏览器发送一个请求：我要一个js文件，</li>
+<li>浏览器：好的，</li>
+<li>代码就利用回调函数拿到数据。</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/26/CSS样式hack/" class="archive-article-date">
-  	<time datetime="2017-05-26T11:06:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/26/CSS样式hack/">CSS样式hack</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/16/CSS中的BFC/" class="archive-article-date">
-  	<time datetime="2017-05-16T13:55:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/16/CSS中的BFC/">CSS中的BFC</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/05/hexo配置/" class="archive-article-date">
-  	<time datetime="2017-04-05T08:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/15/mysql基本操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql基本操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/05/hexo配置/">Hexo配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSONP"><span class="toc-number">1.</span> <span class="toc-text">JSONP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么只能用GET"><span class="toc-number">2.</span> <span class="toc-text">为什么只能用GET</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/Hexo搭建/" class="archive-article-date">
-  	<time datetime="2017-03-02T13:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/Hexo搭建/">Hexo搭建</a>
-    </h1>
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/page/7/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/6/">6</a><a class="page-number" href="/archives/2017/page/7/">7</a><span class="page-number current">8</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -329,8 +331,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
