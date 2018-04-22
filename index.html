@@ -126,20 +126,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-为什么JSONP只支持GET请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-AMD-CMD和Commonjs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/19/为什么JSONP只支持GET请求/">为什么JSONP只支持GET请求</a>
+      <a class="article-title" href="/2018/04/22/AMD-CMD和Commonjs/">AMD,CMD和Commonjs</a>
     </h1>
   
 
         
-        <a href="/2018/04/19/为什么JSONP只支持GET请求/" class="archive-article-date">
-  	<time datetime="2018-04-19T00:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+        <a href="/2018/04/22/AMD-CMD和Commonjs/" class="archive-article-date">
+  	<time datetime="2018-04-22T13:04:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
 </a>
         
       </header>
@@ -149,10 +149,39 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？</p>
-<p>首先我先介绍一下他的原理</p>
+        <table>
+<thead>
+<tr>
+<th>AMD</th>
+<th>CMD</th>
+<th>CommonJS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提前执行</td>
+<td>延迟执行</td>
+<td>- </td>
+</tr>
+<tr>
+<td>依赖前置</td>
+<td>依赖就近</td>
+<td>-  </td>
+</tr>
+<tr>
+<td>浏览器端加载</td>
+<td>浏览器端加载</td>
+<td>服务器端加载</td>
+</tr>
+<tr>
+<td>异步</td>
+<td>异步</td>
+<td>同步</td>
+</tr>
+</tbody>
+</table>
         
-          <a class="article-more-a" href="/2018/04/19/为什么JSONP只支持GET请求/#more">more >></a>
+          <a class="article-more-a" href="/2018/04/22/AMD-CMD和Commonjs/#more">more >></a>
         
       
 
@@ -166,10 +195,6 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
@@ -180,7 +205,91 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/19/为什么JSONP只支持GET请求/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/04/22/AMD-CMD和Commonjs/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-跨域之JSONP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/19/跨域之JSONP/">跨域之JSONP</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/19/跨域之JSONP/" class="archive-article-date">
+  	<time datetime="2018-04-19T00:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？</p>
+<p>首先我先介绍一下他的原理</p>
+        
+          <a class="article-more-a" href="/2018/04/19/跨域之JSONP/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/19/跨域之JSONP/">展开全文 >></a>
         </p>
       
 
@@ -447,95 +556,6 @@
 
 
   
-    <article id="post-Djanggo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/25/Djanggo/">Djanggo</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/25/Djanggo/" class="archive-article-date">
-  	<time datetime="2018-03-25T01:37:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一、特点"><a href="#一、特点" class="headerlink" title="一、特点"></a>一、特点</h4><ol>
-<li>强大的数据库功能：拥有强大的数据库操作接口（QuerySet API），如需要也能执行原生SQL。</li>
-<li>自带强大后台： 几行简单的代码就让你的网站拥有一个强大的后台，轻松管理内容！</li>
-<li>优雅的网址： 用正则匹配网址，传递到对应函数，随意定义，如你所想！</li>
-<li>模板系统： 强大，易扩展的模板系统，设计简易，代码，样式分开设计，更容易管理。</li>
-</ol>
-<p>注：前后端分离时，也可以用Django开发API，完全不用模板系统。</p>
-<ol>
-<li>缓存系统： 与Memcached, Redis等缓存系统联用，更出色的表现，更快的加载速度。</li>
-<li>国际化： 完全支持多语言应用，允许你定义翻译的字符，轻松翻译成不同国家的语言。</li>
-</ol>
-        
-          <a class="article-more-a" href="/2018/03/25/Djanggo/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/25/Djanggo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -628,11 +648,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,11 +672,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,23 +684,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">bootstrap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,15 +696,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">glup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Web安全</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -716,7 +724,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Intllij</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">bootstrap</a>
               </li>
              
               <li class="article-tag-list-item">

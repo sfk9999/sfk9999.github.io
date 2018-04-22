@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ES6之数值的扩展 | sun丶的博客</title>
+  <title>跨域之JSONP | sun丶的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6 扩展了数值">
-<meta name="keywords" content="JavaScript,ES6">
+  <meta name="description" content="JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？ 首先我先介绍一下他的原理">
+<meta name="keywords" content="JavaScript,AJAX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6之数值的扩展">
-<meta property="og:url" content="http://yoursite.com/2017/09/25/ES6之数值的扩展/index.html">
+<meta property="og:title" content="跨域之JSONP">
+<meta property="og:url" content="http://yoursite.com/2018/04/19/跨域之JSONP/index.html">
 <meta property="og:site_name" content="sun丶的博客">
-<meta property="og:description" content="ES6 扩展了数值">
+<meta property="og:description" content="JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？ 首先我先介绍一下他的原理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-12T11:42:23.699Z">
+<meta property="og:updated_time" content="2018-04-22T13:03:33.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6之数值的扩展">
-<meta name="twitter:description" content="ES6 扩展了数值">
+<meta name="twitter:title" content="跨域之JSONP">
+<meta name="twitter:description" content="JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？ 首先我先介绍一下他的原理">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -129,20 +129,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ES6之数值的扩展" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-跨域之JSONP" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ES6之数值的扩展
+      跨域之JSONP
     </h1>
   
 
         
-        <a href="/2017/09/25/ES6之数值的扩展/" class="archive-article-date">
-  	<time datetime="2017-09-25T11:40:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
+        <a href="/2018/04/19/跨域之JSONP/" class="archive-article-date">
+  	<time datetime="2018-04-19T00:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
 </a>
         
       </header>
@@ -156,7 +156,7 @@
     	<div id="toc-article" class="toc-article">
     	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     		<strong class="toc-title">文章目录</strong>
-               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#数值的扩展"><span class="toc-number">1.</span> <span class="toc-text">数值的扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-二进制和八进制表示法"><span class="toc-number">1.1.</span> <span class="toc-text">1 二进制和八进制表示法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Number-isFinite-Number-isNaN"><span class="toc-number">1.2.</span> <span class="toc-text">2 Number.isFinite(),Number.isNaN()</span></a></li></ol></li></ol>
+               <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSONP"><span class="toc-number">1.</span> <span class="toc-text">JSONP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么script标签可以跨域"><span class="toc-number">2.</span> <span class="toc-text">为什么script标签可以跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么只能用GET"><span class="toc-number">3.</span> <span class="toc-text">为什么只能用GET</span></a></li></ol>
              </div>
        <script type="text/javascript">
     	function showToc(){
@@ -176,19 +176,46 @@
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ES6 扩展了数值<br><a id="more"></a></p>
-<h4 id="数值的扩展"><a href="#数值的扩展" class="headerlink" title="数值的扩展"></a>数值的扩展</h4><h5 id="1-二进制和八进制表示法"><a href="#1-二进制和八进制表示法" class="headerlink" title="1 二进制和八进制表示法"></a>1 二进制和八进制表示法</h5><p>ES6 提供了二进制和八进制数值的新的写法，分别用前缀0b（或0B）和0o（或0O）表示。</p>
-<h5 id="2-Number-isFinite-Number-isNaN"><a href="#2-Number-isFinite-Number-isNaN" class="headerlink" title="2 Number.isFinite(),Number.isNaN()"></a>2 Number.isFinite(),Number.isNaN()</h5><ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- ```Number.isNaN()```用来检查一个值是否为NaN。</div><div class="line">- 它们与传统的全局方法isFinite()和isNaN()的**区别在于**，传统方法先调用Number()将非数值的值转为数值，再进行判断，而这两个新方法只对数值有效。</div><div class="line">- Number.isFinite()对于非数值一律返回false, Number.isNaN()只有对于NaN才返回true，非NaN一律返回false。</div><div class="line"></div><div class="line">##### 3 Number.parseInt()和Number.parseFloat()</div><div class="line">ES6 将全局方法parseInt()和parseFloat()，移植到Number对象上面，行为完全保持不变。</div><div class="line">##### 4 Number.isInteger()</div><div class="line">用来判断一个值是否为整数(需要注意的是，在 JavaScript 内部，整数和浮点数是同样的储存方法，所以3和3.0被视为同一个值)</div><div class="line">##### 5 Number.EPSILON</div><div class="line">- Number.EPSILON： 极小的常量。实际上是 JavaScript 能够表示的最小精度。误差如果小于这个值，就可以认为已经没有意义了，即不存在误差了。</div><div class="line">- Number.EPSILON可以用来设置“能够接受的误差范围”。即如果两个浮点数的差小于这个值，我们就认为这两个浮点数相等。</div></pre></td></tr></table></figure>
+        <p>JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？</p>
+<p>首先我先介绍一下他的原理</p>
+<a id="more"></a>
+<p>JSONP是跨域中的老方法，和CORS相比优点是兼容老版本浏览器，缺点是只支持get请求。那么为什么JSONP只支持get请求呢？</p>
+<p>首先我先介绍一下他的原理</p>
+<h4 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h4><ul>
+<li>JSONP是服务器与客户端跨源通信的常用方法</li>
+<li>特点：简单适用，老式浏览器全部支持，服务器改造非常小。</li>
+<li>基本思想: 网页通过添加一个script元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。</li>
+<li>并且是异步的</li>
+<li><p>步骤</p>
+<ul>
+<li><p>首先，网页动态插入script元素，由它向跨源网址发出请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addScriptTag</span>(<span class="params">src</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">  script.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);</div><div class="line">  script.src = src;</div><div class="line">  <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  addScriptTag(<span class="string">'http://example.com/ip?callback=foo'</span>);</div><div class="line">  <span class="comment">// 该请求的查询字符串有一个callback参数，用来指定回调函数的名字，这对于JSONP是必需的。</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Your public IP address is: '</span> + data.ip);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>服务器收到这个请求以后，会将数据放在回调函数的参数位置返回。</p>
 </li>
 </ul>
-<p>function withinErrorMargin (left, right) {<br>  return Math.abs(left - right) &lt; Number.EPSILON * Math.pow(2, 2);<br>}</p>
-<p>0.1 + 0.2 === 0.3 // false<br>withinErrorMargin(0.1 + 0.2, 0.3) // true</p>
-<p>1.1 + 1.3 === 2.4 // false<br>withinErrorMargin(1.1 + 1.3, 2.4) // true<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">##### <span class="number">6</span> 安全整数和Number,isSafeInteger()</div><div class="line">- JavaScript 能够准确表示的整数范围在<span class="number">-2</span>^<span class="number">53</span>到<span class="number">2</span>^<span class="number">53</span>之间（不含两个端点），超过这个范围，无法精确表示这个值。</div><div class="line">- ```Number.MAX_SAFE_INTEGER```和```Number.MIN_SAFE_INTEGER```这两个常量，用来表示这个范围的上下限。</div><div class="line">- ```Number.isSafeInteger()```则是用来判断一个整数是否落在这个范围之内。</div><div class="line"></div><div class="line">##### <span class="number">7</span> Math对象的扩展</div></pre></td></tr></table></figure></p>
-<p>Math.trunc()  //去除一个数的小数部分，返回整数部分<br>Math.sign()   //判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。<br>Math.cbrt()   //用于计算一个数的立方根<br>Math.clz32()  //返回一个数的32位无符号整数形式有多少个前导0<br>Math.imul()   //返回两个数以32位带符号整数形式相乘的结果，返回的也是一个32位的带符号整数。<br>Math.fround() //返回一个数的单精度浮点数形式。<br>Math.hypot()  //返回所有参数的平方和的平方根<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">- </span>对数方法</div></pre></td></tr></table></figure></p>
-<p>Math.expm1(x)   //返回ex - 1，即Math.exp(x) - 1<br>Math.log1p(x)   //返回1 + x的自然对数，即Math.log(1 + x)。如果x小于-1，返回NaN。<br>Math.log10(x)   //返回以10为底的x的对数。如果x小于0，则返回NaN。<br>Math.log2(x)    //返回以2为底的x的对数。如果x小于0，则返回NaN。<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">- </span>双曲函数方法</div></pre></td></tr></table></figure></p>
-<p>Math.sinh(x)    //返回x的双曲正弦（hyperbolic sine）<br>Math.cosh(x)    //返回x的双曲余弦（hyperbolic cosine）<br>Math.tanh(x)    //返回x的双曲正切（hyperbolic tangent）<br>Math.asinh(x)   //返回x的反双曲正弦（inverse hyperbolic sine）<br>Math.acosh(x)   //返回x的反双曲余弦（inverse hyperbolic cosine）<br>Math.atanh(x)   //返回x的反双曲正切（inverse hyperbolic tangent）<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">##### <span class="number">8</span> 指数运算符</div><div class="line">指数运算符（**）</div></pre></td></tr></table></figure></p>
-<p>2 ** 3 // 8<br>```</p>
+</li>
+<li>由于script元素请求的脚本，直接作为代码运行。这时，只要浏览器定义了foo函数，该函数就会立即调用。作为参数的JSON数据被视为JavaScript对象，而不是字符串，因此避免了使用JSON.parse的步骤。</li>
+</ul>
+<h4 id="为什么script标签可以跨域"><a href="#为什么script标签可以跨域" class="headerlink" title="为什么script标签可以跨域"></a>为什么script标签可以跨域</h4><p>因为凡是标签中有src属性的，都不受跨域限制，包括img,iframe。</p>
+<h4 id="为什么只能用GET"><a href="#为什么只能用GET" class="headerlink" title="为什么只能用GET"></a>为什么只能用GET</h4><p>其实背后的流程是：</p>
+<ul>
+<li><p>触发script标签中的src属性的地址，这个请求带有回调函数。</p>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://path/to/server/b?A=a&amp;B=b&amp;callbackFunctionName=myCallback"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>处理好了请求后，返回回调的函数myCallback()</p>
+</li>
+<li>完成跨域</li>
+</ul>
+<p>可以看到，JSONP的最终目的是要向服务器请求数据然后回调，但是其实真真实的原因是post和xmlHttpRequest方法在使用的时候都会去检查是否跨域，而get方法会欺骗浏览器而得到所需要的数据。</p>
+<ul>
+<li>这里所用的欺骗的意思是，<ul>
+<li>代码向浏览器发送一个请求：我要一个js文件，</li>
+<li>浏览器：好的，</li>
+<li>代码就利用回调函数拿到数据。</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -206,7 +233,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
         		</li>
       		
 		</ul>
@@ -225,18 +252,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/29/项目中git的用法/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/22/AMD-CMD和Commonjs/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          项目中git的用法
+          AMD,CMD和Commonjs
         
       </div>
     </a>
   
   
-    <a href="/2017/09/23/AJAX跨域/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">AJAX跨域</div>
+    <a href="/2018/04/15/mysql基本操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql基本操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -263,7 +290,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#数值的扩展"><span class="toc-number">1.</span> <span class="toc-text">数值的扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-二进制和八进制表示法"><span class="toc-number">1.1.</span> <span class="toc-text">1 二进制和八进制表示法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Number-isFinite-Number-isNaN"><span class="toc-number">1.2.</span> <span class="toc-text">2 Number.isFinite(),Number.isNaN()</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSONP"><span class="toc-number">1.</span> <span class="toc-text">JSONP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么script标签可以跨域"><span class="toc-number">2.</span> <span class="toc-text">为什么script标签可以跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么只能用GET"><span class="toc-number">3.</span> <span class="toc-text">为什么只能用GET</span></a></li></ol>
                     </div>
                 </span>
             </div>
