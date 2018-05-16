@@ -1,6 +1,6 @@
 ---
 title: 'AMD,CMD和Commonjs'
-date: 2018-04-22 21:04:05
+date: 2018-04-28 21:04:05
 toc: true
 tags:
     - JavaScript
